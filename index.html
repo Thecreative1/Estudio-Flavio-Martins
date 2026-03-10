@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estúdio Flávio Martins | Presença Digital para Pequenos Negócios</title>
+  <meta name="description" content="Ajudo negócios locais e pequenas empresas a melhorar a sua presença online com sites mais claros, páginas de serviço, ferramentas, SEO local e soluções práticas criadas com rapidez." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta property="og:title" content="Estúdio Flávio Martins | Presença Digital para Pequenos Negócios" />
+  <meta property="og:description" content="Sites mais claros, páginas de serviço, ferramentas, SEO local e soluções práticas para negócios locais e pequenas empresas." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_PT" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Estúdio Flávio Martins | Presença Digital para Pequenos Negócios" />
+  <meta name="twitter:description" content="Ajudo pequenos negócios a melhorar a sua presença online com soluções claras, úteis e orientadas para gerar contactos." />
+  <style>
+    :root {
+      --bg: #f7f2ea;
+      --bg-soft: #efe5d7;
+      --paper: rgba(255,255,255,0.72);
+      --card: rgba(255,255,255,0.65);
+      --text: #1f1a17;
+      --muted: #665c54;
+      --line: rgba(48,33,23,0.10);
+      --accent: #9f5b1f;
+      --accent-deep: #6f3d12;
+      --accent-soft: #f0d7b6;
+      --max: 1180px;
+      --radius: 24px;
+      --shadow: 0 20px 60px rgba(80, 48, 21, 0.10);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text);
+      line-height: 1.65;
+      background:
+        radial-gradient(circle at top left, rgba(240,215,182,0.46), transparent 36%),
+        radial-gradient(circle at top right, rgba(159,91,31,0.14), transparent 28%),
+        linear-gradient(180deg, #fcf8f2 0%, #f2e8dc 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(100% - 2rem, var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(14px);
+      background: rgba(247,242,234,0.72);
+      border-bottom: 1px solid rgba(48,33,23,0.06);
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-size: 1.18rem;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+
+    .brand span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      font-size: 0.96rem;
+      color: var(--muted);
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.95rem 1.4rem;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: 0.22s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(180deg, #b86a24 0%, #8f4c17 100%);
+      color: #fffdf9;
+      border: 1px solid rgba(111,61,18,0.18);
+      box-shadow: 0 14px 32px rgba(159,91,31,0.24);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 38px rgba(159,91,31,0.28);
+      filter: saturate(1.04);
+    }
+
+    .btn-secondary {
+      border-color: rgba(48,33,23,0.14);
+      background: rgba(255,255,255,0.78);
+      color: #2a211b;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.92);
+      border-color: rgba(48,33,23,0.20);
+    }
+
+    .hero {
+      padding: 6rem 0 4.5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: 0.5rem 0.9rem;
+      border-radius: 999px;
+      background: rgba(159,91,31,0.10);
+      border: 1px solid rgba(159,91,31,0.16);
+      color: var(--accent-deep);
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 4vw, 4.7rem);
+      line-height: 1.04;
+      margin-bottom: 1.2rem;
+      max-width: 11.5ch;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 64ch;
+      margin-bottom: 1rem;
+    }
+
+    .hero strong { color: var(--text); }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      margin-top: 1.7rem;
+    }
+
+    .glass {
+      background: var(--paper);
+      border: 1px solid rgba(255,255,255,0.5);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      backdrop-filter: blur(16px);
+    }
+
+    .hero-card {
+      padding: 1.6rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -40px -40px auto;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,202,166,0.8), transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-card h3 {
+      margin-bottom: 1rem;
+      font-size: 1.12rem;
+    }
+
+    .hero-card ul, .list {
+      list-style: none;
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .hero-card li, .list li {
+      color: var(--muted);
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .hero-card li::before,
+    .list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    section { padding: 4.2rem 0; }
+
+    .section-head {
+      max-width: 72ch;
+      margin-bottom: 2rem;
+    }
+
+    .section-head h2 {
+      font-size: clamp(1.9rem, 3vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 0.8rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-head p { color: var(--muted); }
+
+    .grid-2, .grid-3, .grid-4 {
+      display: grid;
+      gap: 1.2rem;
+    }
+
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.45);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      padding: 1.4rem;
+      backdrop-filter: blur(14px);
+    }
+
+    .card h3 {
+      margin-bottom: 0.65rem;
+      font-size: 1.08rem;
+    }
+
+    .card p, .card li { color: var(--muted); }
+
+    .pricing .card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .price {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--accent-deep);
+    }
+
+    .steps .card span {
+      display: inline-flex;
+      width: 2.1rem;
+      height: 2.1rem;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(165,106,42,0.12);
+      color: var(--accent-deep);
+      font-weight: 800;
+      margin-bottom: 0.9rem;
+    }
+
+    .cta-box {
+      padding: 2.2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-box::after {
+      content: "";
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(165,106,42,0.16), transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-box h2 {
+      margin-bottom: 0.8rem;
+      font-size: clamp(2rem, 3vw, 2.9rem);
+      line-height: 1.08;
+      max-width: 16ch;
+    }
+
+    .cta-box p {
+      color: var(--muted);
+      max-width: 60ch;
+      margin-bottom: 1.2rem;
+    }
+
+    footer {
+      padding: 2.2rem 0 3rem;
+      color: var(--muted);
+      text-align: center;
+      border-top: 1px solid rgba(48,33,23,0.06);
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid, .grid-4, .grid-3, .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem 0;
+      }
+
+      h1 { max-width: 100%; }
+      .cta-box h2 { max-width: 100%; }
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding-top: 4.7rem; }
+      .btn { width: 100%; }
+      .hero-actions { flex-direction: column; }
+      .nav-links { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#top" class="brand">Estúdio <span>Flávio Martins</span></a>
+      <nav class="nav-links">
+        <a href="#servicos">Serviços</a>
+        <a href="#porque">Porque eu</a>
+        <a href="#precos">Preços</a>
+        <a href="#contacto" class="btn btn-primary">Analisar o meu site</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Estúdio digital para negócios que querem transmitir mais confiança e tornar-se mais fortes online</div>
+          <h1>Transformo sites fracos em presença digital que transmite confiança e gera contactos</h1>
+          <p>Ajudo negócios locais e pequenas empresas a melhorar a sua presença online com <strong>sites mais claros, páginas de serviço, ferramentas, SEO local e soluções práticas</strong> criadas com rapidez.</p>
+          <p><strong>Com mais de 20 anos em IT</strong>, junto experiência técnica, visão prática e novas ferramentas de IA para criar soluções úteis, rápidas e adaptadas ao mundo real.</p>
+          <div class="hero-actions">
+            <a href="#contacto" class="btn btn-primary">Analisar o meu site</a>
+            <a href="https://wa.me/31621290605" class="btn btn-secondary">Falar por WhatsApp</a>
+          </div>
+        </div>
+
+        <aside class="hero-card glass">
+          <h3>O que costumo melhorar</h3>
+          <ul>
+            <li>Sites antigos, confusos ou pouco profissionais</li>
+            <li>Páginas sem foco em contacto e conversão</li>
+            <li>Falta de clareza sobre serviços e proposta de valor</li>
+            <li>Dependência excessiva de Instagram ou Facebook</li>
+            <li>Presença digital fraca para Google e SEO local</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Ter presença online não é o mesmo que estar bem representado</h2>
+          <p>Muitos negócios têm um site ou redes sociais, mas continuam a transmitir uma imagem fraca, pouco clara ou pouco profissional. Isso reduz confiança e faz perder oportunidades.</p>
+        </div>
+        <div class="grid-2">
+          <div class="card glass">
+            <h3>Problemas comuns</h3>
+            <ul class="list">
+              <li>Site com aspeto antigo ou pouco profissional</li>
+              <li>Informação mal organizada</li>
+              <li>Falta de páginas por serviço</li>
+              <li>Botões de contacto pouco visíveis</li>
+              <li>Má adaptação ao telemóvel</li>
+            </ul>
+          </div>
+          <div class="card glass">
+            <h3>O impacto no negócio</h3>
+            <ul class="list">
+              <li>Menos confiança na empresa</li>
+              <li>Mais dificuldade em gerar contactos</li>
+              <li>Serviços mal explicados</li>
+              <li>Menor visibilidade no Google</li>
+              <li>Dependência de plataformas que não controlas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos">
+      <div class="container">
+        <div class="section-head">
+          <h2>Soluções práticas para negócios que querem tornar-se mais fortes online</h2>
+          <p>Não vendo só “sites”. Trabalho em clareza, estrutura, confiança e utilidade real para ajudar o teu negócio a comunicar melhor e facilitar o contacto com clientes.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card glass">
+            <h3>Landing pages para serviços</h3>
+            <p>Páginas focadas numa oferta específica, com estrutura clara, mensagem forte e chamadas para ação bem visíveis.</p>
+          </div>
+          <div class="card glass">
+            <h3>Melhoria de sites existentes</h3>
+            <p>Ajustes visuais, estruturais e textuais para transformar um site fraco numa presença mais profissional e clara.</p>
+          </div>
+          <div class="card glass">
+            <h3>Páginas de serviço</h3>
+            <p>Criação de páginas separadas por serviço para explicar melhor o que fazes e melhorar SEO local.</p>
+          </div>
+          <div class="card glass">
+            <h3>Ferramentas digitais simples</h3>
+            <p>Ferramentas úteis que ajudam o visitante, aumentam valor percebido e tornam o site mais funcional.</p>
+          </div>
+          <div class="card glass">
+            <h3>SEO local e organização de conteúdo</h3>
+            <p>Estruturação de páginas, títulos, textos e secções para melhorar clareza e presença nas pesquisas locais.</p>
+          </div>
+          <div class="card glass">
+            <h3>Microcopy, formulários e contacto</h3>
+            <p>Melhoria de textos curtos, botões, formulários e integração com WhatsApp para facilitar ação imediata.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="porque">
+      <div class="container">
+        <div class="section-head">
+          <h2>Porque trabalhar comigo</h2>
+          <p>Não venho só do lado estético. Venho de mais de duas décadas em IT, com experiência real em sistemas, estrutura, resolução de problemas e visão prática.</p>
+        </div>
+        <div class="grid-4">
+          <div class="card glass">
+            <h3>20+ anos em IT</h3>
+            <p>Base técnica sólida, experiência real e capacidade de resolver problemas com cabeça fria.</p>
+          </div>
+          <div class="card glass">
+            <h3>Visão técnica e comercial</h3>
+            <p>Olho para o que está mal no site, mas também para o que está a travar confiança, clareza e contactos.</p>
+          </div>
+          <div class="card glass">
+            <h3>Rapidez com critério</h3>
+            <p>Uso IA para acelerar produção, mas sem sacrificar lógica, estrutura e utilidade real.</p>
+          </div>
+          <div class="card glass">
+            <h3>Linguagem clara</h3>
+            <p>Sem conversa técnica desnecessária. A ideia é simplificar, não complicar o teu negócio.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Para quem isto faz sentido</h2>
+          <p>Trabalho sobretudo com negócios locais e pequenas empresas que já prestam um bom serviço, mas cuja presença online ainda não está à altura.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card glass"><h3>Construção e terraplanagem</h3><p>Serviços fortes no terreno, mas muitas vezes com presença digital fraca ou inexistente.</p></div>
+          <div class="card glass"><h3>Piscinas e obras exteriores</h3><p>Áreas onde uma página clara por serviço pode fazer muita diferença na geração de contactos.</p></div>
+          <div class="card glass"><h3>Barbearias e negócios locais</h3><p>Presença visual, informação clara e contacto rápido são decisivos.</p></div>
+          <div class="card glass"><h3>Alojamento local e turismo</h3><p>Confiança, apresentação e clareza são essenciais para converter interesse em reservas.</p></div>
+          <div class="card glass"><h3>Oficinas e serviços técnicos</h3><p>Negócios sólidos que beneficiam muito de uma imagem online mais séria e organizada.</p></div>
+          <div class="card glass"><h3>Lojas e marcas pequenas</h3><p>Estrutura, clareza e bom encaminhamento ajudam a transmitir mais profissionalismo.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps">
+      <div class="container">
+        <div class="section-head">
+          <h2>Como funciona</h2>
+          <p>Sem complicação desnecessária. O objetivo é identificar o que vale a pena melhorar primeiro e entregar algo útil, claro e pronto a usar.</p>
+        </div>
+        <div class="grid-4">
+          <div class="card glass"><span>1</span><h3>Análise</h3><p>Vejo o que já existe e identifico falhas, pontos fracos e oportunidades.</p></div>
+          <div class="card glass"><span>2</span><h3>Direção clara</h3><p>Definimos o que faz mais sentido melhorar primeiro, sem inventar complexidade.</p></div>
+          <div class="card glass"><span>3</span><h3>Execução</h3><p>Crio ou ajusto a página, estrutura, texto ou ferramenta necessária.</p></div>
+          <div class="card glass"><span>4</span><h3>Entrega pronta</h3><p>Recebes uma solução funcional, clara e orientada para gerar mais confiança e mais contacto.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="precos" class="pricing">
+      <div class="container">
+        <div class="section-head">
+          <h2>Serviços com valores de entrada</h2>
+          <p>Cada projeto é diferente, mas estes são exemplos de preços base para os pedidos mais comuns.</p>
+        </div>
+        <div class="grid-4">
+          <div class="card glass">
+            <h3>Landing page de serviço</h3>
+            <div class="price">Desde 350€</div>
+            <p>Página clara, profissional e orientada para contacto.</p>
+          </div>
+          <div class="card glass">
+            <h3>Melhoria de homepage</h3>
+            <div class="price">Desde 250€</div>
+            <p>Revisão estrutural, visual e textual da página principal.</p>
+          </div>
+          <div class="card glass">
+            <h3>Ferramenta digital simples</h3>
+            <div class="price">Desde 450€</div>
+            <p>Ferramenta útil para gerar valor e captar interesse.</p>
+          </div>
+          <div class="card glass">
+            <h3>Auditoria prática</h3>
+            <div class="price">Desde 95€</div>
+            <p>Análise direta com melhorias concretas e prioritárias.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Instagram ajuda. Mas não chega.</h2>
+          <p>As redes sociais podem atrair atenção, mas não substituem uma presença digital sólida. A atenção é curta, a informação perde-se e a empresa fica dependente de uma plataforma que não controla.</p>
+        </div>
+        <div class="grid-2">
+          <div class="card glass">
+            <h3>O problema de depender só de redes sociais</h3>
+            <ul class="list">
+              <li>A informação perde-se rapidamente no feed</li>
+              <li>Nem toda a gente vai ver os teus conteúdos</li>
+              <li>A plataforma controla alcance e visibilidade</li>
+              <li>É fraco para explicar serviços com clareza</li>
+              <li>Não substitui uma base sólida para Google e SEO</li>
+            </ul>
+          </div>
+          <div class="card glass">
+            <h3>O que um site bem feito continua a dar</h3>
+            <ul class="list">
+              <li>Mais confiança e imagem profissional</li>
+              <li>Serviços bem explicados e organizados</li>
+              <li>Melhor contacto e conversão</li>
+              <li>Maior controlo sobre a presença digital</li>
+              <li>Base mais forte para crescer com consistência</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="container">
+        <div class="cta-box glass">
+          <h2>Se o teu negócio tem potencial, a tua presença online também devia mostrá-lo</h2>
+          <p>Analiso o teu site ou presença online e identifico os pontos que podem estar a limitar confiança, clareza e contactos. Recebes uma visão prática, direta e sem complicação.</p>
+          <div class="hero-actions">
+            <a href="https://wa.me/31621290605?text=Olá%2C%20quero%20melhorar%20a%20presen%C3%A7a%20digital%20do%20meu%20neg%C3%B3cio." class="btn btn-primary">Falar por WhatsApp</a>
+            <a href="#formulario-diagnostico" class="btn btn-secondary">Pedir diagnóstico inicial</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="formulario-diagnostico">
+      <div class="container">
+        <div class="section-head">
+          <h2>Pede o teu diagnóstico inicial</h2>
+          <p>Envia os dados do teu negócio e eu vejo os principais pontos que podem estar a travar clareza, confiança e contacto na tua presença online.</p>
+        </div>
+        <div class="card glass" style="padding: 1.8rem; background: rgba(255,255,255,0.82); border: 1px solid rgba(48,33,23,0.08);">
+          <form action="#" method="post" style="display:grid; gap:1rem;">
+            <div class="grid-2">
+              <div>
+                <label for="nome" style="display:block; margin-bottom:0.45rem; font-weight:700; color:#201915;">Nome</label>
+                <input id="nome" name="nome" type="text" placeholder="O teu nome" style="width:100%; padding:0.95rem 1rem; border-radius:16px; border:1px solid rgba(48,33,23,0.16); background:#fffdf9; color:#1f1a17; font:inherit;" />
+              </div>
+              <div>
+                <label for="negocio" style="display:block; margin-bottom:0.45rem; font-weight:700; color:#201915;">Negócio / Empresa</label>
+                <input id="negocio" name="negocio" type="text" placeholder="Nome do negócio" style="width:100%; padding:0.95rem 1rem; border-radius:16px; border:1px solid rgba(48,33,23,0.16); background:#fffdf9; color:#1f1a17; font:inherit;" />
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div>
+                <label for="website" style="display:block; margin-bottom:0.45rem; font-weight:700; color:#201915;">Website ou Instagram</label>
+                <input id="website" name="website" type="text" placeholder="https://..." style="width:100%; padding:0.95rem 1rem; border-radius:16px; border:1px solid rgba(48,33,23,0.16); background:#fffdf9; color:#1f1a17; font:inherit;" />
+              </div>
+              <div>
+                <label for="contacto-email" style="display:block; margin-bottom:0.45rem; font-weight:700; color:#201915;">Email ou WhatsApp</label>
+                <input id="contacto-email" name="contacto" type="text" placeholder="Como queres ser contactado" style="width:100%; padding:0.95rem 1rem; border-radius:16px; border:1px solid rgba(48,33,23,0.16); background:#fffdf9; color:#1f1a17; font:inherit;" />
+              </div>
+            </div>
+
+            <div>
+              <label for="mensagem" style="display:block; margin-bottom:0.45rem; font-weight:700; color:#201915;">O que gostavas de melhorar?</label>
+              <textarea id="mensagem" name="mensagem" rows="5" placeholder="Ex.: clareza do site, mais contactos, melhorar imagem profissional, páginas de serviço, SEO local..." style="width:100%; padding:1rem; border-radius:16px; border:1px solid rgba(48,33,23,0.16); background:#fffdf9; color:#1f1a17; font:inherit; resize:vertical;"></textarea>
+            </div>
+
+            <div style="display:flex; gap:0.9rem; flex-wrap:wrap; align-items:center;">
+              <button type="submit" class="btn btn-primary">Enviar pedido</button>
+              <a href="https://wa.me/31621290605?text=Olá%2C%20quero%20pedir%20um%20diagn%C3%B3stico%20inicial%20da%20minha%20presen%C3%A7a%20online." class="btn btn-secondary">Ou falar por WhatsApp</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      Estúdio Flávio Martins — Presença digital clara, útil e feita para o mundo real.
+    </div>
+  </footer>
+</body>
+</html>
