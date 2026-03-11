@@ -3,16 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Estúdio Flávio Martins | Presença Digital para Pequenos Negócios</title>
-  <meta name="description" content="Ajudo negócios locais e pequenas empresas a melhorar a sua presença online com sites mais claros, páginas de serviço, ferramentas, SEO local e soluções práticas criadas com rapidez." />
+
+  <title>Estúdio Flávio Martins | Criação e Melhoria de Sites para Negócios Locais</title>
+  <meta name="description" content="Ajudo pequenos negócios em Portugal a melhorar sites, criar landing pages, reforçar SEO local e gerar mais contactos com uma presença digital mais clara e profissional." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
-  <meta property="og:title" content="Estúdio Flávio Martins | Presença Digital para Pequenos Negócios" />
-  <meta property="og:description" content="Sites mais claros, páginas de serviço, ferramentas, SEO local e soluções práticas para negócios locais e pequenas empresas." />
+  <link rel="canonical" href="https://estudiofm.pt/" />
+
+  <meta property="og:title" content="Estúdio Flávio Martins | Criação e Melhoria de Sites para Negócios Locais" />
+  <meta property="og:description" content="Landing pages, melhoria de sites, SEO local e presença digital mais forte para pequenos negócios em Portugal." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_PT" />
+  <meta property="og:url" content="https://estudiofm.pt/" />
+  <meta property="og:site_name" content="Estúdio Flávio Martins" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Estúdio Flávio Martins | Presença Digital para Pequenos Negócios" />
-  <meta name="twitter:description" content="Ajudo pequenos negócios a melhorar a sua presença online com soluções claras, úteis e orientadas para gerar contactos." />
+  <meta name="twitter:title" content="Estúdio Flávio Martins | Criação e Melhoria de Sites para Negócios Locais" />
+  <meta name="twitter:description" content="Ajudo pequenos negócios a melhorar a presença online e a gerar mais contactos com sites mais claros e profissionais." />
+  <meta name="theme-color" content="#9f5b1f" />
+
   <style>
     :root {
       --bg: #f7f2ea;
@@ -155,7 +162,7 @@
       font-size: clamp(2.5rem, 4vw, 4.7rem);
       line-height: 1.04;
       margin-bottom: 1.2rem;
-      max-width: 11.5ch;
+      max-width: 12ch;
       letter-spacing: -0.03em;
     }
 
@@ -229,7 +236,7 @@
     section { padding: 4.2rem 0; }
 
     .section-head {
-      max-width: 72ch;
+      max-width: 76ch;
       margin-bottom: 2rem;
     }
 
@@ -314,13 +321,31 @@
       margin-bottom: 0.8rem;
       font-size: clamp(2rem, 3vw, 2.9rem);
       line-height: 1.08;
-      max-width: 16ch;
+      max-width: 18ch;
     }
 
     .cta-box p {
       color: var(--muted);
       max-width: 60ch;
       margin-bottom: 1.2rem;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      padding: 1.25rem 1.35rem;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(48,33,23,0.10);
+      box-shadow: var(--shadow);
+    }
+
+    .faq-item h3 {
+      font-size: 1.03rem;
+      margin-bottom: 0.5rem;
     }
 
     footer {
@@ -341,8 +366,7 @@
         padding: 1rem 0;
       }
 
-      h1 { max-width: 100%; }
-      .cta-box h2 { max-width: 100%; }
+      h1, .cta-box h2 { max-width: 100%; }
     }
 
     @media (max-width: 640px) {
@@ -362,6 +386,117 @@
       font-weight: 600;
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"ProfessionalService",
+        "@id":"https://estudiofm.pt/#business",
+        "name":"Estúdio Flávio Martins",
+        "url":"https://estudiofm.pt/",
+        "description":"Serviços de criação e melhoria de sites, landing pages, SEO local e presença digital para pequenos negócios em Portugal.",
+        "areaServed":"Portugal",
+        "serviceType":[
+          "Criação de landing pages",
+          "Melhoria de sites",
+          "SEO local",
+          "Páginas de serviço",
+          "Auditoria de sites",
+          "Otimização de presença digital"
+        ],
+        "telephone":"+31621290605"
+      },
+      {
+        "@type":"Person",
+        "@id":"https://estudiofm.pt/#person",
+        "name":"Flávio Martins",
+        "jobTitle":"Consultor de Presença Digital",
+        "worksFor":{
+          "@id":"https://estudiofm.pt/#business"
+        },
+        "description":"Profissional com mais de 20 anos de experiência em IT, focado em melhorar presença digital, clareza online e geração de contactos para pequenos negócios."
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://estudiofm.pt/#website",
+        "url":"https://estudiofm.pt/",
+        "name":"Estúdio Flávio Martins",
+        "publisher":{
+          "@id":"https://estudiofm.pt/#business"
+        },
+        "inLanguage":"pt-PT"
+      },
+      {
+        "@type":"Service",
+        "serviceType":"Criação e melhoria de sites para negócios locais",
+        "provider":{
+          "@id":"https://estudiofm.pt/#business"
+        },
+        "areaServed":"Portugal",
+        "audience":{
+          "@type":"Audience",
+          "audienceType":"Pequenos negócios, empresas locais e prestadores de serviços"
+        }
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"https://estudiofm.pt/#faq",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"Vale a pena ter site se já tenho Instagram?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Sim. O Instagram ajuda a chamar atenção, mas um site continua a ser mais forte para transmitir confiança, explicar serviços com clareza, aparecer no Google e gerar contactos com mais consistência."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Um site ajuda mesmo a conseguir mais clientes?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Um site bem pensado pode ajudar a gerar mais contactos ao apresentar melhor os serviços, mostrar profissionalismo e facilitar o contacto por formulário ou WhatsApp."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Fazes sites novos ou também melhoras sites existentes?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Faço ambos. Posso criar uma landing page nova, melhorar a homepage atual, reorganizar páginas de serviço ou corrigir pontos que estejam a travar confiança e contacto."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"O que inclui uma auditoria prática?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"A auditoria prática identifica problemas de clareza, estrutura, mensagem, foco em contacto, adaptação ao telemóvel e oportunidades de melhoria para SEO local e presença digital."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Trabalhas com empresas em todo o país?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Sim. Trabalho remotamente com pequenos negócios em todo o país, com especial foco em empresas locais e negócios de serviços."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Quanto tempo demora uma landing page?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Depende do projeto, mas uma landing page simples e bem definida pode avançar rapidamente. O importante é começar pelo essencial e construir algo claro, profissional e útil."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header>
@@ -370,7 +505,7 @@
       <nav class="nav-links">
         <a href="#servicos">Serviços</a>
         <a href="#porque">Porque eu</a>
-        <a href="#precos">Preços</a>
+        <a href="#faq">FAQ</a>
         <a href="#contacto" class="btn btn-primary">Analisar o meu site</a>
       </nav>
     </div>
@@ -380,9 +515,10 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Estúdio digital para negócios que querem transmitir mais confiança e tornar-se mais fortes online</div>
+          <div class="eyebrow">Criação e melhoria de sites, landing pages e SEO local para pequenos negócios em Portugal</div>
           <h1>Transformo sites fracos em presença digital que transmite confiança e gera contactos</h1>
-          <p>Ajudo negócios locais e pequenas empresas a melhorar a sua presença online com <strong>sites mais claros, páginas de serviço, ferramentas, SEO local e soluções práticas</strong> criadas com rapidez.</p>
+          <p>Ajudo <strong>negócios locais e pequenas empresas em Portugal</strong> a melhorar a sua presença online com <strong>criação de sites para empresas, landing pages para serviços, melhoria de sites existentes, páginas de serviço e SEO local</strong>.</p>
+          <p><strong>Não vendo só sites.</strong> O objetivo é tornar a tua presença digital mais clara, profissional e orientada para gerar contactos, pedidos e oportunidades reais.</p>
           <p><strong>Com mais de 20 anos em IT</strong>, junto experiência técnica, visão prática e novas ferramentas de IA para criar soluções úteis, rápidas e adaptadas ao mundo real.</p>
           <div class="hero-actions">
             <a href="#contacto" class="btn btn-primary">Analisar o meu site</a>
@@ -394,7 +530,7 @@
           <h3>O que costumo melhorar</h3>
           <ul>
             <li>Sites antigos, confusos ou pouco profissionais</li>
-            <li>Páginas sem foco em contacto e conversão</li>
+            <li>Páginas que não geram contactos</li>
             <li>Falta de clareza sobre serviços e proposta de valor</li>
             <li>Dependência excessiva de Instagram ou Facebook</li>
             <li>Presença digital fraca para Google e SEO local</li>
@@ -407,7 +543,7 @@
       <div class="container">
         <div class="section-head">
           <h2>Ter presença online não é o mesmo que estar bem representado</h2>
-          <p>Muitos negócios têm um site ou redes sociais, mas continuam a transmitir uma imagem fraca, pouco clara ou pouco profissional. Isso reduz confiança e faz perder oportunidades.</p>
+          <p>Muitos negócios têm um site ou redes sociais, mas continuam a transmitir uma imagem fraca, pouco clara ou pouco profissional. Isso reduz confiança, enfraquece a imagem da empresa e faz perder contactos que podiam entrar todos os meses.</p>
         </div>
         <div class="grid-2">
           <div class="card glass">
@@ -434,36 +570,94 @@
       </div>
     </section>
 
-    <section id="servicos">
+    <section>
       <div class="container">
         <div class="section-head">
-          <h2>Soluções práticas para negócios que querem tornar-se mais fortes online</h2>
-          <p>Não vendo só “sites”. Trabalho em clareza, estrutura, confiança e utilidade real para ajudar o teu negócio a comunicar melhor e facilitar o contacto com clientes.</p>
+          <h2>O que o teu site devia estar a fazer</h2>
+          <p>Um site empresarial não devia estar online só para existir. Devia trabalhar por ti, reforçar a tua imagem e facilitar o próximo passo do visitante.</p>
         </div>
         <div class="grid-3">
           <div class="card glass">
-            <h3>Landing pages para serviços</h3>
-            <p>Páginas focadas numa oferta específica, com estrutura clara, mensagem forte e chamadas para ação bem visíveis.</p>
+            <h3>Transmitir confiança</h3>
+            <p>Uma presença online profissional ajuda o visitante a sentir que está perante um negócio sério, organizado e credível.</p>
+          </div>
+          <div class="card glass">
+            <h3>Explicar serviços com clareza</h3>
+            <p>Páginas bem estruturadas ajudam o cliente a perceber rapidamente o que fazes, para quem trabalhas e porque deve falar contigo.</p>
+          </div>
+          <div class="card glass">
+            <h3>Gerar mais contactos</h3>
+            <p>O objetivo final não é só ter visitas. É transformar visitas em pedidos de contacto por formulário, telefone ou WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Problemas que resolvo na presença digital de pequenos negócios</h2>
+          <p>Esta parte importa porque muitas empresas não precisam de começar do zero. Precisam de corrigir o que está a travar confiança, clareza, conversão e visibilidade online.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card glass">
+            <h3>Site antigo ou com ar amador</h3>
+            <p>Quando a imagem online parece fraca, o visitante assume que o negócio também pode ser fraco. Isso mata confiança logo à partida.</p>
+          </div>
+          <div class="card glass">
+            <h3>Site que não gera contactos</h3>
+            <p>Se a estrutura, o texto ou os botões não empurram para ação, o site perde o objetivo principal: ajudar a trazer clientes.</p>
+          </div>
+          <div class="card glass">
+            <h3>Negócio dependente só de redes sociais</h3>
+            <p>Instagram e Facebook podem ajudar, mas não substituem uma base estável, organizada e preparada para Google.</p>
+          </div>
+          <div class="card glass">
+            <h3>Serviços mal explicados</h3>
+            <p>Muitas empresas têm bons serviços mas explicam-nos mal. Isso cria dúvida e reduz a probabilidade de contacto.</p>
+          </div>
+          <div class="card glass">
+            <h3>Homepage sem foco</h3>
+            <p>Quando tudo aparece misturado, o visitante não entende rapidamente o que a empresa faz nem como avançar.</p>
+          </div>
+          <div class="card glass">
+            <h3>Fraca adaptação ao telemóvel</h3>
+            <p>Hoje, uma página confusa em mobile é um bloqueio direto à conversão e à experiência do utilizador.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos">
+      <div class="container">
+        <div class="section-head">
+          <h2>Serviços práticos para negócios que querem tornar-se mais fortes online</h2>
+          <p>Não vendo só “sites”. Trabalho em clareza, estrutura, imagem profissional, SEO local e pontos concretos que ajudam o teu negócio a comunicar melhor e a gerar mais contactos.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card glass">
+            <h3>Criação de landing pages para serviços</h3>
+            <p>Páginas focadas numa oferta específica, com estrutura clara, mensagem forte, SEO útil e chamadas para ação bem visíveis.</p>
           </div>
           <div class="card glass">
             <h3>Melhoria de sites existentes</h3>
-            <p>Ajustes visuais, estruturais e textuais para transformar um site fraco numa presença mais profissional e clara.</p>
+            <p>Ajustes visuais, estruturais e textuais para transformar um site fraco numa presença mais profissional, mais clara e mais convincente.</p>
           </div>
           <div class="card glass">
-            <h3>Páginas de serviço</h3>
-            <p>Criação de páginas separadas por serviço para explicar melhor o que fazes e melhorar SEO local.</p>
+            <h3>Páginas de serviço para SEO local</h3>
+            <p>Criação de páginas separadas por serviço para explicar melhor o que fazes e aumentar relevância nas pesquisas locais.</p>
           </div>
           <div class="card glass">
             <h3>Ferramentas digitais simples</h3>
-            <p>Ferramentas úteis que ajudam o visitante, aumentam valor percebido e tornam o site mais funcional.</p>
+            <p>Ferramentas úteis que ajudam o visitante, aumentam valor percebido e tornam o site mais funcional e diferenciador.</p>
           </div>
           <div class="card glass">
             <h3>SEO local e organização de conteúdo</h3>
-            <p>Estruturação de páginas, títulos, textos e secções para melhorar clareza e presença nas pesquisas locais.</p>
+            <p>Estruturação de páginas, títulos, textos, headings e secções para melhorar clareza e presença nas pesquisas locais.</p>
           </div>
           <div class="card glass">
             <h3>Microcopy, formulários e contacto</h3>
-            <p>Melhoria de textos curtos, botões, formulários e integração com WhatsApp para facilitar ação imediata.</p>
+            <p>Melhoria de textos curtos, botões, formulários e integração com WhatsApp para facilitar ação imediata e aumentar pedidos.</p>
           </div>
         </div>
       </div>
@@ -473,24 +667,47 @@
       <div class="container">
         <div class="section-head">
           <h2>Porque trabalhar comigo</h2>
-          <p>Não venho só do lado estético. Venho de mais de duas décadas em IT, com experiência real em sistemas, estrutura, resolução de problemas e visão prática.</p>
+          <p>Não venho só do lado estético. Venho de mais de duas décadas em IT, com experiência real em sistemas, estrutura, resolução de problemas e visão prática aplicada ao mundo dos negócios.</p>
         </div>
         <div class="grid-4">
           <div class="card glass">
             <h3>20+ anos em IT</h3>
-            <p>Base técnica sólida, experiência real e capacidade de resolver problemas com cabeça fria.</p>
+            <p>Base técnica sólida, experiência real e capacidade de resolver problemas com lógica, critério e calma.</p>
           </div>
           <div class="card glass">
             <h3>Visão técnica e comercial</h3>
-            <p>Olho para o que está mal no site, mas também para o que está a travar confiança, clareza e contactos.</p>
+            <p>Olho para o que está mal no site, mas também para o que está a travar confiança, clareza, imagem e contactos.</p>
           </div>
           <div class="card glass">
             <h3>Rapidez com critério</h3>
-            <p>Uso IA para acelerar produção, mas sem sacrificar lógica, estrutura e utilidade real.</p>
+            <p>Uso IA para acelerar produção, mas sem sacrificar lógica, estrutura, qualidade de apresentação e utilidade real.</p>
           </div>
           <div class="card glass">
             <h3>Linguagem clara</h3>
-            <p>Sem conversa técnica desnecessária. A ideia é simplificar, não complicar o teu negócio.</p>
+            <p>Sem conversa técnica desnecessária. A ideia é simplificar, clarificar e ajudar o negócio a parecer mais forte online.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Trabalho com negócios locais em Portugal</h2>
+          <p>Ajudo negócios locais em Guimarães, Braga, Porto e outras zonas do país, mas também trabalho remotamente com pequenas empresas em todo o território nacional. O foco está em serviços, comércio local, obras, alojamento e empresas que precisam de uma imagem online mais forte e mais clara.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card glass">
+            <h3>Negócios locais</h3>
+            <p>Empresas que prestam um bom serviço no terreno mas ainda não têm uma presença online à altura.</p>
+          </div>
+          <div class="card glass">
+            <h3>Pequenas empresas</h3>
+            <p>Negócios que precisam de comunicar melhor, organizar melhor os serviços e facilitar contacto com novos clientes.</p>
+          </div>
+          <div class="card glass">
+            <h3>Prestadores de serviços</h3>
+            <p>Áreas em que confiança, clareza, rapidez de contacto e boa apresentação fazem uma diferença brutal.</p>
           </div>
         </div>
       </div>
@@ -500,7 +717,7 @@
       <div class="container">
         <div class="section-head">
           <h2>Para quem isto faz sentido</h2>
-          <p>Trabalho sobretudo com negócios locais e pequenas empresas que já prestam um bom serviço, mas cuja presença online ainda não está à altura.</p>
+          <p>Trabalho sobretudo com negócios locais e pequenas empresas que já prestam um bom serviço, mas cuja presença online ainda não transmite a mesma força.</p>
         </div>
         <div class="grid-3">
           <div class="card glass"><h3>Construção e terraplanagem</h3><p>Serviços fortes no terreno, mas muitas vezes com presença digital fraca ou inexistente.</p></div>
@@ -509,6 +726,41 @@
           <div class="card glass"><h3>Alojamento local e turismo</h3><p>Confiança, apresentação e clareza são essenciais para converter interesse em reservas.</p></div>
           <div class="card glass"><h3>Oficinas e serviços técnicos</h3><p>Negócios sólidos que beneficiam muito de uma imagem online mais séria e organizada.</p></div>
           <div class="card glass"><h3>Lojas e marcas pequenas</h3><p>Estrutura, clareza e bom encaminhamento ajudam a transmitir mais profissionalismo.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>O que podes pedir</h2>
+          <p>Nem sempre é preciso refazer tudo. Muitas vezes basta corrigir a homepage, organizar serviços, melhorar textos e preparar a página para gerar mais confiança e mais pedidos.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card glass">
+            <h3>Melhorar o meu site atual</h3>
+            <p>Ideal para negócios que já têm presença online, mas sabem que a imagem ou estrutura estão fracas.</p>
+          </div>
+          <div class="card glass">
+            <h3>Criar uma landing page</h3>
+            <p>Boa opção para um serviço específico, campanha, oferta principal ou área onde queres captar contactos.</p>
+          </div>
+          <div class="card glass">
+            <h3>Organizar páginas de serviço</h3>
+            <p>Perfeito para empresas com vários serviços que precisam de mais clareza e melhor SEO local.</p>
+          </div>
+          <div class="card glass">
+            <h3>Rever homepage e mensagem</h3>
+            <p>Quando a página principal não está a explicar bem quem és, o que fazes e porque devem falar contigo.</p>
+          </div>
+          <div class="card glass">
+            <h3>Melhorar formulários e contacto</h3>
+            <p>Para facilitar ação imediata, reduzir fricção e aumentar pedidos por WhatsApp ou formulário.</p>
+          </div>
+          <div class="card glass">
+            <h3>Pedir uma auditoria prática</h3>
+            <p>Recebes uma análise direta com os principais problemas, prioridades e oportunidades de melhoria.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -590,11 +842,54 @@
       </div>
     </section>
 
+    <section id="faq">
+      <div class="container">
+        <div class="section-head">
+          <h2>Perguntas frequentes</h2>
+          <p>Estas são dúvidas normais de quem quer melhorar a presença online do negócio sem cair em complicação ou desperdício.</p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>Vale a pena ter site se já tenho Instagram?</h3>
+            <p>Sim. O Instagram ajuda a chamar atenção, mas um site continua a ser mais forte para transmitir confiança, explicar serviços com clareza, aparecer no Google e gerar contactos com mais consistência.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Um site ajuda mesmo a conseguir mais clientes?</h3>
+            <p>Um site bem pensado pode ajudar a gerar mais contactos ao apresentar melhor os serviços, mostrar profissionalismo e facilitar o contacto por formulário ou WhatsApp.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Fazes sites novos ou também melhoras sites existentes?</h3>
+            <p>Faço ambos. Posso criar uma landing page nova, melhorar a homepage atual, reorganizar páginas de serviço ou corrigir pontos que estejam a travar confiança e contacto.</p>
+          </div>
+          <div class="faq-item">
+            <h3>O que inclui uma auditoria prática?</h3>
+            <p>A auditoria prática identifica problemas de clareza, estrutura, mensagem, foco em contacto, adaptação ao telemóvel e oportunidades de melhoria para SEO local e presença digital.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Trabalhas com empresas em todo o país?</h3>
+            <p>Sim. Trabalho remotamente com pequenos negócios em todo o país, com especial foco em empresas locais e negócios de serviços.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Quanto custa uma landing page?</h3>
+            <p>Depende do objetivo e do nível de detalhe, mas nesta página já tens uma referência base. O importante é perceber primeiro o que vai gerar mais impacto para o negócio.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Quanto tempo demora?</h3>
+            <p>Depende do projeto, mas uma landing page simples e bem definida pode avançar rapidamente. O erro é complicar antes de validar o essencial.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Preciso de ter tudo preparado antes de falar contigo?</h3>
+            <p>Não. Muitas vezes basta ter o negócio, os serviços e uma noção do que está a falhar. A partir daí, organiza-se o resto com mais clareza.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="contacto">
       <div class="container">
         <div class="cta-box glass">
           <h2>Se o teu negócio tem potencial, a tua presença online também devia mostrá-lo</h2>
-          <p>Analiso o teu site ou presença online e identifico os pontos que podem estar a limitar confiança, clareza e contactos. Recebes uma visão prática, direta e sem complicação.</p>
+          <p>Analiso o teu site ou presença online e identifico os pontos que podem estar a limitar confiança, clareza, imagem e contactos. Recebes uma visão prática, direta e sem enfeites sobre o que está a travar resultados.</p>
           <div class="hero-actions">
             <a href="https://wa.me/31621290605?text=Olá%2C%20quero%20melhorar%20a%20presen%C3%A7a%20digital%20do%20meu%20neg%C3%B3cio." class="btn btn-primary">Falar por WhatsApp</a>
             <a href="#formulario-diagnostico" class="btn btn-secondary">Pedir diagnóstico inicial</a>
@@ -607,7 +902,7 @@
       <div class="container">
         <div class="section-head">
           <h2>Pede o teu diagnóstico inicial</h2>
-          <p>Envia os dados do teu negócio e eu vejo os principais pontos que podem estar a travar clareza, confiança e contacto na tua presença online.</p>
+          <p>Envia os dados do teu negócio e eu vejo os principais pontos que podem estar a travar clareza, confiança, imagem profissional e contacto na tua presença online.</p>
         </div>
         <div class="card glass" style="padding: 1.8rem; background: rgba(255,255,255,0.82); border: 1px solid rgba(48,33,23,0.08);">
           <form id="diagnostico-form" style="display:grid; gap:1rem;">
@@ -635,7 +930,7 @@
 
             <div>
               <label for="mensagem" style="display:block; margin-bottom:0.45rem; font-weight:700; color:#201915;">O que gostavas de melhorar?</label>
-              <textarea id="mensagem" name="mensagem" rows="5" placeholder="Ex.: clareza do site, mais contactos, melhorar imagem profissional, páginas de serviço, SEO local..." required style="width:100%; padding:1rem; border-radius:16px; border:1px solid rgba(48,33,23,0.16); background:#fffdf9; color:#1f1a17; font:inherit; resize:vertical;"></textarea>
+              <textarea id="mensagem" name="mensagem" rows="5" placeholder="Ex.: mais contactos, melhorar imagem profissional, rever homepage, criar landing page, páginas de serviço, SEO local..." required style="width:100%; padding:1rem; border-radius:16px; border:1px solid rgba(48,33,23,0.16); background:#fffdf9; color:#1f1a17; font:inherit; resize:vertical;"></textarea>
             </div>
 
             <div id="form-feedback" class="form-feedback">O pedido vai abrir no WhatsApp com a mensagem já preenchida para enviares em um clique.</div>
@@ -655,6 +950,7 @@
       Estúdio Flávio Martins — Presença digital clara, útil e feita para o mundo real.
     </div>
   </footer>
+
   <script>
     const diagnosticoForm = document.getElementById('diagnostico-form');
     const formFeedback = document.getElementById('form-feedback');
@@ -664,21 +960,21 @@
 
       const nome = document.getElementById('nome').value.trim();
       const negocio = document.getElementById('negocio').value.trim();
-      const website = document.getElementById('website').value.trim() || 'Nao indicado';
+      const website = document.getElementById('website').value.trim() || 'Não indicado';
       const contacto = document.getElementById('contacto-email').value.trim();
       const mensagem = document.getElementById('mensagem').value.trim();
 
       if (!nome || !negocio || !contacto || !mensagem) {
         formFeedback.style.display = 'block';
-        formFeedback.textContent = 'Preenche nome, negocio, contacto e o que gostavas de melhorar.';
+        formFeedback.textContent = 'Preenche nome, negócio, contacto e o que gostavas de melhorar.';
         return;
       }
 
       const textoWhatsapp = [
-        'Ola Flavio, quero pedir um diagnostico inicial.',
+        'Olá Flávio, quero pedir um diagnóstico inicial.',
         '',
         'Nome: ' + nome,
-        'Negocio / Empresa: ' + negocio,
+        'Negócio / Empresa: ' + negocio,
         'Website ou Instagram: ' + website,
         'Email ou WhatsApp: ' + contacto,
         '',
