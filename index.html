@@ -351,6 +351,16 @@
       .hero-actions { flex-direction: column; }
       .nav-links { justify-content: center; }
     }
+
+    .form-feedback {
+      display: none;
+      padding: 0.9rem 1rem;
+      border-radius: 16px;
+      border: 1px solid rgba(159,91,31,0.20);
+      background: rgba(159,91,31,0.08);
+      color: var(--accent-deep);
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
@@ -600,15 +610,15 @@
           <p>Envia os dados do teu negócio e eu vejo os principais pontos que podem estar a travar clareza, confiança e contacto na tua presença online.</p>
         </div>
         <div class="card glass" style="padding: 1.8rem; background: rgba(255,255,255,0.82); border: 1px solid rgba(48,33,23,0.08);">
-          <form action="#" method="post" style="display:grid; gap:1rem;">
+          <form id="diagnostico-form" style="display:grid; gap:1rem;">
             <div class="grid-2">
               <div>
                 <label for="nome" style="display:block; margin-bottom:0.45rem; font-weight:700; color:#201915;">Nome</label>
-                <input id="nome" name="nome" type="text" placeholder="O teu nome" style="width:100%; padding:0.95rem 1rem; border-radius:16px; border:1px solid rgba(48,33,23,0.16); background:#fffdf9; color:#1f1a17; font:inherit;" />
+                <input id="nome" name="nome" type="text" placeholder="O teu nome" required style="width:100%; padding:0.95rem 1rem; border-radius:16px; border:1px solid rgba(48,33,23,0.16); background:#fffdf9; color:#1f1a17; font:inherit;" />
               </div>
               <div>
                 <label for="negocio" style="display:block; margin-bottom:0.45rem; font-weight:700; color:#201915;">Negócio / Empresa</label>
-                <input id="negocio" name="negocio" type="text" placeholder="Nome do negócio" style="width:100%; padding:0.95rem 1rem; border-radius:16px; border:1px solid rgba(48,33,23,0.16); background:#fffdf9; color:#1f1a17; font:inherit;" />
+                <input id="negocio" name="negocio" type="text" placeholder="Nome do negócio" required style="width:100%; padding:0.95rem 1rem; border-radius:16px; border:1px solid rgba(48,33,23,0.16); background:#fffdf9; color:#1f1a17; font:inherit;" />
               </div>
             </div>
 
@@ -619,14 +629,16 @@
               </div>
               <div>
                 <label for="contacto-email" style="display:block; margin-bottom:0.45rem; font-weight:700; color:#201915;">Email ou WhatsApp</label>
-                <input id="contacto-email" name="contacto" type="text" placeholder="Como queres ser contactado" style="width:100%; padding:0.95rem 1rem; border-radius:16px; border:1px solid rgba(48,33,23,0.16); background:#fffdf9; color:#1f1a17; font:inherit;" />
+                <input id="contacto-email" name="contacto" type="text" placeholder="Como queres ser contactado" required style="width:100%; padding:0.95rem 1rem; border-radius:16px; border:1px solid rgba(48,33,23,0.16); background:#fffdf9; color:#1f1a17; font:inherit;" />
               </div>
             </div>
 
             <div>
               <label for="mensagem" style="display:block; margin-bottom:0.45rem; font-weight:700; color:#201915;">O que gostavas de melhorar?</label>
-              <textarea id="mensagem" name="mensagem" rows="5" placeholder="Ex.: clareza do site, mais contactos, melhorar imagem profissional, páginas de serviço, SEO local..." style="width:100%; padding:1rem; border-radius:16px; border:1px solid rgba(48,33,23,0.16); background:#fffdf9; color:#1f1a17; font:inherit; resize:vertical;"></textarea>
+              <textarea id="mensagem" name="mensagem" rows="5" placeholder="Ex.: clareza do site, mais contactos, melhorar imagem profissional, páginas de serviço, SEO local..." required style="width:100%; padding:1rem; border-radius:16px; border:1px solid rgba(48,33,23,0.16); background:#fffdf9; color:#1f1a17; font:inherit; resize:vertical;"></textarea>
             </div>
+
+            <div id="form-feedback" class="form-feedback">O pedido vai abrir no WhatsApp com a mensagem já preenchida para enviares em um clique.</div>
 
             <div style="display:flex; gap:0.9rem; flex-wrap:wrap; align-items:center;">
               <button type="submit" class="btn btn-primary">Enviar pedido</button>
@@ -643,5 +655,42 @@
       Estúdio Flávio Martins — Presença digital clara, útil e feita para o mundo real.
     </div>
   </footer>
+  <script>
+    const diagnosticoForm = document.getElementById('diagnostico-form');
+    const formFeedback = document.getElementById('form-feedback');
+
+    diagnosticoForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const nome = document.getElementById('nome').value.trim();
+      const negocio = document.getElementById('negocio').value.trim();
+      const website = document.getElementById('website').value.trim() || 'Nao indicado';
+      const contacto = document.getElementById('contacto-email').value.trim();
+      const mensagem = document.getElementById('mensagem').value.trim();
+
+      if (!nome || !negocio || !contacto || !mensagem) {
+        formFeedback.style.display = 'block';
+        formFeedback.textContent = 'Preenche nome, negocio, contacto e o que gostavas de melhorar.';
+        return;
+      }
+
+      const textoWhatsapp = [
+        'Ola Flavio, quero pedir um diagnostico inicial.',
+        '',
+        'Nome: ' + nome,
+        'Negocio / Empresa: ' + negocio,
+        'Website ou Instagram: ' + website,
+        'Email ou WhatsApp: ' + contacto,
+        '',
+        'O que gostava de melhorar:',
+        mensagem
+      ].join('\n');
+
+      formFeedback.style.display = 'block';
+      formFeedback.textContent = 'A abrir o WhatsApp com os teus dados preenchidos.';
+
+      window.open('https://wa.me/31621290605?text=' + encodeURIComponent(textoWhatsapp), '_blank');
+    });
+  </script>
 </body>
 </html>
