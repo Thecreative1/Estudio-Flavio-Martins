@@ -7,17 +7,23 @@
   <title>Estúdio Flávio Martins | Criação e Melhoria de Sites para Negócios Locais</title>
   <meta name="description" content="Ajudo pequenos negócios em Portugal a melhorar sites, criar landing pages, reforçar SEO local e gerar mais contactos com uma presença digital mais clara e profissional." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
-  <link rel="canonical" href="https://estudiofm.pt/" />
+  <link rel="canonical" href="https://thecreative1.github.io/Estudio-Flavio-Martins/" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 
   <meta property="og:title" content="Estúdio Flávio Martins | Criação e Melhoria de Sites para Negócios Locais" />
   <meta property="og:description" content="Landing pages, melhoria de sites, SEO local e presença digital mais forte para pequenos negócios em Portugal." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_PT" />
-  <meta property="og:url" content="https://estudiofm.pt/" />
+  <meta property="og:url" content="https://thecreative1.github.io/Estudio-Flavio-Martins/" />
   <meta property="og:site_name" content="Estúdio Flávio Martins" />
+  <meta property="og:image" content="https://thecreative1.github.io/Estudio-Flavio-Martins/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/jpeg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Estúdio Flávio Martins | Criação e Melhoria de Sites para Negócios Locais" />
   <meta name="twitter:description" content="Ajudo pequenos negócios a melhorar a presença online e a gerar mais contactos com sites mais claros e profissionais." />
+  <meta name="twitter:image" content="https://thecreative1.github.io/Estudio-Flavio-Martins/og-image.jpg" />
   <meta name="theme-color" content="#9f5b1f" />
 
   <style>
@@ -79,6 +85,7 @@
       font-size: 1.18rem;
       font-weight: 800;
       letter-spacing: 0.2px;
+      flex-shrink: 0;
     }
 
     .brand span { color: var(--accent); }
@@ -299,6 +306,321 @@
       margin-bottom: 0.9rem;
     }
 
+    /* =====================
+       PORTFOLIO
+       ===================== */
+
+    .portfolio-grid { display: grid; gap: 1.4rem; }
+
+    .proj {
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.12);
+      transition: transform 0.4s cubic-bezier(0.34,1.3,0.64,1), box-shadow 0.4s ease;
+    }
+
+    .proj:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 44px 96px rgba(0,0,0,0.17);
+    }
+
+    .proj-featured {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 440px;
+    }
+
+    .proj-small-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.4rem;
+    }
+
+    .proj-small { display: flex; flex-direction: column; }
+
+    .proj-preview {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2.5rem;
+      position: relative;
+      overflow: hidden;
+      min-height: 260px;
+    }
+
+    .proj-info {
+      padding: 2.4rem 2.6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .proj-small .proj-info { flex: 1; }
+
+    .proj-type {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      margin-bottom: 0.85rem;
+    }
+
+    .proj-info h3 {
+      font-size: 1.55rem;
+      margin-bottom: 0.35rem;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+    }
+
+    .proj-sub {
+      font-size: 0.86rem;
+      margin-bottom: 1.1rem;
+      letter-spacing: 0.03em;
+    }
+
+    .proj-info p {
+      font-size: 0.96rem;
+      line-height: 1.78;
+      margin-bottom: 1.5rem;
+    }
+
+    .proj-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.42rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .proj-tag {
+      padding: 0.28rem 0.72rem;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+
+    .proj-link {
+      align-self: flex-start;
+      padding: 0.75rem 1.55rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: filter 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+      text-decoration: none;
+    }
+
+    .proj-link:hover { transform: translateX(4px); filter: brightness(1.1); }
+
+    /* --- DELICARTE --- */
+    .proj-delicarte .proj-preview {
+      background: linear-gradient(150deg, #f8f3ec 0%, #ede4d8 55%, #ddd0bf 100%);
+    }
+
+    .proj-delicarte .proj-info { background: #fbfaf7; }
+    .proj-delicarte .proj-type { color: #6f755c; }
+    .proj-delicarte .proj-info h3 { color: #252621; }
+    .proj-delicarte .proj-info p { color: #4f5147; }
+    .proj-delicarte .proj-sub { color: #7f816e; }
+
+    .proj-delicarte .proj-tag {
+      background: rgba(111,117,92,0.09);
+      border: 1px solid rgba(111,117,92,0.20);
+      color: #4a4f37;
+    }
+
+    .proj-delicarte .proj-link {
+      background: #6f755c;
+      color: #fff;
+      box-shadow: 0 8px 22px rgba(111,117,92,0.28);
+    }
+
+    .delicarte-mock { text-align: center; position: relative; z-index: 1; }
+
+    .delicarte-mock::before {
+      content: "";
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(111,117,92,0.13) 0%, transparent 70%);
+      z-index: -1;
+    }
+
+    .dm-brand {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 4.2rem;
+      letter-spacing: 0.16em;
+      color: #252621;
+      line-height: 1;
+    }
+
+    .dm-sub {
+      display: block;
+      font-size: 0.95rem;
+      letter-spacing: 0.14em;
+      color: #7f816e;
+      margin-top: 0.5rem;
+    }
+
+    .dm-kicker {
+      display: inline-block;
+      margin-top: 1.5rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #6f755c;
+      padding: 0.32rem 0.9rem;
+      border: 1px solid rgba(111,117,92,0.28);
+      border-radius: 999px;
+    }
+
+    /* --- MOTIVO RÚSTICO --- */
+    .proj-rustico .proj-preview {
+      background: radial-gradient(ellipse at 30% 40%, #3d2810 0%, #231508 55%, #14090200 100%),
+                  linear-gradient(160deg, #1e1006 0%, #160d04 100%);
+    }
+
+    .proj-rustico .proj-info { background: #1c1008; }
+    .proj-rustico .proj-type { color: #c89060; }
+    .proj-rustico .proj-info h3 { color: #f0e6d6; }
+    .proj-rustico .proj-info p { color: #9a7a5a; }
+    .proj-rustico .proj-sub { color: #6a5040; }
+
+    .proj-rustico .proj-tag {
+      background: rgba(200,144,96,0.09);
+      border: 1px solid rgba(200,144,96,0.20);
+      color: #c89060;
+    }
+
+    .proj-rustico .proj-link {
+      background: transparent;
+      border: 1.5px solid rgba(200,144,96,0.40);
+      color: #c89060;
+    }
+
+    .proj-rustico .proj-link:hover {
+      background: rgba(200,144,96,0.10);
+      border-color: rgba(200,144,96,0.65);
+      color: #e0b880;
+      filter: none;
+    }
+
+    .rustico-mock { text-align: center; }
+
+    .rm-deco {
+      display: block;
+      margin-bottom: 1.1rem;
+      color: rgba(200,144,80,0.22);
+      font-size: 1.5rem;
+      letter-spacing: 0.55rem;
+    }
+
+    .rm-brand {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2.8rem;
+      color: #e8c896;
+      letter-spacing: 0.05em;
+      line-height: 1.1;
+    }
+
+    .rm-sub {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.26em;
+      color: #7a5a38;
+      text-transform: uppercase;
+      margin-top: 0.65rem;
+    }
+
+    /* --- PULSAR FM --- */
+    .proj-pulsar .proj-preview { background: #080714; }
+    .proj-pulsar .proj-info { background: #0c0a1a; }
+    .proj-pulsar .proj-type { color: #b060ff; }
+    .proj-pulsar .proj-info h3 { color: #e4dff8; }
+    .proj-pulsar .proj-info p { color: #7a7498; }
+    .proj-pulsar .proj-sub { color: #4e4870; }
+
+    .proj-pulsar .proj-tag {
+      background: rgba(160,80,255,0.10);
+      border: 1px solid rgba(160,80,255,0.22);
+      color: #b060ff;
+    }
+
+    .proj-pulsar .proj-link {
+      background: linear-gradient(135deg, #6020c8, #c030a0);
+      color: #fff;
+      box-shadow: 0 8px 26px rgba(128,0,255,0.28);
+    }
+
+    .proj-pulsar .proj-link:hover {
+      filter: brightness(1.15) saturate(1.1);
+      box-shadow: 0 12px 36px rgba(128,0,255,0.42);
+    }
+
+    .pulsar-mock { text-align: center; position: relative; }
+
+    .pm-brand {
+      display: block;
+      font-size: 3.4rem;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      background: linear-gradient(135deg, #c040ff 0%, #ff40a0 50%, #40c0ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: neonPulse 3s ease-in-out infinite;
+    }
+
+    .pm-sub {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.24em;
+      color: #4e4870;
+      text-transform: uppercase;
+      margin-top: 0.5rem;
+    }
+
+    .pm-bars {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 4px;
+      margin-top: 1.8rem;
+      height: 30px;
+    }
+
+    .pm-bar {
+      width: 5px;
+      border-radius: 3px;
+      background: linear-gradient(180deg, #c040ff, #ff40a0);
+      animation: barDance 1.4s ease-in-out infinite;
+      opacity: 0.55;
+    }
+
+    .pm-bar:nth-child(1) { height: 38%; animation-delay: 0s; }
+    .pm-bar:nth-child(2) { height: 70%; animation-delay: 0.14s; }
+    .pm-bar:nth-child(3) { height: 100%; animation-delay: 0.28s; }
+    .pm-bar:nth-child(4) { height: 58%; animation-delay: 0.42s; }
+    .pm-bar:nth-child(5) { height: 88%; animation-delay: 0.56s; }
+    .pm-bar:nth-child(6) { height: 44%; animation-delay: 0.70s; }
+    .pm-bar:nth-child(7) { height: 68%; animation-delay: 0.84s; }
+
+    @keyframes neonPulse {
+      0%, 100% { filter: drop-shadow(0 0 6px rgba(192,64,255,0.30)); }
+      50%       { filter: drop-shadow(0 0 18px rgba(192,64,255,0.60)) drop-shadow(0 0 36px rgba(255,64,160,0.28)); }
+    }
+
+    @keyframes barDance {
+      0%, 100% { transform: scaleY(0.35); }
+      50%       { transform: scaleY(1); }
+    }
+
     .cta-box {
       padding: 2.2rem;
       position: relative;
@@ -360,10 +682,30 @@
         grid-template-columns: 1fr;
       }
 
+      .proj-featured, .proj-small-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .proj-featured .proj-preview { min-height: 220px; }
+
+      .proj-info { padding: 2rem 1.8rem; }
+      .dm-brand { font-size: 3.2rem; }
+      .pm-brand { font-size: 2.6rem; }
+      .rm-brand { font-size: 2.2rem; }
+
       .nav {
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0.9rem 0;
+        min-height: auto;
+        gap: 0.6rem;
+      }
+
+      .nav-links {
+        width: 100%;
         justify-content: center;
-        padding: 1rem 0;
+        gap: 0.9rem;
+        padding-bottom: 0.4rem;
       }
 
       h1, .cta-box h2 { max-width: 100%; }
@@ -373,7 +715,6 @@
       .hero { padding-top: 4.7rem; }
       .btn { width: 100%; }
       .hero-actions { flex-direction: column; }
-      .nav-links { justify-content: center; }
     }
 
     .form-feedback {
@@ -393,9 +734,9 @@
     "@graph":[
       {
         "@type":"ProfessionalService",
-        "@id":"https://estudiofm.pt/#business",
+        "@id":"https://thecreative1.github.io/Estudio-Flavio-Martins/#business",
         "name":"Estúdio Flávio Martins",
-        "url":"https://estudiofm.pt/",
+        "url":"https://thecreative1.github.io/Estudio-Flavio-Martins/",
         "description":"Serviços de criação e melhoria de sites, landing pages, SEO local e presença digital para pequenos negócios em Portugal.",
         "areaServed":"Portugal",
         "serviceType":[
@@ -410,39 +751,27 @@
       },
       {
         "@type":"Person",
-        "@id":"https://estudiofm.pt/#person",
+        "@id":"https://thecreative1.github.io/Estudio-Flavio-Martins/#person",
         "name":"Flávio Martins",
         "jobTitle":"Consultor de Presença Digital",
         "worksFor":{
-          "@id":"https://estudiofm.pt/#business"
+          "@id":"https://thecreative1.github.io/Estudio-Flavio-Martins/#business"
         },
         "description":"Profissional com mais de 20 anos de experiência em IT, focado em melhorar presença digital, clareza online e geração de contactos para pequenos negócios."
       },
       {
         "@type":"WebSite",
-        "@id":"https://estudiofm.pt/#website",
-        "url":"https://estudiofm.pt/",
+        "@id":"https://thecreative1.github.io/Estudio-Flavio-Martins/#website",
+        "url":"https://thecreative1.github.io/Estudio-Flavio-Martins/",
         "name":"Estúdio Flávio Martins",
         "publisher":{
-          "@id":"https://estudiofm.pt/#business"
+          "@id":"https://thecreative1.github.io/Estudio-Flavio-Martins/#business"
         },
         "inLanguage":"pt-PT"
       },
       {
-        "@type":"Service",
-        "serviceType":"Criação e melhoria de sites para negócios locais",
-        "provider":{
-          "@id":"https://estudiofm.pt/#business"
-        },
-        "areaServed":"Portugal",
-        "audience":{
-          "@type":"Audience",
-          "audienceType":"Pequenos negócios, empresas locais e prestadores de serviços"
-        }
-      },
-      {
         "@type":"FAQPage",
-        "@id":"https://estudiofm.pt/#faq",
+        "@id":"https://thecreative1.github.io/Estudio-Flavio-Martins/#faq",
         "mainEntity":[
           {
             "@type":"Question",
@@ -478,18 +807,10 @@
           },
           {
             "@type":"Question",
-            "name":"Trabalhas com empresas em todo o país?",
+            "name":"Preciso de ter tudo preparado antes de falar contigo?",
             "acceptedAnswer":{
               "@type":"Answer",
-              "text":"Sim. Trabalho remotamente com pequenos negócios em todo o país, com especial foco em empresas locais e negócios de serviços."
-            }
-          },
-          {
-            "@type":"Question",
-            "name":"Quanto tempo demora uma landing page?",
-            "acceptedAnswer":{
-              "@type":"Answer",
-              "text":"Depende do projeto, mas uma landing page simples e bem definida pode avançar rapidamente. O importante é começar pelo essencial e construir algo claro, profissional e útil."
+              "text":"Não. Muitas vezes basta ter o negócio, os serviços e uma noção do que está a falhar. A partir daí, organiza-se o resto com mais clareza."
             }
           }
         ]
@@ -502,8 +823,9 @@
   <header>
     <div class="container nav">
       <a href="#top" class="brand">Estúdio <span>Flávio Martins</span></a>
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Menu principal">
         <a href="#servicos">Serviços</a>
+        <a href="#portfolio">Portfolio</a>
         <a href="#porque">Porque eu</a>
         <a href="#faq">FAQ</a>
         <a href="#contacto" class="btn btn-primary">Analisar o meu site</a>
@@ -512,17 +834,19 @@
   </header>
 
   <main id="top">
+
+    <!-- HERO -->
     <section class="hero">
       <div class="container hero-grid">
         <div>
           <div class="eyebrow">Criação e melhoria de sites, landing pages e SEO local para pequenos negócios em Portugal</div>
           <h1>Transformo sites fracos em presença digital que transmite confiança e gera contactos</h1>
-          <p>Ajudo <strong>negócios locais e pequenas empresas em Portugal</strong> a melhorar a sua presença online com <strong>criação de sites para empresas, landing pages para serviços, melhoria de sites existentes, páginas de serviço e SEO local</strong>.</p>
+          <p>Ajudo <strong>negócios locais e pequenas empresas em Portugal</strong> a melhorar a sua presença online com <strong>criação de sites, landing pages, melhoria de sites existentes e SEO local</strong>.</p>
           <p><strong>Não vendo só sites.</strong> O objetivo é tornar a tua presença digital mais clara, profissional e orientada para gerar contactos, pedidos e oportunidades reais.</p>
           <p><strong>Com mais de 20 anos em IT</strong>, junto experiência técnica, visão prática e novas ferramentas de IA para criar soluções úteis, rápidas e adaptadas ao mundo real.</p>
           <div class="hero-actions">
             <a href="#contacto" class="btn btn-primary">Analisar o meu site</a>
-            <a href="https://wa.me/31621290605" class="btn btn-secondary">Falar por WhatsApp</a>
+            <a href="https://wa.me/31621290605" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Falar por WhatsApp</a>
           </div>
         </div>
 
@@ -539,11 +863,12 @@
       </div>
     </section>
 
+    <!-- PROBLEMA / SOLUÇÃO -->
     <section>
       <div class="container">
         <div class="section-head">
           <h2>Ter presença online não é o mesmo que estar bem representado</h2>
-          <p>Muitos negócios têm um site ou redes sociais, mas continuam a transmitir uma imagem fraca, pouco clara ou pouco profissional. Isso reduz confiança, enfraquece a imagem da empresa e faz perder contactos que podiam entrar todos os meses.</p>
+          <p>Muitos negócios têm um site ou redes sociais, mas continuam a transmitir uma imagem fraca ou pouco profissional. Isso reduz confiança e faz perder contactos todos os meses.</p>
         </div>
         <div class="grid-2">
           <div class="card glass">
@@ -570,69 +895,110 @@
       </div>
     </section>
 
-    <section>
+    <!-- PORTFOLIO -->
+    <section id="portfolio">
       <div class="container">
         <div class="section-head">
-          <h2>O que o teu site devia estar a fazer</h2>
-          <p>Um site empresarial não devia estar online só para existir. Devia trabalhar por ti, reforçar a tua imagem e facilitar o próximo passo do visitante.</p>
+          <h2>Projetos reais. Negócios reais.</h2>
+          <p>Cada projeto é diferente — de um espaço de bem-estar a uma empresa de construção rural, de uma calculadora de preços a uma plataforma de rádio com visualizador Winamp. O que não muda é o foco em clareza, identidade e resultado.</p>
         </div>
-        <div class="grid-3">
-          <div class="card glass">
-            <h3>Transmitir confiança</h3>
-            <p>Uma presença online profissional ajuda o visitante a sentir que está perante um negócio sério, organizado e credível.</p>
+        <div class="portfolio-grid">
+
+          <!-- DELICARTE — destaque -->
+          <div class="proj proj-featured proj-delicarte">
+            <div class="proj-preview">
+              <div class="delicarte-mock">
+                <span class="dm-brand">Delicarte</span>
+                <span class="dm-sub">by Raquel Oliveira</span>
+                <span class="dm-kicker">Drenagem linfática · Guimarães</span>
+              </div>
+            </div>
+            <div class="proj-info">
+              <span class="proj-type">Site de raiz</span>
+              <h3>Delicarte</h3>
+              <span class="proj-sub">Espaço de bem-estar · Guimarães</span>
+              <p>Identidade visual própria, estrutura orientada para contacto por WhatsApp, SEO local com schema.org e Core Web Vitals otimizados para melhor posição no Google.</p>
+              <div class="proj-tags">
+                <span class="proj-tag">React + Vite</span>
+                <span class="proj-tag">SEO local</span>
+                <span class="proj-tag">Structured data</span>
+                <span class="proj-tag">WhatsApp CTA</span>
+                <span class="proj-tag">Core Web Vitals</span>
+              </div>
+              <a href="https://delicarte.pt/" target="_blank" rel="noopener noreferrer" class="proj-link">Ver site →</a>
+            </div>
           </div>
-          <div class="card glass">
-            <h3>Explicar serviços com clareza</h3>
-            <p>Páginas bem estruturadas ajudam o cliente a perceber rapidamente o que fazes, para quem trabalhas e porque deve falar contigo.</p>
-          </div>
-          <div class="card glass">
-            <h3>Gerar mais contactos</h3>
-            <p>O objetivo final não é só ter visitas. É transformar visitas em pedidos de contacto por formulário, telefone ou WhatsApp.</p>
+
+          <!-- GRID 2 COLUNAS -->
+          <div class="proj-small-grid">
+
+            <!-- MOTIVO RÚSTICO -->
+            <div class="proj proj-small proj-rustico">
+              <div class="proj-preview">
+                <div class="rustico-mock">
+                  <span class="rm-deco">⬡ ⬡ ⬡</span>
+                  <span class="rm-brand">Motivo<br>Rústico</span>
+                  <span class="rm-sub">Terraplanagem · Guimarães</span>
+                </div>
+              </div>
+              <div class="proj-info">
+                <span class="proj-type">Site de raiz</span>
+                <h3>Motivo Rústico</h3>
+                <span class="proj-sub">Terraplanagem, muros, limpezas · Minho</span>
+                <p>Empresa de construção rural com calculadora de preços integrada, galeria de obras, testemunhos e SEO local para Guimarães, Braga e Minho.</p>
+                <div class="proj-tags">
+                  <span class="proj-tag">Calculadora de preços</span>
+                  <span class="proj-tag">Galeria</span>
+                  <span class="proj-tag">Testemunhos</span>
+                  <span class="proj-tag">SEO local</span>
+                </div>
+                <a href="https://motivorustico.pt/" target="_blank" rel="noopener noreferrer" class="proj-link">Ver site →</a>
+              </div>
+            </div>
+
+            <!-- PULSAR FM -->
+            <div class="proj proj-small proj-pulsar">
+              <div class="proj-preview">
+                <div class="pulsar-mock">
+                  <span class="pm-brand">PULSAR FM</span>
+                  <span class="pm-sub">Rádio online · Portugal</span>
+                  <div class="pm-bars" aria-hidden="true">
+                    <span class="pm-bar"></span>
+                    <span class="pm-bar"></span>
+                    <span class="pm-bar"></span>
+                    <span class="pm-bar"></span>
+                    <span class="pm-bar"></span>
+                    <span class="pm-bar"></span>
+                    <span class="pm-bar"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="proj-info">
+                <span class="proj-type">Plataforma web</span>
+                <h3>Pulsar FM</h3>
+                <span class="proj-sub">Rádio online · Portugal</span>
+                <p>Plataforma com 24 estações ao vivo, visualizador estilo Winamp com motor Milkdrop, Trip Mode em ecrã cheio e uma experiência de rádio única no browser.</p>
+                <div class="proj-tags">
+                  <span class="proj-tag">24 rádios ao vivo</span>
+                  <span class="proj-tag">Visualizador Winamp</span>
+                  <span class="proj-tag">Trip Mode</span>
+                  <span class="proj-tag">UX única</span>
+                </div>
+                <a href="https://pulsarfm.eu/" target="_blank" rel="noopener noreferrer" class="proj-link">Ver plataforma →</a>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
     </section>
 
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <h2>Problemas que resolvo na presença digital de pequenos negócios</h2>
-          <p>Esta parte importa porque muitas empresas não precisam de começar do zero. Precisam de corrigir o que está a travar confiança, clareza, conversão e visibilidade online.</p>
-        </div>
-        <div class="grid-3">
-          <div class="card glass">
-            <h3>Site antigo ou com ar amador</h3>
-            <p>Quando a imagem online parece fraca, o visitante assume que o negócio também pode ser fraco. Isso mata confiança logo à partida.</p>
-          </div>
-          <div class="card glass">
-            <h3>Site que não gera contactos</h3>
-            <p>Se a estrutura, o texto ou os botões não empurram para ação, o site perde o objetivo principal: ajudar a trazer clientes.</p>
-          </div>
-          <div class="card glass">
-            <h3>Negócio dependente só de redes sociais</h3>
-            <p>Instagram e Facebook podem ajudar, mas não substituem uma base estável, organizada e preparada para Google.</p>
-          </div>
-          <div class="card glass">
-            <h3>Serviços mal explicados</h3>
-            <p>Muitas empresas têm bons serviços mas explicam-nos mal. Isso cria dúvida e reduz a probabilidade de contacto.</p>
-          </div>
-          <div class="card glass">
-            <h3>Homepage sem foco</h3>
-            <p>Quando tudo aparece misturado, o visitante não entende rapidamente o que a empresa faz nem como avançar.</p>
-          </div>
-          <div class="card glass">
-            <h3>Fraca adaptação ao telemóvel</h3>
-            <p>Hoje, uma página confusa em mobile é um bloqueio direto à conversão e à experiência do utilizador.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    <!-- SERVIÇOS -->
     <section id="servicos">
       <div class="container">
         <div class="section-head">
           <h2>Serviços práticos para negócios que querem tornar-se mais fortes online</h2>
-          <p>Não vendo só “sites”. Trabalho em clareza, estrutura, imagem profissional, SEO local e pontos concretos que ajudam o teu negócio a comunicar melhor e a gerar mais contactos.</p>
+          <p>Não vendo só "sites". Trabalho em clareza, estrutura, imagem profissional, SEO local e pontos concretos que ajudam o teu negócio a comunicar melhor e a gerar mais contactos.</p>
         </div>
         <div class="grid-3">
           <div class="card glass">
@@ -663,123 +1029,7 @@
       </div>
     </section>
 
-    <section id="porque">
-      <div class="container">
-        <div class="section-head">
-          <h2>Porque trabalhar comigo</h2>
-          <p>Não venho só do lado estético. Venho de mais de duas décadas em IT, com experiência real em sistemas, estrutura, resolução de problemas e visão prática aplicada ao mundo dos negócios.</p>
-        </div>
-        <div class="grid-4">
-          <div class="card glass">
-            <h3>20+ anos em IT</h3>
-            <p>Base técnica sólida, experiência real e capacidade de resolver problemas com lógica, critério e calma.</p>
-          </div>
-          <div class="card glass">
-            <h3>Visão técnica e comercial</h3>
-            <p>Olho para o que está mal no site, mas também para o que está a travar confiança, clareza, imagem e contactos.</p>
-          </div>
-          <div class="card glass">
-            <h3>Rapidez com critério</h3>
-            <p>Uso IA para acelerar produção, mas sem sacrificar lógica, estrutura, qualidade de apresentação e utilidade real.</p>
-          </div>
-          <div class="card glass">
-            <h3>Linguagem clara</h3>
-            <p>Sem conversa técnica desnecessária. A ideia é simplificar, clarificar e ajudar o negócio a parecer mais forte online.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <h2>Trabalho com negócios locais em Portugal</h2>
-          <p>Ajudo negócios locais em Guimarães, Braga, Porto e outras zonas do país, mas também trabalho remotamente com pequenas empresas em todo o território nacional. O foco está em serviços, comércio local, obras, alojamento e empresas que precisam de uma imagem online mais forte e mais clara.</p>
-        </div>
-        <div class="grid-3">
-          <div class="card glass">
-            <h3>Negócios locais</h3>
-            <p>Empresas que prestam um bom serviço no terreno mas ainda não têm uma presença online à altura.</p>
-          </div>
-          <div class="card glass">
-            <h3>Pequenas empresas</h3>
-            <p>Negócios que precisam de comunicar melhor, organizar melhor os serviços e facilitar contacto com novos clientes.</p>
-          </div>
-          <div class="card glass">
-            <h3>Prestadores de serviços</h3>
-            <p>Áreas em que confiança, clareza, rapidez de contacto e boa apresentação fazem uma diferença brutal.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <h2>Para quem isto faz sentido</h2>
-          <p>Trabalho sobretudo com negócios locais e pequenas empresas que já prestam um bom serviço, mas cuja presença online ainda não transmite a mesma força.</p>
-        </div>
-        <div class="grid-3">
-          <div class="card glass"><h3>Construção e terraplanagem</h3><p>Serviços fortes no terreno, mas muitas vezes com presença digital fraca ou inexistente.</p></div>
-          <div class="card glass"><h3>Piscinas e obras exteriores</h3><p>Áreas onde uma página clara por serviço pode fazer muita diferença na geração de contactos.</p></div>
-          <div class="card glass"><h3>Barbearias e negócios locais</h3><p>Presença visual, informação clara e contacto rápido são decisivos.</p></div>
-          <div class="card glass"><h3>Alojamento local e turismo</h3><p>Confiança, apresentação e clareza são essenciais para converter interesse em reservas.</p></div>
-          <div class="card glass"><h3>Oficinas e serviços técnicos</h3><p>Negócios sólidos que beneficiam muito de uma imagem online mais séria e organizada.</p></div>
-          <div class="card glass"><h3>Lojas e marcas pequenas</h3><p>Estrutura, clareza e bom encaminhamento ajudam a transmitir mais profissionalismo.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <h2>O que podes pedir</h2>
-          <p>Nem sempre é preciso refazer tudo. Muitas vezes basta corrigir a homepage, organizar serviços, melhorar textos e preparar a página para gerar mais confiança e mais pedidos.</p>
-        </div>
-        <div class="grid-3">
-          <div class="card glass">
-            <h3>Melhorar o meu site atual</h3>
-            <p>Ideal para negócios que já têm presença online, mas sabem que a imagem ou estrutura estão fracas.</p>
-          </div>
-          <div class="card glass">
-            <h3>Criar uma landing page</h3>
-            <p>Boa opção para um serviço específico, campanha, oferta principal ou área onde queres captar contactos.</p>
-          </div>
-          <div class="card glass">
-            <h3>Organizar páginas de serviço</h3>
-            <p>Perfeito para empresas com vários serviços que precisam de mais clareza e melhor SEO local.</p>
-          </div>
-          <div class="card glass">
-            <h3>Rever homepage e mensagem</h3>
-            <p>Quando a página principal não está a explicar bem quem és, o que fazes e porque devem falar contigo.</p>
-          </div>
-          <div class="card glass">
-            <h3>Melhorar formulários e contacto</h3>
-            <p>Para facilitar ação imediata, reduzir fricção e aumentar pedidos por WhatsApp ou formulário.</p>
-          </div>
-          <div class="card glass">
-            <h3>Pedir uma auditoria prática</h3>
-            <p>Recebes uma análise direta com os principais problemas, prioridades e oportunidades de melhoria.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="steps">
-      <div class="container">
-        <div class="section-head">
-          <h2>Como funciona</h2>
-          <p>Sem complicação desnecessária. O objetivo é identificar o que vale a pena melhorar primeiro e entregar algo útil, claro e pronto a usar.</p>
-        </div>
-        <div class="grid-4">
-          <div class="card glass"><span>1</span><h3>Análise</h3><p>Vejo o que já existe e identifico falhas, pontos fracos e oportunidades.</p></div>
-          <div class="card glass"><span>2</span><h3>Direção clara</h3><p>Definimos o que faz mais sentido melhorar primeiro, sem inventar complexidade.</p></div>
-          <div class="card glass"><span>3</span><h3>Execução</h3><p>Crio ou ajusto a página, estrutura, texto ou ferramenta necessária.</p></div>
-          <div class="card glass"><span>4</span><h3>Entrega pronta</h3><p>Recebes uma solução funcional, clara e orientada para gerar mais confiança e mais contacto.</p></div>
-        </div>
-      </div>
-    </section>
-
+    <!-- PREÇOS -->
     <section id="precos" class="pricing">
       <div class="container">
         <div class="section-head">
@@ -811,37 +1061,51 @@
       </div>
     </section>
 
-    <section>
+    <!-- COMO FUNCIONA -->
+    <section class="steps">
       <div class="container">
         <div class="section-head">
-          <h2>Instagram ajuda. Mas não chega.</h2>
-          <p>As redes sociais podem atrair atenção, mas não substituem uma presença digital sólida. A atenção é curta, a informação perde-se e a empresa fica dependente de uma plataforma que não controla.</p>
+          <h2>Como funciona</h2>
+          <p>Sem complicação desnecessária. O objetivo é identificar o que vale a pena melhorar primeiro e entregar algo útil, claro e pronto a usar.</p>
         </div>
-        <div class="grid-2">
+        <div class="grid-4">
+          <div class="card glass"><span>1</span><h3>Análise</h3><p>Vejo o que já existe e identifico falhas, pontos fracos e oportunidades.</p></div>
+          <div class="card glass"><span>2</span><h3>Direção clara</h3><p>Definimos o que faz mais sentido melhorar primeiro, sem inventar complexidade.</p></div>
+          <div class="card glass"><span>3</span><h3>Execução</h3><p>Crio ou ajusto a página, estrutura, texto ou ferramenta necessária.</p></div>
+          <div class="card glass"><span>4</span><h3>Entrega pronta</h3><p>Recebes uma solução funcional, clara e orientada para gerar mais confiança e mais contacto.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORQUE EU -->
+    <section id="porque">
+      <div class="container">
+        <div class="section-head">
+          <h2>Porque trabalhar comigo</h2>
+          <p>Não venho só do lado estético. Venho de mais de duas décadas em IT, com experiência real em sistemas, estrutura, resolução de problemas e visão prática aplicada ao mundo dos negócios.</p>
+        </div>
+        <div class="grid-4">
           <div class="card glass">
-            <h3>O problema de depender só de redes sociais</h3>
-            <ul class="list">
-              <li>A informação perde-se rapidamente no feed</li>
-              <li>Nem toda a gente vai ver os teus conteúdos</li>
-              <li>A plataforma controla alcance e visibilidade</li>
-              <li>É fraco para explicar serviços com clareza</li>
-              <li>Não substitui uma base sólida para Google e SEO</li>
-            </ul>
+            <h3>20+ anos em IT</h3>
+            <p>Base técnica sólida, experiência real e capacidade de resolver problemas com lógica, critério e calma.</p>
           </div>
           <div class="card glass">
-            <h3>O que um site bem feito continua a dar</h3>
-            <ul class="list">
-              <li>Mais confiança e imagem profissional</li>
-              <li>Serviços bem explicados e organizados</li>
-              <li>Melhor contacto e conversão</li>
-              <li>Maior controlo sobre a presença digital</li>
-              <li>Base mais forte para crescer com consistência</li>
-            </ul>
+            <h3>Visão técnica e comercial</h3>
+            <p>Olho para o que está mal no site, mas também para o que está a travar confiança, clareza, imagem e contactos.</p>
+          </div>
+          <div class="card glass">
+            <h3>Rapidez com critério</h3>
+            <p>Uso IA para acelerar produção, mas sem sacrificar lógica, estrutura, qualidade de apresentação e utilidade real.</p>
+          </div>
+          <div class="card glass">
+            <h3>Linguagem clara</h3>
+            <p>Sem conversa técnica desnecessária. A ideia é simplificar, clarificar e ajudar o negócio a parecer mais forte online.</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- FAQ -->
     <section id="faq">
       <div class="container">
         <div class="section-head">
@@ -866,18 +1130,6 @@
             <p>A auditoria prática identifica problemas de clareza, estrutura, mensagem, foco em contacto, adaptação ao telemóvel e oportunidades de melhoria para SEO local e presença digital.</p>
           </div>
           <div class="faq-item">
-            <h3>Trabalhas com empresas em todo o país?</h3>
-            <p>Sim. Trabalho remotamente com pequenos negócios em todo o país, com especial foco em empresas locais e negócios de serviços.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Quanto custa uma landing page?</h3>
-            <p>Depende do objetivo e do nível de detalhe, mas nesta página já tens uma referência base. O importante é perceber primeiro o que vai gerar mais impacto para o negócio.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Quanto tempo demora?</h3>
-            <p>Depende do projeto, mas uma landing page simples e bem definida pode avançar rapidamente. O erro é complicar antes de validar o essencial.</p>
-          </div>
-          <div class="faq-item">
             <h3>Preciso de ter tudo preparado antes de falar contigo?</h3>
             <p>Não. Muitas vezes basta ter o negócio, os serviços e uma noção do que está a falhar. A partir daí, organiza-se o resto com mais clareza.</p>
           </div>
@@ -885,19 +1137,21 @@
       </div>
     </section>
 
+    <!-- CTA -->
     <section id="contacto">
       <div class="container">
         <div class="cta-box glass">
           <h2>Se o teu negócio tem potencial, a tua presença online também devia mostrá-lo</h2>
           <p>Analiso o teu site ou presença online e identifico os pontos que podem estar a limitar confiança, clareza, imagem e contactos. Recebes uma visão prática, direta e sem enfeites sobre o que está a travar resultados.</p>
           <div class="hero-actions">
-            <a href="https://wa.me/31621290605?text=Olá%2C%20quero%20melhorar%20a%20presen%C3%A7a%20digital%20do%20meu%20neg%C3%B3cio." class="btn btn-primary">Falar por WhatsApp</a>
+            <a href="https://wa.me/31621290605?text=Ol%C3%A1%2C%20quero%20melhorar%20a%20presen%C3%A7a%20digital%20do%20meu%20neg%C3%B3cio." class="btn btn-primary" target="_blank" rel="noopener noreferrer">Falar por WhatsApp</a>
             <a href="#formulario-diagnostico" class="btn btn-secondary">Pedir diagnóstico inicial</a>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- FORMULÁRIO -->
     <section id="formulario-diagnostico">
       <div class="container">
         <div class="section-head">
@@ -937,12 +1191,13 @@
 
             <div style="display:flex; gap:0.9rem; flex-wrap:wrap; align-items:center;">
               <button type="submit" class="btn btn-primary">Enviar pedido</button>
-              <a href="https://wa.me/31621290605?text=Olá%2C%20quero%20pedir%20um%20diagn%C3%B3stico%20inicial%20da%20minha%20presen%C3%A7a%20online." class="btn btn-secondary">Ou falar por WhatsApp</a>
+              <a href="https://wa.me/31621290605?text=Ol%C3%A1%2C%20quero%20pedir%20um%20diagn%C3%B3stico%20inicial%20da%20minha%20presen%C3%A7a%20online." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Ou falar por WhatsApp</a>
             </div>
           </form>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer>
