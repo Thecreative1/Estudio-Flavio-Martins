@@ -565,51 +565,49 @@
       .project-content p {
         color: var(--muted);
       }
-      .portfolio-shelf {
-        margin-top: clamp(2rem, 5vw, 4rem);
-      }
-      .shelf-head {
-        display: flex;
-        align-items: end;
-        justify-content: space-between;
-        gap: 1rem;
-        margin-bottom: 1rem;
-      }
-      .shelf-head h3 {
-        color: var(--paper);
-        font-size: clamp(1.7rem, 3vw, 2.7rem);
-      }
-      .shelf-head p {
-        max-width: 58ch;
-        color: var(--muted);
-        font-size: 0.95rem;
-      }
       .mini-project-grid {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(1rem, 2vw, 1.35rem);
       }
       .mini-project-card {
-        min-height: 280px;
+        min-height: 430px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        gap: 1.4rem;
-        padding: 1rem;
+        gap: 1.1rem;
+        padding: clamp(1rem, 2vw, 1.25rem);
         border: 1px solid var(--line);
         border-radius: var(--radius);
         background:
           linear-gradient(
             135deg,
             var(--project-glow, oklch(83% 0.19 145 / 0.12)),
-            transparent 56%
+            transparent 50%
           ),
           oklch(100% 0 0 / 0.045);
         box-shadow: 0 1px 0 oklch(100% 0 0 / 0.05) inset;
+        overflow: hidden;
+        position: relative;
+        isolation: isolate;
         transition:
           transform 180ms ease,
           border-color 180ms ease,
           background 180ms ease;
+      }
+      .mini-project-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        opacity: 0.72;
+        background:
+          linear-gradient(135deg, transparent 0 72%, var(--project-glow)),
+          radial-gradient(
+            circle at 10% 10%,
+            var(--project-glow),
+            transparent 34%
+          );
       }
       .mini-project-card:hover {
         transform: translateY(-3px);
@@ -622,8 +620,8 @@
           ),
           oklch(100% 0 0 / 0.065);
       }
-      .mini-project-card i,
-      .mini-project-card > div > svg {
+      .mini-project-card > div > svg,
+      .visit-line svg {
         width: 1.25rem;
         height: 1.25rem;
         color: var(--project-accent, var(--lime));
@@ -636,13 +634,171 @@
         margin-top: 1.1rem;
         color: var(--paper);
         font-family: var(--font-display);
-        font-size: 1.32rem;
+        font-size: clamp(1.45rem, 2vw, 2.1rem);
         line-height: 1.1;
       }
       .mini-project-card p {
-        margin-top: 0.65rem;
+        max-width: 58ch;
+        margin-top: 0.7rem;
         color: var(--muted);
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+      }
+      .brand-scene {
+        min-height: 168px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 1rem;
+        border: 1px solid oklch(100% 0 0 / 0.12);
+        border-radius: var(--radius-sm);
+        position: relative;
+        overflow: hidden;
+        background: var(--scene-bg, oklch(15% 0.02 180));
+      }
+      .brand-scene img {
+        width: min(78%, 260px);
+        max-height: 105px;
+        object-fit: contain;
+        position: relative;
+        z-index: 2;
+        filter: drop-shadow(0 18px 30px oklch(5% 0.02 180 / 0.44));
+      }
+      .scene-mark {
+        position: relative;
+        z-index: 2;
+        color: var(--scene-mark, var(--paper));
+        font-family: var(--font-display);
+        font-size: clamp(2rem, 5vw, 4.2rem);
+        font-weight: 800;
+        line-height: 0.9;
+      }
+      .scene-circuito {
+        --scene-bg: linear-gradient(
+          145deg,
+          oklch(12% 0.026 190),
+          oklch(22% 0.04 130)
+        );
+      }
+      .scene-circuito::before {
+        content: "";
+        position: absolute;
+        right: -8%;
+        bottom: -24%;
+        width: 74%;
+        height: 58%;
+        border-radius: 52% 48% 0 0;
+        background: oklch(9% 0.014 180 / 0.72);
+        transform: rotate(-8deg);
+      }
+      .scene-circuito::after {
+        content: "";
+        position: absolute;
+        left: 12%;
+        right: 12%;
+        bottom: 26%;
+        height: 4px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--lime), var(--amber));
+        box-shadow: 0 0 28px oklch(83% 0.19 145 / 0.35);
+      }
+      .scene-delicarte {
+        --scene-bg:
+          radial-gradient(
+            circle at 24% 24%,
+            oklch(86% 0.1 25 / 0.42),
+            transparent 30%
+          ),
+          linear-gradient(135deg, oklch(24% 0.04 18), oklch(17% 0.03 350));
+        --scene-mark: oklch(91% 0.055 45);
+      }
+      .scene-delicarte::before,
+      .scene-delicarte::after {
+        content: "";
+        position: absolute;
+        width: 42%;
+        aspect-ratio: 1;
+        border: 1px solid oklch(88% 0.08 32 / 0.42);
+        border-radius: 50%;
+      }
+      .scene-delicarte::before {
+        left: 16%;
+        top: 22%;
+      }
+      .scene-delicarte::after {
+        right: 18%;
+        bottom: 18%;
+      }
+      .scene-rustico {
+        --scene-bg:
+          linear-gradient(135deg, oklch(32% 0.065 64), oklch(17% 0.03 80)),
+          repeating-linear-gradient(
+            45deg,
+            transparent 0 16px,
+            oklch(88% 0.06 80 / 0.08) 16px 18px
+          );
+        --scene-mark: oklch(88% 0.08 76);
+      }
+      .scene-rustico::before {
+        content: "";
+        position: absolute;
+        inset: 18% 12%;
+        background:
+          linear-gradient(
+            30deg,
+            transparent 48%,
+            oklch(90% 0.06 72 / 0.18) 49% 51%,
+            transparent 52%
+          ),
+          linear-gradient(
+            150deg,
+            transparent 48%,
+            oklch(90% 0.06 72 / 0.14) 49% 51%,
+            transparent 52%
+          );
+        background-size: 62px 44px;
+        opacity: 0.8;
+      }
+      .scene-pulsar {
+        --scene-bg:
+          radial-gradient(
+            circle at 52% 40%,
+            oklch(67% 0.22 325 / 0.38),
+            transparent 34%
+          ),
+          linear-gradient(160deg, oklch(12% 0.04 285), oklch(8% 0.03 230));
+        --scene-mark: oklch(88% 0.14 320);
+      }
+      .scene-pulsar::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(
+          180deg,
+          oklch(100% 0 0 / 0.08) 0 1px,
+          transparent 1px 8px
+        );
+      }
+      .eq-bars {
+        width: min(72%, 240px);
+        height: 72px;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        gap: 9px;
+        position: relative;
+        z-index: 2;
+      }
+      .eq-bars span {
+        width: 14px;
+        height: var(--bar);
+        border-radius: 999px 999px 4px 4px;
+        background: linear-gradient(
+          180deg,
+          oklch(80% 0.18 205),
+          oklch(70% 0.22 325)
+        );
+        box-shadow:
+          0 0 16px oklch(80% 0.18 205 / 0.62),
+          0 0 30px oklch(70% 0.22 325 / 0.45);
       }
       .mini-project-meta {
         display: flex;
@@ -660,15 +816,16 @@
         font-size: 0.76rem;
         font-weight: 700;
       }
-      .mini-project-card a {
+      .visit-line {
         display: inline-flex;
         align-items: center;
         gap: 0.45rem;
+        margin-top: 1rem;
         color: var(--project-accent, var(--lime));
         font-size: 0.9rem;
         font-weight: 800;
       }
-      .mini-project-card a svg {
+      .visit-line svg {
         width: 0.95rem;
         height: 0.95rem;
       }
@@ -1071,10 +1228,6 @@
         .form-grid {
           grid-template-columns: 1fr;
         }
-        .shelf-head {
-          align-items: start;
-          flex-direction: column;
-        }
         .project-shot {
           min-height: 260px;
           padding: 1rem;
@@ -1162,8 +1315,8 @@
                 "position": 3,
                 "item": {
                   "@type": "CreativeWork",
-                  "name": "OndeCortar.pt",
-                  "url": "https://ondecortar.pt/"
+                  "name": "Motivo Rústico",
+                  "url": "https://motivorustico.pt/"
                 }
               },
               {
@@ -1171,80 +1324,8 @@
                 "position": 4,
                 "item": {
                   "@type": "CreativeWork",
-                  "name": "Motivo Rústico",
-                  "url": "https://motivorustico.pt/"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 5,
-                "item": {
-                  "@type": "CreativeWork",
-                  "name": "Malmequer bem me Quer",
-                  "url": "https://thecreative1.github.io/MalmequerBemmequer/"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 6,
-                "item": {
-                  "@type": "CreativeWork",
-                  "name": "Martins Bungalow Retreat",
-                  "url": "https://thecreative1.github.io/MartinsBungalowRetreat/"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 7,
-                "item": {
-                  "@type": "CreativeWork",
-                  "name": "Alma do Minho",
-                  "url": "https://thecreative1.github.io/almadominho-site/"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 8,
-                "item": {
-                  "@type": "CreativeWork",
                   "name": "Pulsar FM",
                   "url": "https://pulsarfm.eu/"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 9,
-                "item": {
-                  "@type": "CreativeWork",
-                  "name": "EcoMotor",
-                  "url": "https://thecreative1.github.io/EcoMotor/"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 10,
-                "item": {
-                  "@type": "CreativeWork",
-                  "name": "Crafty Gifts Place",
-                  "url": "https://craftygiftsplace.store/"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 11,
-                "item": {
-                  "@type": "CreativeWork",
-                  "name": "História de Portugal",
-                  "url": "https://thecreative1.github.io/HistoriaPortugal/"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 12,
-                "item": {
-                  "@type": "CreativeWork",
-                  "name": "AutoCompara",
-                  "url": "https://thecreative1.github.io/AutoCompara/"
                 }
               }
             ]
@@ -1393,364 +1474,152 @@
         <div class="container">
           <div class="section-head">
             <div>
-              <span class="label">Portfólio em destaque</span>
-              <h2>Projetos que mostram a máquina inteira a trabalhar.</h2>
+              <span class="label">Portfólio assinado</span>
+              <h2>Projetos reais, cada um com a sua própria voz.</h2>
             </div>
             <p>
-              O objetivo não é só “ficar bonito”. É criar presenças online que
-              explicam, posicionam no Google, dão ferramentas ao visitante e
-              abrem caminho para contacto comercial.
+              A seleção é curta de propósito. São trabalhos que assumo como
+              montra: estratégia, copy, SEO, ferramentas úteis e uma identidade
+              visual que respeita a marca de cada cliente.
             </p>
           </div>
-          <article class="project">
-            <div class="project-visual">
-              <div class="browser-bar">
-                <span>https://circuitocar.blog/</span>
-                <span class="status">published</span>
-              </div>
-              <div class="project-shot">
-                <img
-                  src="https://circuitocar.blog/img/cc.png"
-                  alt="Identidade visual da Circuito Car usada no blog automóvel"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <div class="project-content">
-              <div class="tag-row">
-                <span class="tag">Automóvel</span>
-                <span class="tag">Famalicão</span>
-                <span class="tag">SEO local</span>
-                <span class="tag">Ferramentas</span>
-              </div>
-              <h3>Circuito Car Blog</h3>
-              <p>
-                Blog automóvel para a Circuito Car, stand em Joane, criado para
-                ajudar compradores de carros usados no eixo Famalicão, Braga e
-                Guimarães. Junta guias práticos, stock em destaque, simulador de
-                crédito, simulador de retoma e contacto por WhatsApp.
-              </p>
-              <ul class="project-points">
-                <li>
-                  Conteúdo organizado por intenção de pesquisa: guias locais,
-                  híbridos, família, financiamento e retoma.
-                </li>
-                <li>
-                  Ferramentas interativas para transformar dúvidas em leads com
-                  dados úteis para a equipa comercial.
-                </li>
-                <li>
-                  Arquitetura de confiança: provas, localização, equipa,
-                  horários, stock e próximos passos claros.
-                </li>
-                <li>
-                  Integração com o ecossistema existente da marca, incluindo
-                  stock em circuitocar.pt e contactos diretos.
-                </li>
-              </ul>
-              <div class="stack-row" aria-label="Entregáveis do projeto">
-                <span>UX copy</span> <span>HTML/CSS/JS</span>
-                <span>Schema SEO</span> <span>WhatsApp flows</span>
-                <span>Calculadoras</span>
-              </div>
-              <div class="inline-actions">
-                <a
-                  href="https://circuitocar.blog/"
-                  class="btn btn-primary"
-                  target="_blank"
-                  rel="noopener"
-                  ><i data-lucide="external-link" aria-hidden="true"></i> Abrir
-                  projeto</a
-                >
-                <a href="#contacto" class="btn btn-secondary"
-                  ><i data-lucide="sparkles" aria-hidden="true"></i> Quero algo
-                  assim</a
-                >
-              </div>
-            </div>
-          </article>
-          <div class="portfolio-shelf" aria-label="Outros projetos entregues">
-            <div class="shelf-head">
+          <div class="mini-project-grid" aria-label="Projetos entregues">
+            <a
+              class="mini-project-card"
+              href="https://circuitocar.blog/"
+              target="_blank"
+              rel="noopener"
+              style="
+                --project-accent: var(--lime);
+                --project-glow: oklch(83% 0.19 145 / 0.15);
+              "
+            >
               <div>
-                <span class="label">Mais projetos</span>
-                <h3>Um portfólio com vários tipos de entrega.</h3>
+                <div class="brand-scene scene-circuito">
+                  <img
+                    src="https://circuitocar.blog/img/cc.png"
+                    alt="Identidade visual da Circuito Car Blog"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="mini-project-meta">
+                  <span>Automóvel</span>
+                  <span>SEO local</span>
+                  <span>Simuladores</span>
+                </div>
+                <h4>Circuito Car Blog</h4>
+                <p>
+                  Blog automóvel para a Circuito Car, stand em Joane, com guias
+                  locais, stock selecionado, simulador de crédito, simulador de
+                  retoma e contacto por WhatsApp.
+                </p>
               </div>
-              <p>
-                Sites locais, diretórios, catálogos, turismo, media e conteúdos
-                especializados. Cada peça mostra uma capacidade diferente:
-                posicionar, explicar, converter, organizar ou criar uma
-                experiência útil.
-              </p>
-            </div>
-            <div class="mini-project-grid">
-              <a
-                class="mini-project-card"
-                href="https://delicarte.pt/"
-                target="_blank"
-                rel="noopener"
-                style="
-                  --project-accent: var(--rose);
-                  --project-glow: oklch(70% 0.17 18 / 0.15);
-                "
-              >
-                <div>
-                  <i data-lucide="sparkles" aria-hidden="true"></i>
-                  <h4>Delicarte</h4>
-                  <p>
-                    Site de raiz para um espaço de bem-estar em Guimarães, com
-                    identidade clara, SEO local, dados estruturados, WhatsApp e
-                    uma experiência rápida.
-                  </p>
+              <span class="visit-line"
+                >Abrir projeto
+                <i data-lucide="external-link" aria-hidden="true"></i
+              ></span>
+            </a>
+            <a
+              class="mini-project-card"
+              href="https://delicarte.pt/"
+              target="_blank"
+              rel="noopener"
+              style="
+                --project-accent: oklch(84% 0.1 32);
+                --project-glow: oklch(76% 0.14 22 / 0.16);
+              "
+            >
+              <div>
+                <div class="brand-scene scene-delicarte" aria-hidden="true">
+                  <span class="scene-mark">D</span>
                 </div>
                 <div class="mini-project-meta">
                   <span>Bem-estar</span>
                   <span>SEO local</span>
                   <span>WhatsApp</span>
                 </div>
-              </a>
-              <a
-                class="mini-project-card"
-                href="https://ondecortar.pt/"
-                target="_blank"
-                rel="noopener"
-                style="
-                  --project-accent: var(--cyan);
-                  --project-glow: oklch(78% 0.12 205 / 0.15);
-                "
-              >
-                <div>
-                  <i data-lucide="scissors" aria-hidden="true"></i>
-                  <h4>OndeCortar.pt</h4>
-                  <p>
-                    Diretório para encontrar barbearias em Portugal com mapa,
-                    pesquisa por cidade e estrutura pensada para SEO local.
-                  </p>
-                </div>
-                <div class="mini-project-meta">
-                  <span>Diretório</span>
-                  <span>Mapas</span>
-                  <span>SEO local</span>
-                </div>
-              </a>
-              <a
-                class="mini-project-card"
-                href="https://motivorustico.pt/"
-                target="_blank"
-                rel="noopener"
-                style="
-                  --project-accent: var(--amber);
-                  --project-glow: oklch(78% 0.17 72 / 0.16);
-                "
-              >
-                <div>
-                  <i data-lucide="shovel" aria-hidden="true"></i>
-                  <h4>Motivo Rústico</h4>
-                  <p>
-                    Site para serviços de terraplanagem, muros em pedra e
-                    limpezas com calculadora, galeria, testemunhos e pedidos
-                    diretos.
-                  </p>
+                <h4>Delicarte</h4>
+                <p>
+                  Site de raiz para um espaço de bem-estar em Guimarães. Tom
+                  calmo, SEO local, estrutura de confiança, dados estruturados e
+                  contacto direto por WhatsApp.
+                </p>
+              </div>
+              <span class="visit-line"
+                >Abrir projeto
+                <i data-lucide="external-link" aria-hidden="true"></i
+              ></span>
+            </a>
+            <a
+              class="mini-project-card"
+              href="https://motivorustico.pt/"
+              target="_blank"
+              rel="noopener"
+              style="
+                --project-accent: var(--amber);
+                --project-glow: oklch(78% 0.17 72 / 0.16);
+              "
+            >
+              <div>
+                <div class="brand-scene scene-rustico" aria-hidden="true">
+                  <span class="scene-mark">MR</span>
                 </div>
                 <div class="mini-project-meta">
                   <span>Serviços locais</span>
                   <span>Calculadora</span>
                   <span>Leads</span>
                 </div>
-              </a>
-              <a
-                class="mini-project-card"
-                href="https://thecreative1.github.io/MalmequerBemmequer/"
-                target="_blank"
-                rel="noopener"
-                style="
-                  --project-accent: var(--lime);
-                  --project-glow: oklch(83% 0.19 145 / 0.14);
-                "
-              >
-                <div>
-                  <i data-lucide="shopping-bag" aria-hidden="true"></i>
-                  <h4>Malmequer bem me Quer</h4>
-                  <p>
-                    Catálogo digital mobile-first para comércio local, com
-                    produtos organizados e contacto direto por WhatsApp.
-                  </p>
-                </div>
-                <div class="mini-project-meta">
-                  <span>Catálogo</span>
-                  <span>Comércio</span>
-                  <span>Mobile</span>
-                </div>
-              </a>
-              <a
-                class="mini-project-card"
-                href="https://thecreative1.github.io/MartinsBungalowRetreat/"
-                target="_blank"
-                rel="noopener"
-                style="
-                  --project-accent: var(--cyan);
-                  --project-glow: oklch(78% 0.12 205 / 0.14);
-                "
-              >
-                <div>
-                  <i data-lucide="tree-pine" aria-hidden="true"></i>
-                  <h4>Martins Bungalow Retreat</h4>
-                  <p>
-                    Presença turística para alojamento, com promessa clara,
-                    conteúdo de destino e caminho simples para reserva.
-                  </p>
-                </div>
-                <div class="mini-project-meta">
-                  <span>Turismo</span>
-                  <span>Reservas</span>
-                  <span>Destino</span>
-                </div>
-              </a>
-              <a
-                class="mini-project-card"
-                href="https://thecreative1.github.io/almadominho-site/"
-                target="_blank"
-                rel="noopener"
-                style="
-                  --project-accent: var(--amber);
-                  --project-glow: oklch(78% 0.17 72 / 0.14);
-                "
-              >
-                <div>
-                  <i data-lucide="map" aria-hidden="true"></i>
-                  <h4>Alma do Minho</h4>
-                  <p>
-                    Guia de slow travel para o Norte de Portugal, com conteúdo
-                    editorial sobre Guimarães, Braga, Gerês, comida e vinho
-                    verde.
-                  </p>
-                </div>
-                <div class="mini-project-meta">
-                  <span>Conteúdo</span>
-                  <span>Turismo</span>
-                  <span>Blog</span>
-                </div>
-              </a>
-              <a
-                class="mini-project-card"
-                href="https://pulsarfm.eu/"
-                target="_blank"
-                rel="noopener"
-                style="
-                  --project-accent: var(--rose);
-                  --project-glow: oklch(70% 0.17 18 / 0.14);
-                "
-              >
-                <div>
-                  <i data-lucide="radio" aria-hidden="true"></i>
-                  <h4>Pulsar FM</h4>
-                  <p>
-                    Plataforma de rádios online com visualizador retro estilo
-                    Winamp, Trip Mode e uma experiência interativa memorável.
-                  </p>
+                <h4>Motivo Rústico</h4>
+                <p>
+                  Presença local para terraplanagens, muros em pedra e limpezas
+                  no Minho, com calculadora, galeria, prova social e pedido de
+                  orçamento simples.
+                </p>
+              </div>
+              <span class="visit-line"
+                >Abrir projeto
+                <i data-lucide="external-link" aria-hidden="true"></i
+              ></span>
+            </a>
+            <a
+              class="mini-project-card"
+              href="https://pulsarfm.eu/"
+              target="_blank"
+              rel="noopener"
+              style="
+                --project-accent: oklch(80% 0.18 205);
+                --project-glow: oklch(70% 0.22 325 / 0.18);
+              "
+            >
+              <div>
+                <div class="brand-scene scene-pulsar" aria-hidden="true">
+                  <span class="eq-bars">
+                    <span style="--bar: 38%"></span>
+                    <span style="--bar: 74%"></span>
+                    <span style="--bar: 52%"></span>
+                    <span style="--bar: 92%"></span>
+                    <span style="--bar: 64%"></span>
+                    <span style="--bar: 82%"></span>
+                    <span style="--bar: 44%"></span>
+                  </span>
                 </div>
                 <div class="mini-project-meta">
                   <span>Media</span>
-                  <span>Interativo</span>
+                  <span>Neon UI</span>
                   <span>Visualizador</span>
                 </div>
-              </a>
-              <a
-                class="mini-project-card"
-                href="https://thecreative1.github.io/EcoMotor/"
-                target="_blank"
-                rel="noopener"
-                style="
-                  --project-accent: var(--lime);
-                  --project-glow: oklch(83% 0.19 145 / 0.13);
-                "
-              >
-                <div>
-                  <i data-lucide="car-front" aria-hidden="true"></i>
-                  <h4>EcoMotor</h4>
-                  <p>
-                    Projeto automóvel para peças e manutenção, com estrutura de
-                    comparação, navegação clara e foco em decisões rápidas.
-                  </p>
-                </div>
-                <div class="mini-project-meta">
-                  <span>Automóvel</span>
-                  <span>Pesquisa</span>
-                  <span>Comparador</span>
-                </div>
-              </a>
-              <a
-                class="mini-project-card"
-                href="https://craftygiftsplace.store/"
-                target="_blank"
-                rel="noopener"
-                style="
-                  --project-accent: var(--amber);
-                  --project-glow: oklch(78% 0.17 72 / 0.15);
-                "
-              >
-                <div>
-                  <i data-lucide="gift" aria-hidden="true"></i>
-                  <h4>Crafty Gifts Place</h4>
-                  <p>
-                    Montra multilingue para presentes artesanais em madeira,
-                    preparada para apresentar produtos e encaminhar para compra.
-                  </p>
-                </div>
-                <div class="mini-project-meta">
-                  <span>E-commerce</span>
-                  <span>Multilingue</span>
-                  <span>Produtos</span>
-                </div>
-              </a>
-              <a
-                class="mini-project-card"
-                href="https://thecreative1.github.io/HistoriaPortugal/"
-                target="_blank"
-                rel="noopener"
-                style="
-                  --project-accent: var(--cyan);
-                  --project-glow: oklch(78% 0.12 205 / 0.13);
-                "
-              >
-                <div>
-                  <i data-lucide="landmark" aria-hidden="true"></i>
-                  <h4>História de Portugal</h4>
-                  <p>
-                    Site de conteúdo educativo com narrativa histórica,
-                    estrutura clara e leitura simples para diferentes públicos.
-                  </p>
-                </div>
-                <div class="mini-project-meta">
-                  <span>Educação</span>
-                  <span>Conteúdo</span>
-                  <span>PT / EN</span>
-                </div>
-              </a>
-              <a
-                class="mini-project-card"
-                href="https://thecreative1.github.io/AutoCompara/"
-                target="_blank"
-                rel="noopener"
-                style="
-                  --project-accent: var(--rose);
-                  --project-glow: oklch(70% 0.17 18 / 0.13);
-                "
-              >
-                <div>
-                  <i data-lucide="gauge" aria-hidden="true"></i>
-                  <h4>AutoCompara</h4>
-                  <p>
-                    Conceito automóvel para comparar opções, organizar peças e
-                    ajudar visitantes a perceberem alternativas com rapidez.
-                  </p>
-                </div>
-                <div class="mini-project-meta">
-                  <span>Automóvel</span>
-                  <span>Comparação</span>
-                  <span>Catálogo</span>
-                </div>
-              </a>
-            </div>
+                <h4>Pulsar FM</h4>
+                <p>
+                  Rádios online com alma retro: visualizador estilo Winamp, Trip
+                  Mode, interface neon e uma experiência mais memorável do que
+                  uma lista de links.
+                </p>
+              </div>
+              <span class="visit-line"
+                >Abrir projeto
+                <i data-lucide="external-link" aria-hidden="true"></i
+              ></span>
+            </a>
           </div>
         </div>
       </section>
@@ -1759,7 +1628,7 @@
           <div class="section-head">
             <div>
               <span class="label">Capacidades</span>
-              <h2>O que consigo entregar aos teus clientes.</h2>
+              <h2>O que levo para cada projeto.</h2>
             </div>
             <p>
               Uma página moderna precisa de mais do que uma boa imagem. Precisa
