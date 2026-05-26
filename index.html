@@ -1240,6 +1240,268 @@
           flex-direction: column;
         }
       }
+
+      /* ─── Console entrance sequence ───────────────────── */
+      @media (prefers-reduced-motion: no-preference) {
+        .diagnostic-line {
+          opacity: 0;
+          animation: console-in 380ms cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+        .diagnostic-line:nth-child(1) { animation-delay: 820ms; }
+        .diagnostic-line:nth-child(2) { animation-delay: 1040ms; }
+        .diagnostic-line:nth-child(3) { animation-delay: 1260ms; }
+        .signal-grid {
+          opacity: 0;
+          animation: console-in 380ms cubic-bezier(0.16, 1, 0.3, 1) 1480ms both;
+        }
+        @keyframes console-in {
+          from { opacity: 0; transform: translateX(-8px); }
+          to   { opacity: 1; transform: translateX(0); }
+        }
+        .status::before {
+          animation: dot-pulse 2.6s ease-in-out infinite;
+        }
+        @keyframes dot-pulse {
+          0%, 100% { box-shadow: 0 0 0 0 oklch(83% 0.19 145 / 0.55); }
+          58%       { box-shadow: 0 0 0 6px oklch(83% 0.19 145 / 0); }
+        }
+        .eq-bars span {
+          animation: eq-dance var(--eq-speed, 1s) ease-in-out infinite alternate;
+        }
+        .eq-bars span:nth-child(1) { --eq-speed: 0.88s; animation-delay:   0ms; }
+        .eq-bars span:nth-child(2) { --eq-speed: 1.14s; animation-delay:  75ms; }
+        .eq-bars span:nth-child(3) { --eq-speed: 0.82s; animation-delay: 150ms; }
+        .eq-bars span:nth-child(4) { --eq-speed: 1.22s; animation-delay:  38ms; }
+        .eq-bars span:nth-child(5) { --eq-speed: 0.94s; animation-delay: 113ms; }
+        .eq-bars span:nth-child(6) { --eq-speed: 1.08s; animation-delay: 188ms; }
+        .eq-bars span:nth-child(7) { --eq-speed: 0.90s; animation-delay:  63ms; }
+        @keyframes eq-dance {
+          from { height: calc(var(--bar) * 0.2 + 8%); }
+          to   { height: var(--bar); }
+        }
+        /* Scroll-triggered reveals */
+        .io-item {
+          opacity: 0;
+          transform: translateY(22px);
+          transition:
+            opacity  560ms cubic-bezier(0.16, 1, 0.3, 1),
+            transform 560ms cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .io-item.io-visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* ─── Capability watermark numbers ─────────────────── */
+      .capability {
+        position: relative;
+      }
+      .capability-number {
+        position: absolute;
+        top: -0.18em;
+        right: -0.04em;
+        color: var(--paper);
+        font-family: var(--font-display);
+        font-size: 8rem;
+        font-weight: 700;
+        line-height: 1;
+        opacity: 0.052;
+        pointer-events: none;
+        user-select: none;
+        z-index: 0;
+      }
+      .capability-number-label {
+        display: inline-block;
+        margin-bottom: 0.45rem;
+        color: var(--lime);
+        font-family: var(--font-display);
+        font-size: 0.86rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+      .capability > div {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* ─── Project card scene hover ─────────────────────── */
+      .brand-scene {
+        transition: transform 380ms cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .mini-project-card:hover .brand-scene {
+        transform: scale(1.04);
+      }
+
+      /* ─── Process connector + circle steps ─────────────── */
+      .process-grid {
+        position: relative;
+      }
+      @media (min-width: 1021px) {
+        .process-grid::after {
+          content: "";
+          position: absolute;
+          top: 2.2rem;
+          left: 4%;
+          right: 4%;
+          height: 1px;
+          background: linear-gradient(
+            90deg,
+            var(--amber),
+            var(--lime) 33%,
+            var(--cyan) 66%,
+            var(--rose)
+          );
+          opacity: 0.3;
+          z-index: 0;
+        }
+      }
+      .process-step {
+        position: relative;
+        z-index: 1;
+      }
+      .process-step::before {
+        content: "0" counter(process);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-bottom: 1.5rem;
+        border-radius: 50%;
+        border: 1px solid var(--line-strong);
+        background: var(--ink-2);
+        color: var(--amber);
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 0.82rem;
+        box-shadow:
+          0 0 0 4px oklch(78% 0.17 72 / 0.1),
+          0 0 0 8px oklch(78% 0.17 72 / 0.04);
+      }
+
+      /* ─── Sobre / About section ────────────────────────── */
+      .sobre {
+        background:
+          linear-gradient(180deg, oklch(100% 0 0 / 0.028), transparent 30%),
+          oklch(11% 0.02 180 / 0.42);
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+        gap: clamp(2rem, 5vw, 4rem);
+        align-items: start;
+      }
+      .about-lead {
+        margin-bottom: 1rem;
+        color: var(--paper);
+        font-size: clamp(1.06rem, 1.85vw, 1.26rem);
+        font-weight: 600;
+        line-height: 1.55;
+      }
+      .about-body {
+        color: var(--muted);
+        font-size: 0.97rem;
+        line-height: 1.74;
+      }
+      .about-body + .about-body {
+        margin-top: 0.85rem;
+      }
+      .about-stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.7rem;
+        margin-top: 1.9rem;
+      }
+      .about-stat {
+        padding: 0.95rem;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: oklch(100% 0 0 / 0.035);
+      }
+      .about-stat strong {
+        display: block;
+        color: var(--lime);
+        font-family: var(--font-display);
+        font-size: 1.7rem;
+        font-weight: 700;
+        line-height: 1;
+      }
+      .about-stat span {
+        display: block;
+        margin-top: 0.32rem;
+        color: var(--muted);
+        font-size: 0.8rem;
+      }
+      .testimonial-stack {
+        display: grid;
+        gap: 1rem;
+      }
+      .testimonial {
+        padding: 1.3rem;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: oklch(100% 0 0 / 0.04);
+        box-shadow: 0 1px 0 oklch(100% 0 0 / 0.05) inset;
+      }
+      .testimonial p {
+        color: var(--paper);
+        font-size: 0.95rem;
+        line-height: 1.68;
+        font-style: italic;
+      }
+      .testimonial p::before {
+        content: "\201C";
+        color: var(--lime);
+        font-family: var(--font-display);
+        font-size: 2.2rem;
+        line-height: 0.5;
+        vertical-align: -0.45em;
+        margin-right: 0.12em;
+        opacity: 0.6;
+        font-style: normal;
+      }
+      .testimonial cite {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        margin-top: 1rem;
+        color: var(--lime);
+        font-family: var(--font-display);
+        font-size: 0.82rem;
+        font-weight: 700;
+        font-style: normal;
+      }
+      .testimonial cite::before {
+        content: "";
+        flex: 0 0 1.6rem;
+        height: 1px;
+        background: currentColor;
+        opacity: 0.45;
+      }
+      .about-cta-note {
+        padding: 1.1rem;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: oklch(83% 0.19 145 / 0.05);
+        color: var(--muted);
+        font-size: 0.92rem;
+        line-height: 1.62;
+      }
+      .about-cta-note strong {
+        display: block;
+        margin-bottom: 0.4rem;
+        color: var(--paper);
+        font-family: var(--font-display);
+        font-size: 1rem;
+      }
+      @media (max-width: 1020px) {
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
     <script type="application/ld+json">
       {
@@ -1384,6 +1646,7 @@
         </a>
         <nav class="nav-links" aria-label="Navegação principal">
           <a href="#portfolio">Portfólio</a>
+          <a href="#sobre">Sobre</a>
           <a href="#capacidades">Capacidades</a>
           <a href="#servicos">Serviços</a> <a href="#precos">Preços</a>
           <a href="#contacto" class="nav-cta">Diagnóstico</a>
@@ -1623,6 +1886,59 @@
           </div>
         </div>
       </section>
+
+      <section id="sobre" class="sobre">
+        <div class="container">
+          <div class="about-grid">
+            <div>
+              <span class="label">Quem está por detrás</span>
+              <h2>20 anos em IT.<br><span style="color:var(--lime)">Foco em resultados reais.</span></h2>
+              <p class="about-lead">
+                Comecei em infraestrutura e suporte técnico. Passei por projetos corporativos, automação e sistemas internos. Hoje aplico essa base técnica em algo mais direto: presença digital que funciona de verdade.
+              </p>
+              <p class="about-body">
+                Não crio sites bonitos por criar. Olho para o negócio, percebo o que trava o contacto e construo uma estrutura que explica a oferta, gera confiança e facilita a ação.
+              </p>
+              <p class="about-body">
+                Trabalho com um número pequeno de clientes de cada vez. Sem agência, sem intermediários. Um ponto de contacto, uma entrega, um resultado que se mede.
+              </p>
+              <div class="about-stats">
+                <div class="about-stat">
+                  <strong>20+</strong>
+                  <span>anos em IT e sistemas</span>
+                </div>
+                <div class="about-stat">
+                  <strong>4</strong>
+                  <span>projetos entregues com identidade própria</span>
+                </div>
+                <div class="about-stat">
+                  <strong>PT</strong>
+                  <span>negócios locais em todo o país</span>
+                </div>
+                <div class="about-stat">
+                  <strong>100%</strong>
+                  <span>remoto, sem complicações</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-stack">
+              <div class="testimonial">
+                <p>O blog passou a trazer contactos por WhatsApp de pessoas que já viram os carros e sabem o que querem. Antes tinham de explicar tudo de início. Agora chegam à conversa com contexto, e isso poupa tempo dos dois lados.</p>
+                <cite>Circuito Car, Stand automóvel em Joane</cite>
+              </div>
+              <div class="testimonial">
+                <p>A calculadora foi o que mais surpreendeu. O cliente preenche, percebe logo a ordem de grandeza do orçamento, e quando liga já sabe que é para avançar. Os pedidos ficaram mais qualificados.</p>
+                <cite>Motivo Rústico, Terraplanagens e muros no Minho</cite>
+              </div>
+              <div class="about-cta-note">
+                <strong>Preferes conversar primeiro?</strong>
+                Podes enviar o teu projeto por WhatsApp ou preencher o formulário abaixo. Respondo em menos de 24 horas.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="capacidades">
         <div class="container">
           <div class="section-head">
@@ -2060,6 +2376,51 @@
           "https://wa.me/31621290605?text=" + encodeURIComponent(textoWhatsapp),
           "_blank",
         );
+      });
+    </script>
+    <script>
+      // Inject visible capability number labels (watermark stays as ghost)
+      document.querySelectorAll('.capability').forEach(function(el) {
+        var numEl = el.querySelector('.capability-number');
+        var contentDiv = Array.from(el.children).find(function(c) { return c.tagName === 'DIV'; });
+        if (numEl && contentDiv) {
+          numEl.setAttribute('aria-hidden', 'true');
+          var label = document.createElement('span');
+          label.className = 'capability-number-label';
+          label.setAttribute('aria-hidden', 'true');
+          label.textContent = numEl.textContent.trim();
+          contentDiv.prepend(label);
+        }
+      });
+
+      // Scroll-triggered reveals via IntersectionObserver
+      var ioSelector = [
+        '.capability', '.service', '.process-step', '.price-card',
+        '.mini-project-card', '.faq-item', '.testimonial',
+        '.about-stat', '.about-cta-note',
+        '.section-head > div', '.section-head > p'
+      ].join(', ');
+
+      var ioObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('io-visible');
+            ioObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+      document.querySelectorAll(ioSelector).forEach(function(el) {
+        // Stagger siblings that share the same parent
+        var siblings = Array.from(el.parentElement.children).filter(function(c) {
+          return c.matches && c.matches(ioSelector);
+        });
+        var idx = siblings.indexOf(el);
+        if (idx > 0) {
+          el.style.transitionDelay = Math.min(idx * 80, 400) + 'ms';
+        }
+        el.classList.add('io-item');
+        ioObserver.observe(el);
       });
     </script>
   </body>
