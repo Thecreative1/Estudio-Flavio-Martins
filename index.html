@@ -3,2425 +3,399 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Estúdio Flávio Martins | Sites, SEO Local e Ferramentas Digitais
-    </title>
-    <meta
-      name="description"
-      content="Criação e melhoria de sites, landing pages, SEO local, conteúdo estratégico e ferramentas digitais para negócios que querem gerar mais contactos."
-    />
+    <title>Estúdio Flávio Martins | Produtos digitais que se fazem notar</title>
+    <meta name="description" content="Sites, plataformas, SEO local e ferramentas digitais desenhadas e construídas por Flávio Martins. Conheça AutoRetoma, OndeCortar e outros projetos reais." />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="canonical" href="https://estudiofm.pt/" />
-    <meta
-      property="og:title"
-      content="Estúdio Flávio Martins | Sites, SEO Local e Ferramentas Digitais"
-    />
-    <meta
-      property="og:description"
-      content="Portfólio e serviços para transformar presença online em confiança, clareza e pedidos de contacto."
-    />
+    <meta property="og:title" content="Estúdio Flávio Martins | Produtos digitais que se fazem notar" />
+    <meta property="og:description" content="Estratégia, design e código para transformar ideias em produtos digitais úteis." />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_PT" />
     <meta property="og:url" content="https://estudiofm.pt/" />
     <meta property="og:site_name" content="Estúdio Flávio Martins" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Estúdio Flávio Martins | Sites, SEO Local e Ferramentas Digitais"
-    />
-    <meta
-      name="twitter:description"
-      content="Crio sites, landing pages e ferramentas digitais úteis para negócios locais e pequenas empresas."
-    />
-    <meta name="theme-color" content="#101819" />
+    <meta name="theme-color" content="#111826" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Sora:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <style>
       :root {
-        --ink: oklch(14% 0.022 180);
-        --ink-2: oklch(18% 0.028 180);
-        --panel: oklch(22% 0.035 178);
-        --panel-2: oklch(26% 0.036 178);
-        --paper: oklch(94% 0.016 110);
-        --paper-soft: oklch(86% 0.025 115);
-        --muted: oklch(72% 0.035 150);
-        --muted-2: oklch(60% 0.035 160);
-        --line: oklch(78% 0.04 165 / 0.18);
-        --line-strong: oklch(84% 0.09 145 / 0.38);
-        --lime: oklch(83% 0.19 145);
-        --lime-soft: oklch(74% 0.12 145 / 0.18);
-        --amber: oklch(78% 0.17 72);
-        --cyan: oklch(78% 0.12 205);
-        --rose: oklch(70% 0.17 18);
-        --shadow: 0 28px 80px oklch(8% 0.02 180 / 0.36);
-        --max: 1180px;
-        --radius: 8px;
-        --radius-sm: 5px;
-        --font-display: "Chakra Petch", "Segoe UI", sans-serif;
-        --font-body: "Sora", "Segoe UI", sans-serif;
-      }
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        min-height: 100vh;
-        background: linear-gradient(
-          135deg,
-          oklch(14% 0.026 178) 0%,
-          oklch(12% 0.028 200) 42%,
-          oklch(17% 0.035 140) 100%
-        );
-        color: var(--paper);
-        font-family: var(--font-body);
-        line-height: 1.65;
-        overflow-x: hidden;
-      }
-      body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        z-index: -2;
-        background:
-          linear-gradient(90deg, oklch(100% 0 0 / 0.035) 1px, transparent 1px),
-          linear-gradient(180deg, oklch(100% 0 0 / 0.03) 1px, transparent 1px);
-        background-size: 46px 46px;
-        mask-image: linear-gradient(180deg, black 0%, transparent 88%);
-      }
-      body::after {
-        content: "";
-        position: fixed;
-        inset: 0;
-        z-index: -1;
-        pointer-events: none;
-        background:
-          linear-gradient(
-            120deg,
-            transparent 0 34%,
-            oklch(83% 0.19 145 / 0.09) 34% 35%,
-            transparent 35% 100%
-          ),
-          linear-gradient(
-            160deg,
-            transparent 0 58%,
-            oklch(78% 0.17 72 / 0.09) 58% 59%,
-            transparent 59% 100%
-          );
-      }
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-      img {
-        display: block;
-        max-width: 100%;
-      }
-      button,
-      input,
-      textarea {
-        font: inherit;
-      }
-      .container {
-        width: min(100% - 2rem, var(--max));
-        margin: 0 auto;
-      }
-      .site-header {
-        position: sticky;
-        top: 0;
-        z-index: 50;
-        background: oklch(14% 0.022 180 / 0.94);
-        border-bottom: 1px solid var(--line);
-      }
-      .nav {
-        min-height: 76px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-      }
-      .brand {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.75rem;
-        font-family: var(--font-display);
-        font-weight: 700;
-        line-height: 1;
-      }
-      .brand-mark {
-        display: grid;
-        width: 42px;
-        height: 42px;
-        place-items: center;
-        border: 1px solid var(--line-strong);
-        border-radius: var(--radius-sm);
-        background:
-          linear-gradient(135deg, oklch(83% 0.19 145 / 0.2), transparent),
-          var(--panel);
-        color: var(--lime);
-        box-shadow: inset 0 0 0 1px oklch(100% 0 0 / 0.04);
-      }
-      .brand-text {
-        display: grid;
-        gap: 0.16rem;
-      }
-      .brand-text small {
-        color: var(--muted);
-        font-family: var(--font-body);
-        font-size: 0.72rem;
-        font-weight: 600;
-      }
-      .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 0.45rem;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-      }
-      .nav-links a {
-        display: inline-flex;
-        align-items: center;
-        min-height: 40px;
-        padding: 0.62rem 0.85rem;
-        border: 1px solid transparent;
-        border-radius: var(--radius-sm);
-        color: var(--muted);
-        font-size: 0.9rem;
-        font-weight: 600;
-        transition:
-          color 180ms ease,
-          border-color 180ms ease,
-          background 180ms ease;
-      }
-      .nav-links a:hover {
-        color: var(--paper);
-        border-color: var(--line);
-        background: oklch(100% 0 0 / 0.035);
-      }
-      .nav-links .nav-cta {
-        color: var(--ink);
-        border-color: transparent;
-        background: var(--lime);
-      }
-      .nav-links .nav-cta:hover {
-        color: var(--ink);
-        border-color: transparent;
-        background: color-mix(in oklch, var(--lime) 86%, var(--paper));
-      }
-      main {
-        overflow: hidden;
-      }
-      section {
-        padding: clamp(4rem, 7vw, 7rem) 0;
-      }
-      .hero {
-        padding-top: clamp(2.9rem, 5vw, 5rem);
-        padding-bottom: clamp(3.25rem, 6vw, 5.5rem);
-      }
-      .hero-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
-        gap: clamp(2rem, 5vw, 4rem);
-        align-items: center;
-      }
-      .kicker {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.55rem;
-        margin-bottom: 1.2rem;
-        color: var(--lime);
-        font-family: var(--font-display);
-        font-size: 0.94rem;
-        font-weight: 700;
-      }
-      .kicker::before {
-        content: "";
-        width: 0.72rem;
-        height: 0.72rem;
-        border-radius: 50%;
-        background: var(--amber);
-        box-shadow: 0 0 0 5px oklch(78% 0.17 72 / 0.12);
-      }
-      h1,
-      h2,
-      h3 {
-        font-family: var(--font-display);
-        line-height: 1.04;
-        letter-spacing: 0;
-      }
-      h1 {
-        max-width: 13.8ch;
-        margin-bottom: 1.2rem;
-        font-size: clamp(2.55rem, 5vw, 5rem);
-        font-weight: 700;
-      }
-      h1 span {
-        color: var(--lime);
-      }
-      .hero-copy {
-        max-width: 68ch;
-        color: var(--muted);
-        font-size: clamp(1rem, 1.55vw, 1.18rem);
-      }
-      .hero-copy strong {
-        color: var(--paper);
-        font-weight: 700;
-      }
-      .hero-actions,
-      .inline-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.8rem;
-        margin-top: 1.8rem;
-      }
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.55rem;
-        min-height: 48px;
-        padding: 0.86rem 1.05rem;
-        border: 1px solid var(--line);
-        border-radius: var(--radius-sm);
-        background: oklch(100% 0 0 / 0.04);
-        color: var(--paper);
-        font-weight: 700;
-        cursor: pointer;
-        transition:
-          transform 180ms ease,
-          background 180ms ease,
-          border-color 180ms ease,
-          color 180ms ease;
-      }
-      .btn svg {
-        width: 1.05rem;
-        height: 1.05rem;
-        flex: 0 0 auto;
-      }
-      .btn:hover {
-        transform: translateY(-2px);
-        border-color: var(--line-strong);
-        background: oklch(100% 0 0 / 0.075);
-      }
-      .btn-primary {
-        border-color: transparent;
-        background: var(--lime);
-        color: var(--ink);
-        box-shadow: 0 18px 44px oklch(83% 0.19 145 / 0.22);
-      }
-      .btn-primary:hover {
-        background: color-mix(in oklch, var(--lime) 86%, var(--paper));
-        border-color: transparent;
-      }
-      .btn-secondary {
-        border-color: oklch(78% 0.12 205 / 0.34);
-        color: var(--cyan);
-      }
-      .trust-strip {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 0.7rem;
-        margin-top: 2rem;
-        max-width: 760px;
-      }
-      .trust-strip div {
-        min-height: 78px;
-        padding: 0.85rem;
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background: oklch(100% 0 0 / 0.035);
-      }
-      .trust-strip strong {
-        display: block;
-        color: var(--paper);
-        font-family: var(--font-display);
-        font-size: 1.04rem;
-      }
-      .trust-strip span {
-        color: var(--muted);
-        font-size: 0.86rem;
-      }
-      .console {
-        border: 1px solid var(--line-strong);
-        border-radius: var(--radius);
-        background: linear-gradient(
-          180deg,
-          oklch(24% 0.04 178),
-          oklch(16% 0.028 185)
-        );
-        box-shadow: var(--shadow);
-        overflow: hidden;
-      }
-      .console-top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-        padding: 0.82rem 0.95rem;
-        border-bottom: 1px solid var(--line);
-        background: oklch(100% 0 0 / 0.04);
-        color: var(--muted);
-        font-family: var(--font-display);
-        font-size: 0.88rem;
-      }
-      .console-dots {
-        display: inline-flex;
-        gap: 0.42rem;
-      }
-      .console-dots span {
-        width: 0.64rem;
-        height: 0.64rem;
-        border-radius: 50%;
-        background: var(--rose);
-      }
-      .console-dots span:nth-child(2) {
-        background: var(--amber);
-      }
-      .console-dots span:nth-child(3) {
-        background: var(--lime);
-      }
-      .console-body {
-        padding: clamp(1.1rem, 3vw, 1.65rem);
-        display: grid;
-        gap: 1.1rem;
-      }
-      .diagnostic-line {
-        display: grid;
-        grid-template-columns: auto 1fr auto;
-        gap: 0.7rem;
-        align-items: center;
-        padding: 0.75rem;
-        border: 1px solid oklch(100% 0 0 / 0.07);
-        border-radius: var(--radius-sm);
-        background: oklch(9% 0.018 180 / 0.36);
-        color: var(--muted);
-        font-size: 0.9rem;
-      }
-      .diagnostic-line strong {
-        color: var(--paper);
-        font-family: var(--font-display);
-      }
-      .status {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.35rem;
-        color: var(--lime);
-        font-family: var(--font-display);
-        font-size: 0.82rem;
-        font-weight: 700;
-      }
-      .status::before {
-        content: "";
-        width: 0.55rem;
-        height: 0.55rem;
-        border-radius: 50%;
-        background: currentColor;
-      }
-      .signal-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0.75rem;
-      }
-      .signal {
-        min-height: 118px;
-        padding: 0.9rem;
-        border: 1px solid var(--line);
-        border-radius: var(--radius-sm);
-        background: oklch(100% 0 0 / 0.035);
-        position: relative;
-        overflow: hidden;
-      }
-      .signal::after {
-        content: "";
-        position: absolute;
-        left: 0.9rem;
-        right: 0.9rem;
-        bottom: 0.85rem;
-        height: 4px;
-        border-radius: 999px;
-        background: linear-gradient(
-          90deg,
-          var(--lime),
-          var(--cyan),
-          var(--amber)
-        );
-      }
-      .signal small {
-        color: var(--muted);
-        font-size: 0.74rem;
-        font-weight: 700;
-      }
-      .signal strong {
-        display: block;
-        margin-top: 0.28rem;
-        color: var(--paper);
-        font-family: var(--font-display);
-        font-size: 1.2rem;
-        line-height: 1.15;
-      }
-      .section-head {
-        display: grid;
-        grid-template-columns: minmax(0, 0.8fr) minmax(280px, 0.55fr);
-        gap: clamp(1.4rem, 4vw, 3rem);
-        align-items: end;
-        margin-bottom: clamp(1.6rem, 4vw, 3rem);
-      }
-      .section-head.full {
-        max-width: 820px;
-        grid-template-columns: 1fr;
-      }
-      .label {
-        display: inline-block;
-        margin-bottom: 0.75rem;
-        color: var(--amber);
-        font-family: var(--font-display);
-        font-size: 0.92rem;
-        font-weight: 700;
-      }
-      .section-head h2 {
-        font-size: clamp(2rem, 4vw, 4rem);
-        font-weight: 700;
-      }
-      .section-head p {
-        color: var(--muted);
-        font-size: 1rem;
-      }
-      .portfolio {
-        background:
-          linear-gradient(180deg, oklch(100% 0 0 / 0.03), transparent 28%),
-          oklch(11% 0.018 180 / 0.4);
-        border-top: 1px solid var(--line);
-        border-bottom: 1px solid var(--line);
-      }
-      .project {
-        display: grid;
-        grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
-        gap: clamp(1.2rem, 4vw, 2rem);
-        align-items: start;
-      }
-      .project-visual,
-      .project-content,
-      .capability,
-      .service,
-      .process-step,
-      .price-card,
-      .faq-item,
-      .contact-panel,
-      .form-panel {
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background: oklch(100% 0 0 / 0.045);
-        box-shadow: 0 1px 0 oklch(100% 0 0 / 0.05) inset;
-      }
-      .project-visual {
-        display: grid;
-        grid-template-rows: auto 1fr;
-        overflow: hidden;
-        background:
-          linear-gradient(135deg, oklch(83% 0.19 145 / 0.12), transparent 48%),
-          linear-gradient(180deg, oklch(24% 0.036 180), oklch(15% 0.025 185));
-      }
-      .browser-bar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-        padding: 0.9rem 1rem;
-        border-bottom: 1px solid var(--line);
-        color: var(--muted);
-        font-size: 0.84rem;
-      }
-      .project-shot {
-        display: grid;
-        min-height: 300px;
-        place-items: center;
-        padding: clamp(1.4rem, 3vw, 2.3rem);
-      }
-      .project-shot img {
-        width: min(100%, 520px);
-        border-radius: var(--radius);
-        border: 1px solid oklch(100% 0 0 / 0.12);
-        background: oklch(96% 0.02 100);
-        box-shadow: 0 24px 80px oklch(5% 0.02 180 / 0.44);
-      }
-      .project-content {
-        padding: clamp(1.2rem, 3vw, 2rem);
-        display: grid;
-        gap: 1.1rem;
-      }
-      .project-content h3 {
-        max-width: 12ch;
-        color: var(--paper);
-        font-size: clamp(2rem, 4vw, 4.1rem);
-      }
-      .project-content p {
-        color: var(--muted);
-      }
-      .mini-project-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: clamp(1rem, 2vw, 1.35rem);
-      }
-      .mini-project-card {
-        min-height: 430px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 1.1rem;
-        padding: clamp(1rem, 2vw, 1.25rem);
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background:
-          linear-gradient(
-            135deg,
-            var(--project-glow, oklch(83% 0.19 145 / 0.12)),
-            transparent 50%
-          ),
-          oklch(100% 0 0 / 0.045);
-        box-shadow: 0 1px 0 oklch(100% 0 0 / 0.05) inset;
-        overflow: hidden;
-        position: relative;
-        isolation: isolate;
-        transition:
-          transform 180ms ease,
-          border-color 180ms ease,
-          background 180ms ease;
-      }
-      .mini-project-card::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        z-index: -1;
-        opacity: 0.72;
-        background:
-          linear-gradient(135deg, transparent 0 72%, var(--project-glow)),
-          radial-gradient(
-            circle at 10% 10%,
-            var(--project-glow),
-            transparent 34%
-          );
-      }
-      .mini-project-card:hover {
-        transform: translateY(-3px);
-        border-color: var(--line-strong);
-        background:
-          linear-gradient(
-            135deg,
-            var(--project-glow, oklch(83% 0.19 145 / 0.16)),
-            transparent 56%
-          ),
-          oklch(100% 0 0 / 0.065);
-      }
-      .mini-project-card > div > svg,
-      .visit-line svg {
-        width: 1.25rem;
-        height: 1.25rem;
-        color: var(--project-accent, var(--lime));
-      }
-      .mini-project-card:focus-visible {
-        outline: 3px solid var(--project-accent, var(--lime));
-        outline-offset: 3px;
-      }
-      .mini-project-card h4 {
-        margin-top: 1.1rem;
-        color: var(--paper);
-        font-family: var(--font-display);
-        font-size: clamp(1.45rem, 2vw, 2.1rem);
-        line-height: 1.1;
-      }
-      .mini-project-card p {
-        max-width: 58ch;
-        margin-top: 0.7rem;
-        color: var(--muted);
-        font-size: 0.95rem;
-      }
-      .brand-scene {
-        min-height: 168px;
-        display: grid;
-        place-items: center;
-        margin-bottom: 1rem;
-        border: 1px solid oklch(100% 0 0 / 0.12);
-        border-radius: var(--radius-sm);
-        position: relative;
-        overflow: hidden;
-        background: var(--scene-bg, oklch(15% 0.02 180));
-      }
-      .brand-scene img {
-        width: min(78%, 260px);
-        max-height: 105px;
-        object-fit: contain;
-        position: relative;
-        z-index: 2;
-        filter: drop-shadow(0 18px 30px oklch(5% 0.02 180 / 0.44));
-      }
-      .scene-mark {
-        position: relative;
-        z-index: 2;
-        color: var(--scene-mark, var(--paper));
-        font-family: var(--font-display);
-        font-size: clamp(2rem, 5vw, 4.2rem);
-        font-weight: 800;
-        line-height: 0.9;
-      }
-      .scene-circuito {
-        --scene-bg: linear-gradient(
-          145deg,
-          oklch(12% 0.026 190),
-          oklch(22% 0.04 130)
-        );
-      }
-      .scene-circuito::before {
-        content: "";
-        position: absolute;
-        right: -8%;
-        bottom: -24%;
-        width: 74%;
-        height: 58%;
-        border-radius: 52% 48% 0 0;
-        background: oklch(9% 0.014 180 / 0.72);
-        transform: rotate(-8deg);
-      }
-      .scene-circuito::after {
-        content: "";
-        position: absolute;
-        left: 12%;
-        right: 12%;
-        bottom: 26%;
-        height: 4px;
-        border-radius: 999px;
-        background: linear-gradient(90deg, var(--lime), var(--amber));
-        box-shadow: 0 0 28px oklch(83% 0.19 145 / 0.35);
-      }
-      .scene-delicarte {
-        --scene-bg:
-          radial-gradient(
-            circle at 24% 24%,
-            oklch(86% 0.1 25 / 0.42),
-            transparent 30%
-          ),
-          linear-gradient(135deg, oklch(24% 0.04 18), oklch(17% 0.03 350));
-        --scene-mark: oklch(91% 0.055 45);
-      }
-      .scene-delicarte::before,
-      .scene-delicarte::after {
-        content: "";
-        position: absolute;
-        width: 42%;
-        aspect-ratio: 1;
-        border: 1px solid oklch(88% 0.08 32 / 0.42);
-        border-radius: 50%;
-      }
-      .scene-delicarte::before {
-        left: 16%;
-        top: 22%;
-      }
-      .scene-delicarte::after {
-        right: 18%;
-        bottom: 18%;
-      }
-      .scene-rustico {
-        --scene-bg:
-          linear-gradient(135deg, oklch(32% 0.065 64), oklch(17% 0.03 80)),
-          repeating-linear-gradient(
-            45deg,
-            transparent 0 16px,
-            oklch(88% 0.06 80 / 0.08) 16px 18px
-          );
-        --scene-mark: oklch(88% 0.08 76);
-      }
-      .scene-rustico::before {
-        content: "";
-        position: absolute;
-        inset: 18% 12%;
-        background:
-          linear-gradient(
-            30deg,
-            transparent 48%,
-            oklch(90% 0.06 72 / 0.18) 49% 51%,
-            transparent 52%
-          ),
-          linear-gradient(
-            150deg,
-            transparent 48%,
-            oklch(90% 0.06 72 / 0.14) 49% 51%,
-            transparent 52%
-          );
-        background-size: 62px 44px;
-        opacity: 0.8;
-      }
-      .scene-pulsar {
-        --scene-bg:
-          radial-gradient(
-            circle at 52% 40%,
-            oklch(67% 0.22 325 / 0.38),
-            transparent 34%
-          ),
-          linear-gradient(160deg, oklch(12% 0.04 285), oklch(8% 0.03 230));
-        --scene-mark: oklch(88% 0.14 320);
-      }
-      .scene-pulsar::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: repeating-linear-gradient(
-          180deg,
-          oklch(100% 0 0 / 0.08) 0 1px,
-          transparent 1px 8px
-        );
-      }
-      .eq-bars {
-        width: min(72%, 240px);
-        height: 72px;
-        display: flex;
-        align-items: end;
-        justify-content: center;
-        gap: 9px;
-        position: relative;
-        z-index: 2;
-      }
-      .eq-bars span {
-        width: 14px;
-        height: var(--bar);
-        border-radius: 999px 999px 4px 4px;
-        background: linear-gradient(
-          180deg,
-          oklch(80% 0.18 205),
-          oklch(70% 0.22 325)
-        );
-        box-shadow:
-          0 0 16px oklch(80% 0.18 205 / 0.62),
-          0 0 30px oklch(70% 0.22 325 / 0.45);
-      }
-      .mini-project-meta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.45rem;
-      }
-      .mini-project-meta span {
-        display: inline-flex;
-        align-items: center;
-        min-height: 28px;
-        padding: 0.3rem 0.48rem;
-        border: 1px solid var(--line);
-        border-radius: var(--radius-sm);
-        color: var(--paper-soft);
-        font-size: 0.76rem;
-        font-weight: 700;
-      }
-      .visit-line {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.45rem;
-        margin-top: 1rem;
-        color: var(--project-accent, var(--lime));
-        font-size: 0.9rem;
-        font-weight: 800;
-      }
-      .visit-line svg {
-        width: 0.95rem;
-        height: 0.95rem;
-      }
-      .tag-row,
-      .stack-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.55rem;
-      }
-      .tag,
-      .stack-row span {
-        display: inline-flex;
-        align-items: center;
-        min-height: 32px;
-        padding: 0.38rem 0.55rem;
-        border: 1px solid var(--line);
-        border-radius: var(--radius-sm);
-        background: oklch(100% 0 0 / 0.04);
-        color: var(--paper-soft);
-        font-size: 0.82rem;
-        font-weight: 700;
-      }
-      .project-points {
-        display: grid;
-        gap: 0.65rem;
-        list-style: none;
-      }
-      .project-points li,
-      .check-list li {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        gap: 0.65rem;
-        color: var(--muted);
-      }
-      .project-points li::before,
-      .check-list li::before {
-        content: "";
-        width: 0.66rem;
-        height: 0.66rem;
-        margin-top: 0.48rem;
-        border-radius: 2px;
-        background: var(--lime);
-        box-shadow: 0 0 0 4px oklch(83% 0.19 145 / 0.1);
-      }
-      .capability-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1rem;
-      }
-      .capability {
-        min-height: 260px;
-        padding: 1.1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        position: relative;
-        overflow: hidden;
-      }
-      .capability:nth-child(2n) {
-        background: oklch(78% 0.17 72 / 0.08);
-      }
-      .capability:nth-child(3n) {
-        background: oklch(78% 0.12 205 / 0.08);
-      }
-      .capability-number {
-        color: var(--lime);
-        font-family: var(--font-display);
-        font-weight: 700;
-      }
-      .capability h3 {
-        margin-top: 1.8rem;
-        color: var(--paper);
-        font-size: 1.45rem;
-      }
-      .capability p {
-        color: var(--muted);
-        margin-top: 0.75rem;
-        font-size: 0.95rem;
-      }
-      .services-wrap {
-        display: grid;
-        grid-template-columns: minmax(260px, 0.45fr) minmax(0, 1fr);
-        gap: clamp(1.2rem, 4vw, 2rem);
-        align-items: start;
-      }
-      .service-menu {
-        position: sticky;
-        top: 98px;
-        display: grid;
-        gap: 0.75rem;
-      }
-      .service-menu div {
-        padding: 0.9rem;
-        border: 1px solid var(--line);
-        border-radius: var(--radius-sm);
-        color: var(--muted);
-        background: oklch(100% 0 0 / 0.035);
-      }
-      .service-menu strong {
-        display: block;
-        color: var(--paper);
-        font-family: var(--font-display);
-        font-size: 1rem;
-      }
-      .service-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1rem;
-      }
-      .service {
-        padding: 1.05rem;
-        background: oklch(22% 0.035 178 / 0.8);
-      }
-      .service svg,
-      .price-card svg {
-        width: 1.35rem;
-        height: 1.35rem;
-        color: var(--lime);
-        margin-bottom: 1.1rem;
-      }
-      .service h3 {
-        margin-bottom: 0.55rem;
-        color: var(--paper);
-        font-size: 1.22rem;
-      }
-      .service p,
-      .price-card p,
-      .process-step p,
-      .faq-item p {
-        color: var(--muted);
-        font-size: 0.94rem;
-      }
-      .process-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 1rem;
-        counter-reset: process;
-      }
-      .process-step {
-        min-height: 230px;
-        padding: 1rem;
-        counter-increment: process;
-      }
-      .process-step::before {
-        content: "0" counter(process);
-        display: inline-flex;
-        margin-bottom: 2rem;
-        color: var(--amber);
-        font-family: var(--font-display);
-        font-weight: 700;
-      }
-      .process-step h3 {
-        margin-bottom: 0.55rem;
-        color: var(--paper);
-        font-size: 1.2rem;
-      }
-      .pricing {
-        background: oklch(89% 0.02 110);
-        color: var(--ink);
-      }
-      .pricing .section-head p,
-      .pricing .label {
-        color: oklch(38% 0.05 150);
-      }
-      .pricing .label {
-        color: oklch(42% 0.12 145);
-      }
-      .pricing-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 1rem;
-      }
-      .price-card {
-        min-height: 260px;
-        padding: 1.1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        border-color: oklch(42% 0.05 150 / 0.18);
-        background: oklch(96% 0.018 105);
-        color: var(--ink);
-        box-shadow: 0 18px 50px oklch(30% 0.08 120 / 0.12);
-      }
-      .price-card.featured {
-        background: var(--ink);
-        color: var(--paper);
-        border-color: oklch(58% 0.14 145 / 0.5);
-      }
-      .price-card.featured p {
-        color: var(--muted);
-      }
-      .price-card h3 {
-        color: inherit;
-        font-size: 1.16rem;
-      }
-      .price {
-        margin: 1rem 0;
-        color: oklch(44% 0.15 145);
-        font-family: var(--font-display);
-        font-size: clamp(1.45rem, 2.5vw, 2rem);
-        font-weight: 700;
-      }
-      .featured .price {
-        color: var(--lime);
-      }
-      .faq-contact {
-        display: grid;
-        grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
-        gap: clamp(1.2rem, 4vw, 2rem);
-        align-items: start;
-      }
-      .faq-list {
-        display: grid;
-        gap: 0.75rem;
-      }
-      .faq-item {
-        overflow: hidden;
-      }
-      .faq-item summary {
-        padding: 1rem;
-        color: var(--paper);
-        font-family: var(--font-display);
-        font-size: 1.05rem;
-        font-weight: 700;
-        cursor: pointer;
-      }
-      .faq-item p {
-        padding: 0 1rem 1rem;
-      }
-      .contact-panel,
-      .form-panel {
-        padding: clamp(1.1rem, 3vw, 1.7rem);
-      }
-      .contact-panel {
-        margin-bottom: 1rem;
-        background:
-          linear-gradient(135deg, oklch(83% 0.19 145 / 0.15), transparent 52%),
-          oklch(100% 0 0 / 0.055);
-      }
-      .contact-panel h2 {
-        margin-bottom: 0.75rem;
-        font-size: clamp(2rem, 4vw, 3.35rem);
-      }
-      .contact-panel p {
-        color: var(--muted);
-      }
-      form {
-        display: grid;
-        gap: 1rem;
-      }
-      .form-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1rem;
-      }
-      label {
-        display: block;
-        margin-bottom: 0.42rem;
-        color: var(--paper);
-        font-size: 0.9rem;
-        font-weight: 700;
-      }
-      input,
-      textarea {
-        width: 100%;
-        border: 1px solid var(--line);
-        border-radius: var(--radius-sm);
-        background: oklch(9% 0.018 180 / 0.36);
-        color: var(--paper);
-        padding: 0.9rem 0.95rem;
-        outline: none;
-        transition:
-          border-color 180ms ease,
-          box-shadow 180ms ease,
-          background 180ms ease;
-      }
-      input::placeholder,
-      textarea::placeholder {
-        color: oklch(72% 0.035 150 / 0.62);
-      }
-      input:focus,
-      textarea:focus {
-        border-color: var(--lime);
-        box-shadow: 0 0 0 4px oklch(83% 0.19 145 / 0.12);
-        background: oklch(12% 0.022 180 / 0.58);
-      }
-      textarea {
-        resize: vertical;
-        min-height: 150px;
-      }
-      .form-feedback {
-        display: none;
-        padding: 0.85rem 0.95rem;
-        border: 1px solid oklch(83% 0.19 145 / 0.28);
-        border-radius: var(--radius-sm);
-        background: oklch(83% 0.19 145 / 0.12);
-        color: var(--paper);
-        font-size: 0.92rem;
-        font-weight: 700;
-      }
-      footer {
-        padding: 2.4rem 0 3rem;
-        border-top: 1px solid var(--line);
-        color: var(--muted);
-      }
-      .footer-inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-        flex-wrap: wrap;
-      }
-      .footer-inner a {
-        color: var(--paper);
-        font-weight: 700;
-      }
-      @media (prefers-reduced-motion: no-preference) {
-        .reveal {
-          animation: rise 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
-        }
-        .reveal:nth-child(2) {
-          animation-delay: 80ms;
-        }
-        .reveal:nth-child(3) {
-          animation-delay: 140ms;
-        }
-        @keyframes rise {
-          from {
-            opacity: 0;
-            transform: translateY(18px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      }
-      @media (max-width: 1020px) {
-        .hero-grid,
-        .project,
-        .section-head,
-        .services-wrap,
-        .faq-contact {
-          grid-template-columns: 1fr;
-        }
-        h1,
-        .project-content h3 {
-          max-width: 100%;
-        }
-        .service-menu {
-          position: static;
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-        .capability-grid,
-        .mini-project-grid,
-        .pricing-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-        .process-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-      }
-      @media (max-width: 720px) {
-        .nav {
-          align-items: flex-start;
-          flex-direction: column;
-          padding: 0.85rem 0;
-        }
-        .nav-links {
-          width: 100%;
-          justify-content: flex-start;
-          flex-wrap: nowrap;
-          overflow-x: auto;
-          padding-bottom: 0.15rem;
-          scrollbar-width: none;
-        }
-        .nav-links::-webkit-scrollbar {
-          display: none;
-        }
-        .nav-links a[href="#capacidades"] {
-          display: none;
-        }
-        .nav-links a {
-          flex: 0 0 auto;
-          min-height: 36px;
-          padding: 0.5rem 0.58rem;
-          font-size: 0.82rem;
-        }
-        .hero {
-          padding-top: 3rem;
-        }
-        .trust-strip,
-        .signal-grid,
-        .service-grid,
-        .service-menu,
-        .capability-grid,
-        .mini-project-grid,
-        .process-grid,
-        .pricing-grid,
-        .form-grid {
-          grid-template-columns: 1fr;
-        }
-        .project-shot {
-          min-height: 260px;
-          padding: 1rem;
-        }
-        .btn {
-          width: 100%;
-        }
-        .inline-actions,
-        .hero-actions {
-          flex-direction: column;
-        }
-      }
-
-      /* ─── Console entrance sequence ───────────────────── */
-      @media (prefers-reduced-motion: no-preference) {
-        .diagnostic-line {
-          opacity: 0;
-          animation: console-in 380ms cubic-bezier(0.16, 1, 0.3, 1) both;
-        }
-        .diagnostic-line:nth-child(1) { animation-delay: 820ms; }
-        .diagnostic-line:nth-child(2) { animation-delay: 1040ms; }
-        .diagnostic-line:nth-child(3) { animation-delay: 1260ms; }
-        .signal-grid {
-          opacity: 0;
-          animation: console-in 380ms cubic-bezier(0.16, 1, 0.3, 1) 1480ms both;
-        }
-        @keyframes console-in {
-          from { opacity: 0; transform: translateX(-8px); }
-          to   { opacity: 1; transform: translateX(0); }
-        }
-        .status::before {
-          animation: dot-pulse 2.6s ease-in-out infinite;
-        }
-        @keyframes dot-pulse {
-          0%, 100% { box-shadow: 0 0 0 0 oklch(83% 0.19 145 / 0.55); }
-          58%       { box-shadow: 0 0 0 6px oklch(83% 0.19 145 / 0); }
-        }
-        .eq-bars span {
-          animation: eq-dance var(--eq-speed, 1s) ease-in-out infinite alternate;
-        }
-        .eq-bars span:nth-child(1) { --eq-speed: 0.88s; animation-delay:   0ms; }
-        .eq-bars span:nth-child(2) { --eq-speed: 1.14s; animation-delay:  75ms; }
-        .eq-bars span:nth-child(3) { --eq-speed: 0.82s; animation-delay: 150ms; }
-        .eq-bars span:nth-child(4) { --eq-speed: 1.22s; animation-delay:  38ms; }
-        .eq-bars span:nth-child(5) { --eq-speed: 0.94s; animation-delay: 113ms; }
-        .eq-bars span:nth-child(6) { --eq-speed: 1.08s; animation-delay: 188ms; }
-        .eq-bars span:nth-child(7) { --eq-speed: 0.90s; animation-delay:  63ms; }
-        @keyframes eq-dance {
-          from { height: calc(var(--bar) * 0.2 + 8%); }
-          to   { height: var(--bar); }
-        }
-        /* Scroll-triggered reveals */
-        .io-item {
-          opacity: 0;
-          transform: translateY(22px);
-          transition:
-            opacity  560ms cubic-bezier(0.16, 1, 0.3, 1),
-            transform 560ms cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .io-item.io-visible {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* ─── Capability watermark numbers ─────────────────── */
-      .capability {
-        position: relative;
-      }
-      .capability-number {
-        position: absolute;
-        top: -0.18em;
-        right: -0.04em;
-        color: var(--paper);
-        font-family: var(--font-display);
-        font-size: 8rem;
-        font-weight: 700;
-        line-height: 1;
-        opacity: 0.052;
-        pointer-events: none;
-        user-select: none;
-        z-index: 0;
-      }
-      .capability-number-label {
-        display: inline-block;
-        margin-bottom: 0.45rem;
-        color: var(--lime);
-        font-family: var(--font-display);
-        font-size: 0.86rem;
-        font-weight: 700;
-        letter-spacing: 0.04em;
-      }
-      .capability > div {
-        position: relative;
-        z-index: 1;
-      }
-
-      /* ─── Project card scene hover ─────────────────────── */
-      .brand-scene {
-        transition: transform 380ms cubic-bezier(0.16, 1, 0.3, 1);
-      }
-      .mini-project-card:hover .brand-scene {
-        transform: scale(1.04);
-      }
-
-      /* ─── Process connector + circle steps ─────────────── */
-      .process-grid {
-        position: relative;
-      }
-      @media (min-width: 1021px) {
-        .process-grid::after {
-          content: "";
-          position: absolute;
-          top: 2.2rem;
-          left: 4%;
-          right: 4%;
-          height: 1px;
-          background: linear-gradient(
-            90deg,
-            var(--amber),
-            var(--lime) 33%,
-            var(--cyan) 66%,
-            var(--rose)
-          );
-          opacity: 0.3;
-          z-index: 0;
-        }
-      }
-      .process-step {
-        position: relative;
-        z-index: 1;
-      }
-      .process-step::before {
-        content: "0" counter(process);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 2.4rem;
-        height: 2.4rem;
-        margin-bottom: 1.5rem;
-        border-radius: 50%;
-        border: 1px solid var(--line-strong);
-        background: var(--ink-2);
-        color: var(--amber);
-        font-family: var(--font-display);
-        font-weight: 700;
-        font-size: 0.82rem;
-        box-shadow:
-          0 0 0 4px oklch(78% 0.17 72 / 0.1),
-          0 0 0 8px oklch(78% 0.17 72 / 0.04);
-      }
-
-      /* ─── Sobre / About section ────────────────────────── */
-      .sobre {
-        background:
-          linear-gradient(180deg, oklch(100% 0 0 / 0.028), transparent 30%),
-          oklch(11% 0.02 180 / 0.42);
-        border-top: 1px solid var(--line);
-        border-bottom: 1px solid var(--line);
-      }
-      .about-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
-        gap: clamp(2rem, 5vw, 4rem);
-        align-items: start;
-      }
-      .about-lead {
-        margin-bottom: 1rem;
-        color: var(--paper);
-        font-size: clamp(1.06rem, 1.85vw, 1.26rem);
-        font-weight: 600;
-        line-height: 1.55;
-      }
-      .about-body {
-        color: var(--muted);
-        font-size: 0.97rem;
-        line-height: 1.74;
-      }
-      .about-body + .about-body {
-        margin-top: 0.85rem;
-      }
-      .about-stats {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.7rem;
-        margin-top: 1.9rem;
-      }
-      .about-stat {
-        padding: 0.95rem;
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background: oklch(100% 0 0 / 0.035);
-      }
-      .about-stat strong {
-        display: block;
-        color: var(--lime);
-        font-family: var(--font-display);
-        font-size: 1.7rem;
-        font-weight: 700;
-        line-height: 1;
-      }
-      .about-stat span {
-        display: block;
-        margin-top: 0.32rem;
-        color: var(--muted);
-        font-size: 0.8rem;
-      }
-      .testimonial-stack {
-        display: grid;
-        gap: 1rem;
-      }
-      .testimonial {
-        padding: 1.3rem;
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background: oklch(100% 0 0 / 0.04);
-        box-shadow: 0 1px 0 oklch(100% 0 0 / 0.05) inset;
-      }
-      .testimonial p {
-        color: var(--paper);
-        font-size: 0.95rem;
-        line-height: 1.68;
-        font-style: italic;
-      }
-      .testimonial p::before {
-        content: "\201C";
-        color: var(--lime);
-        font-family: var(--font-display);
-        font-size: 2.2rem;
-        line-height: 0.5;
-        vertical-align: -0.45em;
-        margin-right: 0.12em;
-        opacity: 0.6;
-        font-style: normal;
-      }
-      .testimonial cite {
-        display: flex;
-        align-items: center;
-        gap: 0.6rem;
-        margin-top: 1rem;
-        color: var(--lime);
-        font-family: var(--font-display);
-        font-size: 0.82rem;
-        font-weight: 700;
-        font-style: normal;
-      }
-      .testimonial cite::before {
-        content: "";
-        flex: 0 0 1.6rem;
-        height: 1px;
-        background: currentColor;
-        opacity: 0.45;
-      }
-      .about-cta-note {
-        padding: 1.1rem;
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background: oklch(83% 0.19 145 / 0.05);
-        color: var(--muted);
-        font-size: 0.92rem;
-        line-height: 1.62;
-      }
-      .about-cta-note strong {
-        display: block;
-        margin-bottom: 0.4rem;
-        color: var(--paper);
-        font-family: var(--font-display);
-        font-size: 1rem;
-      }
-      @media (max-width: 1020px) {
-        .about-grid {
-          grid-template-columns: 1fr;
-        }
+        --night: oklch(13% 0.025 250);
+        --night-2: oklch(17% 0.035 250);
+        --surface: oklch(20% 0.035 250);
+        --paper: oklch(94% 0.02 95);
+        --paper-dim: oklch(80% 0.025 95);
+        --muted: oklch(70% 0.035 235);
+        --line: oklch(82% 0.03 240 / 0.18);
+        --line-hot: oklch(84% 0.2 135 / 0.44);
+        --lime: oklch(84% 0.2 135);
+        --coral: oklch(70% 0.19 28);
+        --blue: oklch(72% 0.16 235);
+        --amber: oklch(80% 0.16 78);
+        --max: 1240px;
+        --display: "Chakra Petch", "Segoe UI", sans-serif;
+        --body: "Sora", "Segoe UI", sans-serif;
+        --ease: cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      *, *::before, *::after { box-sizing: border-box; }
+      * { margin: 0; }
+      html { scroll-behavior: smooth; background: var(--night); }
+      body { min-width: 320px; overflow-x: hidden; background: var(--night); color: var(--paper); font-family: var(--body); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+      body::selection { background: var(--lime); color: var(--night); }
+      a { color: inherit; text-decoration: none; }
+      button, input, textarea { font: inherit; }
+      img, svg { display: block; max-width: 100%; }
+      :focus-visible { outline: 2px solid var(--lime); outline-offset: 4px; }
+      .skip-link { position: fixed; top: 0; left: 1rem; z-index: 999; padding: .75rem 1rem; background: var(--lime); color: var(--night); transform: translateY(-120%); transition: transform .2s var(--ease); }
+      .skip-link:focus { transform: translateY(0); }
+      .wrap { width: min(calc(100% - 2rem), var(--max)); margin-inline: auto; }
+      .progress { position: fixed; inset: 0 auto auto 0; z-index: 200; width: 0; height: 3px; background: var(--lime); box-shadow: 0 0 24px var(--lime); }
+      #field { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; opacity: .72; }
+      .site-header { position: fixed; inset: 0 0 auto; z-index: 100; border-bottom: 1px solid transparent; transition: background .35s ease, border-color .35s ease; }
+      .site-header.scrolled { background: oklch(13% 0.025 250 / .92); border-color: var(--line); }
+      .nav { height: 78px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1.5rem; }
+      .brand { display: inline-flex; align-items: center; gap: .7rem; width: fit-content; font: 700 .9rem/1 var(--display); }
+      .brand-mark { position: relative; width: 34px; height: 34px; border: 1px solid var(--line-hot); background: var(--surface); }
+      .brand-mark::before, .brand-mark::after { content: ""; position: absolute; background: var(--lime); }
+      .brand-mark::before { width: 13px; height: 2px; left: 6px; top: 9px; box-shadow: 7px 7px 0 var(--lime), 0 14px 0 var(--lime); }
+      .brand-mark::after { width: 2px; height: 13px; right: 7px; bottom: 6px; }
+      .nav-links { display: flex; align-items: center; gap: 1.8rem; color: var(--muted); font-size: .82rem; font-weight: 600; }
+      .nav-links a { position: relative; }
+      .nav-links a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -.35rem; height: 1px; background: var(--lime); transition: right .25s var(--ease); }
+      .nav-links a:hover { color: var(--paper); }
+      .nav-links a:hover::after { right: 0; }
+      .header-cta { justify-self: end; display: inline-flex; align-items: center; gap: .65rem; padding: .68rem .9rem; border: 1px solid var(--line); background: var(--surface); font-size: .78rem; font-weight: 700; transition: transform .25s var(--ease), color .25s, background .25s; }
+      .header-cta::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 0 4px oklch(84% .2 135 / .12); }
+      .header-cta:hover { transform: translateY(-2px); background: var(--paper); color: var(--night); }
+      .hero { position: relative; min-height: 100svh; display: flex; align-items: flex-end; overflow: hidden; padding: 9rem 0 clamp(3rem, 7vw, 6rem); }
+      .hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle at 75% 30%, oklch(72% .16 235 / .12), transparent 32%), radial-gradient(circle at 20% 85%, oklch(84% .2 135 / .08), transparent 30%); }
+      .hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(260px, .55fr); gap: clamp(2rem, 7vw, 7rem); align-items: end; }
+      .availability { display: inline-flex; align-items: center; gap: .65rem; margin-bottom: clamp(1.5rem, 4vw, 3.5rem); color: var(--paper-dim); font-size: .78rem; font-weight: 600; }
+      .availability i { width: 8px; height: 8px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 20px var(--lime); }
+      .hero h1 { max-width: 8.5ch; font: 700 clamp(4rem, 10.6vw, 9.6rem)/.83 var(--display); letter-spacing: -.06em; text-wrap: balance; }
+      .hero h1 span { display: block; color: var(--lime); transform: translateX(clamp(0rem, 5vw, 4rem)); }
+      .hero-side { padding-bottom: .45rem; }
+      .hero-side p { max-width: 32ch; color: var(--paper-dim); font-size: clamp(1rem, 1.4vw, 1.2rem); }
+      .hero-actions { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: 2rem; }
+      .btn { display: inline-flex; min-height: 50px; align-items: center; justify-content: center; gap: .75rem; padding: .8rem 1rem; border: 1px solid var(--line); font-size: .84rem; font-weight: 700; transition: transform .25s var(--ease), box-shadow .25s, background .25s, color .25s; }
+      .btn:hover { transform: translateY(-3px); }
+      .btn-primary { border-color: var(--lime); background: var(--lime); color: var(--night); }
+      .btn-primary:hover { box-shadow: 0 0 42px oklch(84% .2 135 / .22); }
+      .btn-ghost:hover { background: var(--paper); color: var(--night); }
+      .scroll-cue { position: absolute; right: clamp(1rem, 3vw, 3rem); bottom: 2rem; z-index: 3; display: grid; gap: .6rem; justify-items: center; color: var(--muted); font: 600 .66rem/1 var(--display); writing-mode: vertical-rl; letter-spacing: .12em; }
+      .scroll-cue::after { content: ""; width: 1px; height: 54px; background: linear-gradient(var(--lime), transparent); animation: scrollPulse 1.8s var(--ease) infinite; }
+      .ticker { overflow: hidden; border-block: 1px solid var(--line); background: var(--surface); }
+      .ticker-track { display: flex; width: max-content; animation: ticker 26s linear infinite; }
+      .ticker-group { display: flex; align-items: center; flex-shrink: 0; }
+      .ticker span { display: inline-flex; align-items: center; gap: 1.5rem; padding: 1.05rem 1.5rem; color: var(--paper-dim); font: 600 clamp(.82rem, 1.2vw, 1rem)/1 var(--display); }
+      .ticker span::after { content: "✦"; color: var(--lime); }
+      .intro { padding: clamp(7rem, 14vw, 13rem) 0; }
+      .intro-layout { display: grid; grid-template-columns: .55fr 1.45fr; gap: clamp(2rem, 8vw, 9rem); align-items: start; }
+      .eyebrow { display: flex; align-items: center; gap: .75rem; color: var(--muted); font: 700 .75rem/1 var(--display); letter-spacing: .08em; }
+      .eyebrow::before { content: attr(data-index); color: var(--lime); }
+      .intro h2, .section-title { font: 700 clamp(3rem, 7.2vw, 7rem)/.92 var(--display); letter-spacing: -.045em; text-wrap: balance; }
+      .intro h2 strong { color: var(--coral); font-weight: inherit; }
+      .intro-copy { max-width: 52ch; margin: 2.4rem 0 0 auto; color: var(--paper-dim); font-size: clamp(1.05rem, 1.5vw, 1.32rem); }
+      .work-head { padding: 0 0 3rem; display: flex; align-items: end; justify-content: space-between; gap: 2rem; }
+      .work-head p { max-width: 32ch; color: var(--muted); }
+      .project-stage { position: relative; min-height: 100svh; display: grid; align-items: center; padding: clamp(5rem, 10vw, 9rem) 0; overflow: clip; }
+      .project-stage::before { content: attr(data-watermark); position: absolute; left: -.04em; top: 4%; color: oklch(100% 0 0 / .04); font: 700 clamp(8rem, 26vw, 26rem)/1 var(--display); letter-spacing: -.09em; white-space: nowrap; pointer-events: none; }
+      .project-grid { position: relative; display: grid; grid-template-columns: minmax(280px, .7fr) minmax(0, 1.3fr); gap: clamp(2.5rem, 7vw, 7rem); align-items: center; }
+      .project-stage.alt .project-copy { order: 2; }
+      .project-stage.alt .product-window { order: 1; }
+      .project-number { display: block; margin-bottom: 1.8rem; color: var(--project); font: 700 .8rem/1 var(--display); letter-spacing: .12em; }
+      .project-copy h3 { font: 700 clamp(3.1rem, 7vw, 7.2rem)/.86 var(--display); letter-spacing: -.055em; }
+      .project-copy > p { max-width: 43ch; margin-top: 1.7rem; color: var(--paper-dim); }
+      .project-facts { margin-top: 2.2rem; border-top: 1px solid var(--line); }
+      .project-fact { display: grid; grid-template-columns: 8rem 1fr; gap: 1rem; padding: .85rem 0; border-bottom: 1px solid var(--line); font-size: .82rem; }
+      .project-fact span { color: var(--muted); }
+      .project-fact strong { color: var(--paper); font-weight: 600; }
+      .project-link { display: inline-flex; align-items: center; gap: .75rem; margin-top: 2rem; padding-bottom: .35rem; border-bottom: 1px solid var(--project); color: var(--project); font-weight: 700; transition: gap .25s var(--ease); }
+      .project-link:hover { gap: 1.15rem; }
+      .project-link .arrow { font-size: 1.2rem; }
+      .product-window { position: relative; isolation: isolate; min-height: 570px; border: 1px solid oklch(95% .02 250 / .16); border-radius: 18px; overflow: hidden; box-shadow: 0 32px 90px oklch(5% .025 250 / .46); transform-style: preserve-3d; transition: transform .2s ease-out; }
+      .window-bar { height: 42px; display: flex; align-items: center; gap: .42rem; padding: 0 1rem; border-bottom: 1px solid oklch(95% .02 250 / .1); background: oklch(15% .025 250); }
+      .window-bar i { width: 8px; height: 8px; border-radius: 50%; background: oklch(70% .04 240); }
+      .window-bar i:nth-child(1) { background: var(--coral); }
+      .window-bar i:nth-child(2) { background: var(--amber); }
+      .window-bar i:nth-child(3) { background: var(--lime); }
+      .window-address { margin-left: .6rem; color: oklch(74% .02 250); font-size: .62rem; }
+      .auto-stage { --project: var(--coral); background: oklch(14% .034 255); }
+      .auto-ui { min-height: 528px; padding: clamp(1.4rem, 3vw, 2.6rem); background: oklch(14% .035 255); }
+      .auto-nav { display: flex; justify-content: space-between; align-items: center; padding-bottom: 2rem; }
+      .auto-logo { font: 700 1.12rem/1 var(--body); }
+      .auto-logo b { color: var(--coral); }
+      .auto-nav-links { display: flex; gap: 1rem; color: oklch(77% .02 250); font-size: .56rem; }
+      .auto-hero { display: grid; grid-template-columns: 1fr .75fr; gap: 1.5rem; }
+      .auto-tag { display: inline-block; color: var(--coral); font-size: .54rem; font-weight: 700; }
+      .auto-hero h4 { max-width: 10ch; margin-top: .6rem; font: 700 clamp(1.8rem, 3.3vw, 3.2rem)/.96 var(--body); letter-spacing: -.045em; }
+      .auto-hero p { max-width: 32ch; margin-top: 1rem; color: oklch(75% .025 250); font-size: .68rem; line-height: 1.6; }
+      .auto-actions { display: flex; gap: .55rem; margin-top: 1.35rem; }
+      .mini-btn { padding: .6rem .75rem; border: 1px solid oklch(90% .02 250 / .15); border-radius: 5px; font-size: .58rem; font-weight: 700; }
+      .mini-btn.hot { border-color: var(--coral); background: var(--coral); color: var(--night); }
+      .auto-panel { padding: 1.25rem; border: 1px solid oklch(80% .05 250 / .1); border-radius: 10px; background: oklch(18% .045 255); }
+      .auto-panel strong { display: block; font-size: .72rem; }
+      .auto-panel ul { display: grid; gap: .85rem; margin: 1rem 0 0; padding: 0; list-style: none; }
+      .auto-panel li { display: flex; gap: .6rem; color: oklch(75% .025 250); font-size: .58rem; line-height: 1.45; }
+      .auto-panel li::before { content: ""; flex: 0 0 6px; height: 6px; margin-top: .25rem; border-radius: 50%; background: var(--coral); }
+      .auto-car { display: grid; grid-template-columns: 1fr auto; gap: .8rem; margin-top: 1.8rem; padding: 1rem; border-radius: 9px; background: oklch(96% .015 90); color: oklch(17% .025 250); }
+      .auto-car small { color: oklch(48% .03 250); font-size: .5rem; }
+      .auto-car h5 { margin-top: .2rem; font-size: .82rem; }
+      .car-specs { display: flex; gap: .7rem; margin-top: .65rem; color: oklch(45% .03 250); font-size: .48rem; }
+      .auto-price { align-self: center; font: 700 1rem/1 var(--body); color: var(--coral); }
+      .directory-stage { --project: var(--blue); background: oklch(17% .038 235); }
+      .directory-stage::after { content: ""; position: absolute; width: 34rem; height: 34rem; right: -12rem; top: 8%; border: 1px solid oklch(72% .16 235 / .2); border-radius: 50%; box-shadow: 0 0 0 6rem oklch(72% .16 235 / .04), 0 0 0 12rem oklch(72% .16 235 / .025); pointer-events: none; }
+      .cut-ui { display: grid; grid-template-columns: .9fr 1.1fr; min-height: 528px; background: oklch(91% .03 90); color: oklch(18% .025 70); }
+      .cut-search { padding: clamp(1.3rem, 3vw, 2.5rem); }
+      .cut-logo { font: 700 1rem/1 var(--body); }
+      .cut-kicker { display: block; margin-top: 3.3rem; color: var(--coral); font-size: .52rem; font-weight: 700; }
+      .cut-search h4 { max-width: 10ch; margin-top: .7rem; font: 700 clamp(1.75rem, 3vw, 2.8rem)/.98 var(--body); letter-spacing: -.04em; }
+      .cut-search h4 em { color: var(--coral); font-family: Georgia, serif; font-weight: 400; }
+      .cut-count { margin-top: 1.5rem; color: oklch(48% .025 80); font-size: .56rem; }
+      .search-box { display: grid; grid-template-columns: 1fr auto; gap: .5rem; margin-top: 1.15rem; padding: .6rem; border: 1px solid oklch(45% .03 80 / .25); border-radius: 7px; background: oklch(97% .01 90); }
+      .search-box span { align-self: center; color: oklch(58% .02 80); font-size: .5rem; }
+      .search-box b { padding: .45rem .6rem; border-radius: 4px; background: var(--coral); color: var(--paper); font-size: .48rem; }
+      .regions { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .8rem; }
+      .regions span { padding: .3rem .45rem; border: 1px solid oklch(45% .03 80 / .18); border-radius: 3px; background: oklch(97% .01 90); font-size: .43rem; }
+      .cut-result { margin-top: 1rem; padding: .75rem; border: 1px solid oklch(45% .03 80 / .13); border-radius: 7px; background: oklch(97% .01 90 / .78); }
+      .cut-result small { color: var(--coral); font-size: .42rem; font-weight: 700; }
+      .cut-result strong { display: block; margin-top: .25rem; font-size: .65rem; }
+      .cut-result p { margin-top: .3rem; color: oklch(50% .025 80); font-size: .43rem; }
+      .map { position: relative; overflow: hidden; background: oklch(87% .07 210); }
+      .map::before { content: ""; position: absolute; inset: -20%; opacity: .75; background-image: linear-gradient(36deg, transparent 47%, oklch(96% .025 90) 47% 52%, transparent 52%), linear-gradient(122deg, transparent 46%, oklch(96% .025 90) 46% 54%, transparent 54%); background-size: 110px 130px, 170px 190px; transform: rotate(-8deg); }
+      .map::after { content: "PORTUGAL"; position: absolute; right: 12%; top: 35%; color: oklch(38% .05 220 / .42); font: 700 .58rem/1 var(--body); letter-spacing: .18em; transform: rotate(-8deg); }
+      .pin { position: absolute; z-index: 2; width: 10px; height: 10px; border: 2px solid var(--paper); border-radius: 50%; background: var(--coral); box-shadow: 0 2px 8px oklch(20% .05 220 / .25); animation: pin 2.4s var(--ease) infinite; }
+      .pin:nth-child(1) { left: 42%; top: 18%; animation-delay: -.3s; }
+      .pin:nth-child(2) { left: 39%; top: 28%; animation-delay: -.8s; }
+      .pin:nth-child(3) { left: 36%; top: 42%; animation-delay: -1.2s; }
+      .pin:nth-child(4) { left: 34%; top: 58%; animation-delay: -1.7s; }
+      .pin:nth-child(5) { left: 31%; top: 72%; animation-delay: -2s; }
+      .map-label { position: absolute; z-index: 3; left: 1rem; bottom: 1rem; padding: .45rem .65rem; border-radius: 4px; background: var(--paper); color: var(--night); font-size: .52rem; font-weight: 700; }
+      .archive { padding: clamp(7rem, 13vw, 12rem) 0; background: var(--paper); color: var(--night); }
+      .archive-head { display: grid; grid-template-columns: .55fr 1.45fr; gap: clamp(2rem, 8vw, 9rem); align-items: end; margin-bottom: 4rem; }
+      .archive .eyebrow { color: oklch(42% .03 250); }
+      .archive h2 { font: 700 clamp(3rem, 7vw, 6.8rem)/.9 var(--display); letter-spacing: -.05em; }
+      .project-list { border-top: 1px solid oklch(25% .03 250 / .22); }
+      .project-row { position: relative; display: grid; grid-template-columns: 4rem 1fr 1.2fr auto; gap: 1.5rem; align-items: center; min-height: 140px; padding: 1.4rem 0; border-bottom: 1px solid oklch(25% .03 250 / .22); transition: padding .35s var(--ease), color .25s; }
+      .project-row::before { content: ""; position: absolute; inset: 0; z-index: 0; background: var(--row); transform: scaleY(0); transform-origin: bottom; transition: transform .35s var(--ease); }
+      .project-row > * { position: relative; z-index: 1; }
+      .project-row:hover { padding-inline: 1.2rem; color: var(--paper); }
+      .project-row:hover::before { transform: scaleY(1); }
+      .row-no { color: oklch(45% .03 250); font: 600 .72rem/1 var(--display); }
+      .project-row:hover .row-no, .project-row:hover .row-desc { color: var(--paper-dim); }
+      .row-title { font: 700 clamp(1.5rem, 3vw, 2.6rem)/1 var(--display); letter-spacing: -.03em; }
+      .row-desc { max-width: 42ch; color: oklch(40% .03 250); font-size: .8rem; }
+      .row-tags { display: flex; justify-content: end; gap: .4rem; flex-wrap: wrap; }
+      .row-tags span { padding: .36rem .5rem; border: 1px solid currentColor; border-radius: 3px; font-size: .58rem; font-weight: 600; }
+      .capabilities { position: relative; padding: clamp(7rem, 13vw, 12rem) 0; }
+      .cap-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(3rem, 9vw, 10rem); align-items: start; }
+      .cap-sticky { position: sticky; top: 130px; }
+      .cap-sticky p { max-width: 38ch; margin-top: 1.7rem; color: var(--muted); }
+      .cap-list { counter-reset: caps; border-top: 1px solid var(--line); }
+      .cap-item { counter-increment: caps; display: grid; grid-template-columns: 3rem 1fr; gap: 1.2rem; padding: clamp(1.8rem, 4vw, 3.2rem) 0; border-bottom: 1px solid var(--line); }
+      .cap-item::before { content: "0" counter(caps); color: var(--lime); font: 700 .7rem/1 var(--display); padding-top: .45rem; }
+      .cap-item h3 { font: 600 clamp(1.45rem, 2.4vw, 2.2rem)/1.05 var(--display); }
+      .cap-item p { max-width: 48ch; margin-top: .75rem; color: var(--muted); font-size: .88rem; }
+      .method { padding: clamp(6rem, 11vw, 10rem) 0; border-block: 1px solid var(--line); background: var(--surface); }
+      .method-head { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: clamp(3rem, 6vw, 6rem); }
+      .method-head p { max-width: 34ch; color: var(--muted); }
+      .steps { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); }
+      .step { min-height: 300px; padding: clamp(1.5rem, 3vw, 2.6rem); }
+      .step + .step { border-left: 1px solid var(--line); }
+      .step b { color: var(--lime); font: 700 .72rem/1 var(--display); }
+      .step h3 { margin-top: 5rem; font: 600 clamp(1.6rem, 3vw, 2.7rem)/1 var(--display); }
+      .step p { margin-top: 1rem; color: var(--muted); font-size: .86rem; }
+      .contact { position: relative; min-height: 100svh; display: grid; align-items: center; padding: 8rem 0 4rem; overflow: hidden; background: var(--lime); color: var(--night); }
+      .contact::before { content: "FM"; position: absolute; right: -.08em; bottom: -.18em; color: oklch(20% .05 135 / .09); font: 700 clamp(18rem, 46vw, 48rem)/.75 var(--display); letter-spacing: -.12em; pointer-events: none; }
+      .contact-layout { position: relative; z-index: 2; display: grid; grid-template-columns: 1.2fr .8fr; gap: clamp(3rem, 9vw, 10rem); align-items: end; }
+      .contact h2 { max-width: 8ch; font: 700 clamp(4rem, 10vw, 10rem)/.82 var(--display); letter-spacing: -.065em; }
+      .contact-side p { max-width: 32ch; font-size: clamp(1rem, 1.4vw, 1.18rem); }
+      .contact-actions { display: grid; gap: .7rem; margin-top: 2rem; }
+      .contact-action { display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 62px; padding: .9rem 1rem; border: 1px solid oklch(18% .04 250 / .3); background: var(--night); color: var(--paper); font-weight: 700; transition: transform .25s var(--ease), background .25s, color .25s; }
+      .contact-action:hover { transform: translateX(6px); background: var(--paper); color: var(--night); }
+      .contact small { display: block; margin-top: 2rem; color: oklch(26% .05 145); }
+      footer { position: relative; z-index: 2; align-self: end; margin-top: 5rem; padding-top: 1.5rem; border-top: 1px solid oklch(18% .04 250 / .25); }
+      .footer-inner { display: flex; justify-content: space-between; gap: 1rem; font-size: .72rem; font-weight: 600; }
+      .reveal { opacity: 0; transform: translateY(38px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+      .reveal.visible { opacity: 1; transform: none; }
+      .cursor-orb { position: fixed; z-index: 300; width: 22px; height: 22px; border: 1px solid var(--lime); border-radius: 50%; pointer-events: none; transform: translate(-50%, -50%); opacity: 0; transition: width .25s var(--ease), height .25s var(--ease), background .25s, opacity .25s; mix-blend-mode: difference; }
+      .cursor-orb.active { width: 56px; height: 56px; background: var(--paper); }
+      @keyframes ticker { to { transform: translateX(-50%); } }
+      @keyframes scrollPulse { 0%,100% { transform: scaleY(.35); transform-origin: top; opacity: .5; } 50% { transform: scaleY(1); opacity: 1; } }
+      @keyframes pin { 0%,100% { box-shadow: 0 0 0 0 oklch(70% .19 28 / .35); } 50% { box-shadow: 0 0 0 8px oklch(70% .19 28 / 0); } }
+      @media (max-width: 980px) {
+        .nav { grid-template-columns: 1fr auto; }
+        .nav-links { display: none; }
+        .hero-grid, .project-grid, .intro-layout, .archive-head, .cap-grid, .contact-layout { grid-template-columns: 1fr; }
+        .hero-grid { align-items: end; gap: 2.5rem; }
+        .hero h1 { max-width: 9ch; }
+        .hero h1 span { transform: none; }
+        .hero-side { display: grid; grid-template-columns: 1fr auto; gap: 1.5rem; align-items: end; }
+        .hero-actions { margin: 0; }
+        .intro-copy { margin-left: 0; }
+        .project-stage { min-height: auto; }
+        .project-stage.alt .project-copy, .project-stage.alt .product-window { order: initial; }
+        .project-copy { max-width: 680px; }
+        .product-window { min-height: 520px; }
+        .project-row { grid-template-columns: 3rem 1fr auto; }
+        .row-desc { grid-column: 2; }
+        .row-tags { grid-column: 3; grid-row: 1 / span 2; }
+        .cap-sticky { position: static; }
+      }
+      @media (max-width: 680px) {
+        .wrap { width: min(calc(100% - 1.2rem), var(--max)); }
+        .nav { height: 66px; }
+        .brand > span { display: none; }
+        .header-cta { padding: .6rem .7rem; }
+        .hero { min-height: 94svh; padding-top: 7rem; }
+        .hero-grid { gap: 2rem; }
+        .hero h1 { font-size: clamp(3.8rem, 20vw, 6.5rem); }
+        .hero-side { display: block; }
+        .hero-actions { margin-top: 1.5rem; }
+        .hero-actions .btn { flex: 1; }
+        .scroll-cue { display: none; }
+        .work-head, .method-head { display: block; }
+        .work-head p, .method-head p { margin-top: 1rem; }
+        .project-grid { gap: 2.5rem; }
+        .project-copy h3 { font-size: clamp(3rem, 17vw, 5rem); }
+        .project-fact { grid-template-columns: 6.5rem 1fr; }
+        .product-window { min-height: 430px; border-radius: 10px; }
+        .auto-ui, .cut-ui { min-height: 388px; }
+        .auto-ui { padding: 1.1rem; }
+        .auto-nav-links, .auto-panel { display: none; }
+        .auto-hero { display: block; }
+        .auto-hero h4 { font-size: 2.1rem; }
+        .auto-car { margin-top: 2.4rem; }
+        .cut-ui { grid-template-columns: 1fr .66fr; }
+        .cut-search { padding: 1rem; }
+        .cut-kicker { margin-top: 1.8rem; }
+        .cut-search h4 { font-size: 1.8rem; }
+        .cut-result, .regions { display: none; }
+        .project-row { grid-template-columns: 2rem 1fr auto; gap: .7rem; min-height: 120px; }
+        .row-desc { display: none; }
+        .row-tags span { display: none; }
+        .row-tags::after { content: "↗"; font-size: 1.25rem; }
+        .steps { grid-template-columns: 1fr; }
+        .step { min-height: auto; }
+        .step + .step { border-left: 0; border-top: 1px solid var(--line); }
+        .step h3 { margin-top: 2.5rem; }
+        .contact { min-height: 100svh; }
+        .contact h2 { font-size: clamp(4rem, 20vw, 7rem); }
+        .footer-inner { display: grid; }
+      }
+      @media (pointer: coarse), (prefers-reduced-motion: reduce) { .cursor-orb { display: none; } }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+        .reveal { opacity: 1; transform: none; }
       }
     </style>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "ProfessionalService",
-            "@id": "https://estudiofm.pt/#business",
-            "name": "Estúdio Flávio Martins",
-            "url": "https://estudiofm.pt/",
-            "description": "Criação e melhoria de sites, landing pages, SEO local, conteúdo estratégico e ferramentas digitais para pequenos negócios em Portugal.",
-            "areaServed": "Portugal",
-            "serviceType": [
-              "Criação de sites",
-              "Landing pages",
-              "SEO local",
-              "Ferramentas digitais",
-              "Simuladores online",
-              "Otimização de contacto por WhatsApp",
-              "Auditoria de presença digital"
-            ],
-            "telephone": "+31621290605"
-          },
-          {
-            "@type": "Person",
-            "@id": "https://estudiofm.pt/#person",
-            "name": "Flávio Martins",
-            "jobTitle": "Consultor de Presença Digital",
-            "worksFor": { "@id": "https://estudiofm.pt/#business" },
-            "description": "Profissional com mais de 20 anos de experiência em IT, focado em sites, SEO local, ferramentas digitais e clareza comercial para negócios."
-          },
-          {
-            "@type": "WebSite",
-            "@id": "https://estudiofm.pt/#website",
-            "url": "https://estudiofm.pt/",
-            "name": "Estúdio Flávio Martins",
-            "publisher": { "@id": "https://estudiofm.pt/#business" },
-            "inLanguage": "pt-PT"
-          },
-          {
-            "@type": "CreativeWork",
-            "@id": "https://estudiofm.pt/#circuito-car",
-            "name": "Circuito Car Blog",
-            "url": "https://circuitocar.blog/",
-            "creator": { "@id": "https://estudiofm.pt/#person" },
-            "description": "Blog automóvel com guias locais, conteúdo SEO, simulador de crédito, simulador de retoma e integração de contacto por WhatsApp para a Circuito Car."
-          },
-          {
-            "@type": "ItemList",
-            "@id": "https://estudiofm.pt/#portfolio-list",
-            "name": "Portfólio Estúdio Flávio Martins",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                  "@type": "CreativeWork",
-                  "name": "Circuito Car Blog",
-                  "url": "https://circuitocar.blog/"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                  "@type": "CreativeWork",
-                  "name": "Delicarte",
-                  "url": "https://delicarte.pt/"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "item": {
-                  "@type": "CreativeWork",
-                  "name": "Motivo Rústico",
-                  "url": "https://motivorustico.pt/"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 4,
-                "item": {
-                  "@type": "CreativeWork",
-                  "name": "Pulsar FM",
-                  "url": "https://pulsarfm.eu/"
-                }
-              }
-            ]
-          },
-          {
-            "@type": "FAQPage",
-            "@id": "https://estudiofm.pt/#faq",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Fazes sites novos ou também melhoras sites existentes?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Faço ambos. Posso criar uma landing page nova, melhorar a homepage atual, reorganizar páginas de serviço ou acrescentar ferramentas úteis ao site que já existe."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Que tipo de ferramentas digitais podes criar?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Ferramentas simples como simuladores, calculadoras, formulários inteligentes, páginas de captação e fluxos de contacto por WhatsApp com dados pré-preenchidos."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Um site ajuda mesmo a conseguir mais clientes?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Um site bem pensado ajuda a transmitir confiança, explicar serviços com clareza, aparecer melhor no Google e facilitar o contacto por telefone, formulário ou WhatsApp."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Trabalhas com empresas em todo o país?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Sim. Trabalho remotamente com pequenos negócios em Portugal, com especial foco em empresas locais, prestadores de serviços e marcas que precisam de uma presença online mais clara."
-                }
-              }
-            ]
-          }
-        ]
+        "@type": "ProfessionalService",
+        "name": "Estúdio Flávio Martins",
+        "url": "https://estudiofm.pt/",
+        "description": "Estratégia, design, desenvolvimento web, SEO local e ferramentas digitais.",
+        "areaServed": "Portugal",
+        "founder": { "@type": "Person", "name": "Flávio Martins" },
+        "sameAs": ["https://autoretoma.pt/", "https://ondecortar.pt/"]
       }
     </script>
   </head>
   <body>
+    <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+    <div class="progress" aria-hidden="true"></div>
+    <div class="cursor-orb" aria-hidden="true"></div>
     <header class="site-header">
-      <div class="container nav">
-        <a href="#top" class="brand" aria-label="Estúdio Flávio Martins">
-          <span class="brand-mark">EFM</span>
-          <span class="brand-text">
-            Estúdio Flávio Martins
-            <small>digital systems for local business</small>
-          </span>
-        </a>
-        <nav class="nav-links" aria-label="Navegação principal">
-          <a href="#portfolio">Portfólio</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#capacidades">Capacidades</a>
-          <a href="#servicos">Serviços</a> <a href="#precos">Preços</a>
-          <a href="#contacto" class="nav-cta">Diagnóstico</a>
-        </nav>
+      <div class="wrap nav">
+        <a class="brand" href="#top" aria-label="Estúdio Flávio Martins, início"><i class="brand-mark" aria-hidden="true"></i><span>ESTÚDIO FLÁVIO MARTINS</span></a>
+        <nav class="nav-links" aria-label="Navegação principal"><a href="#trabalho">Trabalho</a><a href="#capacidades">Capacidades</a><a href="#metodo">Método</a></nav>
+        <a class="header-cta" href="#contacto">Disponível para projetos</a>
       </div>
     </header>
-    <main id="top">
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="reveal">
-            <div class="kicker">Sites, SEO local e ferramentas digitais</div>
-            <h1>Presença digital com <span>lógica de sistema</span>.</h1>
-            <p class="hero-copy">
-              Ajudo negócios locais e pequenas empresas a transformar sites
-              confusos em páginas claras, rápidas e preparadas para gerar
-              contactos. Design, copy, SEO local, formulários, WhatsApp e
-              pequenas ferramentas entram no mesmo plano: fazer o cliente
-              perceber, confiar e agir.
-            </p>
-            <div class="hero-actions">
-              <a href="#portfolio" class="btn btn-primary"
-                ><i data-lucide="monitor-check" aria-hidden="true"></i> Ver
-                trabalho real</a
-              >
-              <a
-                href="https://wa.me/31621290605?text=Olá%2C%20quero%20melhorar%20a%20presen%C3%A7a%20digital%20do%20meu%20neg%C3%B3cio."
-                class="btn btn-secondary"
-                ><i data-lucide="message-square" aria-hidden="true"></i> Falar
-                por WhatsApp</a
-              >
-            </div>
-            <div class="trust-strip" aria-label="Resumo de capacidades">
-              <div>
-                <strong>20+ anos IT</strong>
-                <span>Base técnica para resolver problemas com calma.</span>
-              </div>
-              <div>
-                <strong>SEO + UX</strong>
-                <span>Conteúdo útil com estrutura para conversão.</span>
-              </div>
-              <div>
-                <strong>Web tools</strong>
-                <span>Simuladores e fluxos que captam intenção.</span>
-              </div>
-            </div>
-          </div>
-          <aside
-            class="console reveal"
-            aria-label="Painel de diagnóstico digital"
-          >
-            <div class="console-top">
-              <span class="console-dots" aria-hidden="true"
-                ><span></span><span></span><span></span
-              ></span>
-              <span>audit.run / local-business</span>
-            </div>
-            <div class="console-body">
-              <div class="diagnostic-line">
-                <strong>01</strong>
-                <span>Clareza da oferta e hierarquia da página</span>
-                <span class="status">online</span>
-              </div>
-              <div class="diagnostic-line">
-                <strong>02</strong>
-                <span>SEO local, headings, schema e intenção de pesquisa</span>
-                <span class="status">ready</span>
-              </div>
-              <div class="diagnostic-line">
-                <strong>03</strong>
-                <span>Contacto: WhatsApp, formulário e fricção mobile</span>
-                <span class="status">live</span>
-              </div>
-              <div class="signal-grid">
-                <div class="signal">
-                  <small>OUTPUT</small>
-                  <strong>Mais confiança no primeiro ecrã</strong>
-                </div>
-                <div class="signal">
-                  <small>OUTPUT</small>
-                  <strong>Mais caminhos para pedir contacto</strong>
-                </div>
-              </div>
-            </div>
-          </aside>
+    <main id="conteudo">
+      <section class="hero" id="top">
+        <canvas id="field" aria-hidden="true"></canvas>
+        <div class="wrap hero-grid">
+          <div><span class="availability"><i aria-hidden="true"></i> Estratégia, design e código, por uma pessoa só.</span><h1 class="reveal">FAÇO A WEB <span>MEXER.</span></h1></div>
+          <div class="hero-side reveal"><p>Transformo ideias em sites e produtos digitais que explicam melhor, trabalham mais e não se confundem com o resto.</p><div class="hero-actions"><a class="btn btn-primary magnetic" href="#trabalho">Explorar projetos <span aria-hidden="true">↓</span></a><a class="btn btn-ghost magnetic" href="#contacto">Falar comigo</a></div></div>
         </div>
+        <span class="scroll-cue" aria-hidden="true">SCROLL</span>
       </section>
-      <section id="portfolio" class="portfolio">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <span class="label">Portfólio assinado</span>
-              <h2>Projetos reais, cada um com a sua própria voz.</h2>
-            </div>
-            <p>
-              A seleção é curta de propósito. São trabalhos que assumo como
-              montra: estratégia, copy, SEO, ferramentas úteis e uma identidade
-              visual que respeita a marca de cada cliente.
-            </p>
-          </div>
-          <div class="mini-project-grid" aria-label="Projetos entregues">
-            <a
-              class="mini-project-card"
-              href="https://circuitocar.blog/"
-              target="_blank"
-              rel="noopener"
-              style="
-                --project-accent: var(--lime);
-                --project-glow: oklch(83% 0.19 145 / 0.15);
-              "
-            >
-              <div>
-                <div class="brand-scene scene-circuito">
-                  <img
-                    src="https://circuitocar.blog/img/cc.png"
-                    alt="Identidade visual da Circuito Car Blog"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="mini-project-meta">
-                  <span>Automóvel</span>
-                  <span>SEO local</span>
-                  <span>Simuladores</span>
-                </div>
-                <h4>Circuito Car Blog</h4>
-                <p>
-                  Blog automóvel para a Circuito Car, stand em Joane, com guias
-                  locais, stock selecionado, simulador de crédito, simulador de
-                  retoma e contacto por WhatsApp.
-                </p>
-              </div>
-              <span class="visit-line"
-                >Abrir projeto
-                <i data-lucide="external-link" aria-hidden="true"></i
-              ></span>
-            </a>
-            <a
-              class="mini-project-card"
-              href="https://delicarte.pt/"
-              target="_blank"
-              rel="noopener"
-              style="
-                --project-accent: oklch(84% 0.1 32);
-                --project-glow: oklch(76% 0.14 22 / 0.16);
-              "
-            >
-              <div>
-                <div class="brand-scene scene-delicarte" aria-hidden="true">
-                  <span class="scene-mark">D</span>
-                </div>
-                <div class="mini-project-meta">
-                  <span>Bem-estar</span>
-                  <span>SEO local</span>
-                  <span>WhatsApp</span>
-                </div>
-                <h4>Delicarte</h4>
-                <p>
-                  Site de raiz para um espaço de bem-estar em Guimarães. Tom
-                  calmo, SEO local, estrutura de confiança, dados estruturados e
-                  contacto direto por WhatsApp.
-                </p>
-              </div>
-              <span class="visit-line"
-                >Abrir projeto
-                <i data-lucide="external-link" aria-hidden="true"></i
-              ></span>
-            </a>
-            <a
-              class="mini-project-card"
-              href="https://motivorustico.pt/"
-              target="_blank"
-              rel="noopener"
-              style="
-                --project-accent: var(--amber);
-                --project-glow: oklch(78% 0.17 72 / 0.16);
-              "
-            >
-              <div>
-                <div class="brand-scene scene-rustico" aria-hidden="true">
-                  <span class="scene-mark">MR</span>
-                </div>
-                <div class="mini-project-meta">
-                  <span>Serviços locais</span>
-                  <span>Calculadora</span>
-                  <span>Leads</span>
-                </div>
-                <h4>Motivo Rústico</h4>
-                <p>
-                  Presença local para terraplanagens, muros em pedra e limpezas
-                  no Minho, com calculadora, galeria, prova social e pedido de
-                  orçamento simples.
-                </p>
-              </div>
-              <span class="visit-line"
-                >Abrir projeto
-                <i data-lucide="external-link" aria-hidden="true"></i
-              ></span>
-            </a>
-            <a
-              class="mini-project-card"
-              href="https://pulsarfm.eu/"
-              target="_blank"
-              rel="noopener"
-              style="
-                --project-accent: oklch(80% 0.18 205);
-                --project-glow: oklch(70% 0.22 325 / 0.18);
-              "
-            >
-              <div>
-                <div class="brand-scene scene-pulsar" aria-hidden="true">
-                  <span class="eq-bars">
-                    <span style="--bar: 38%"></span>
-                    <span style="--bar: 74%"></span>
-                    <span style="--bar: 52%"></span>
-                    <span style="--bar: 92%"></span>
-                    <span style="--bar: 64%"></span>
-                    <span style="--bar: 82%"></span>
-                    <span style="--bar: 44%"></span>
-                  </span>
-                </div>
-                <div class="mini-project-meta">
-                  <span>Media</span>
-                  <span>Neon UI</span>
-                  <span>Visualizador</span>
-                </div>
-                <h4>Pulsar FM</h4>
-                <p>
-                  Rádios online com alma retro: visualizador estilo Winamp, Trip
-                  Mode, interface neon e uma experiência mais memorável do que
-                  uma lista de links.
-                </p>
-              </div>
-              <span class="visit-line"
-                >Abrir projeto
-                <i data-lucide="external-link" aria-hidden="true"></i
-              ></span>
-            </a>
-          </div>
-        </div>
+      <div class="ticker" aria-label="Capacidades do estúdio">
+        <div class="ticker-track"><div class="ticker-group"><span>PRODUTOS DIGITAIS</span><span>DESIGN COM IDENTIDADE</span><span>SEO LOCAL</span><span>FERRAMENTAS ÚTEIS</span><span>EXPERIÊNCIAS INTERATIVAS</span><span>PERFORMANCE</span></div><div class="ticker-group" aria-hidden="true"><span>PRODUTOS DIGITAIS</span><span>DESIGN COM IDENTIDADE</span><span>SEO LOCAL</span><span>FERRAMENTAS ÚTEIS</span><span>EXPERIÊNCIAS INTERATIVAS</span><span>PERFORMANCE</span></div></div>
+      </div>
+      <section class="intro">
+        <div class="wrap intro-layout"><span class="eyebrow reveal" data-index="01">O que faço</span><div><h2 class="reveal">Não vendo páginas. Construo <strong>vantagem digital.</strong></h2><p class="intro-copy reveal">Começo no problema e vou até ao produto lançado. Estratégia, texto, identidade, desenvolvimento e SEO trabalham juntos, porque o cliente final nunca os vê em separado.</p></div></div>
       </section>
-
-      <section id="sobre" class="sobre">
-        <div class="container">
-          <div class="about-grid">
-            <div>
-              <span class="label">Quem está por detrás</span>
-              <h2>20 anos em IT.<br><span style="color:var(--lime)">Foco em resultados reais.</span></h2>
-              <p class="about-lead">
-                Comecei em infraestrutura e suporte técnico. Passei por projetos corporativos, automação e sistemas internos. Hoje aplico essa base técnica em algo mais direto: presença digital que funciona de verdade.
-              </p>
-              <p class="about-body">
-                Não crio sites bonitos por criar. Olho para o negócio, percebo o que trava o contacto e construo uma estrutura que explica a oferta, gera confiança e facilita a ação.
-              </p>
-              <p class="about-body">
-                Trabalho com um número pequeno de clientes de cada vez. Sem agência, sem intermediários. Um ponto de contacto, uma entrega, um resultado que se mede.
-              </p>
-              <div class="about-stats">
-                <div class="about-stat">
-                  <strong>20+</strong>
-                  <span>anos em IT e sistemas</span>
-                </div>
-                <div class="about-stat">
-                  <strong>4</strong>
-                  <span>projetos entregues com identidade própria</span>
-                </div>
-                <div class="about-stat">
-                  <strong>PT</strong>
-                  <span>negócios locais em todo o país</span>
-                </div>
-                <div class="about-stat">
-                  <strong>100%</strong>
-                  <span>remoto, sem complicações</span>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial-stack">
-              <div class="testimonial">
-                <p>O blog passou a trazer contactos por WhatsApp de pessoas que já viram os carros e sabem o que querem. Antes tinham de explicar tudo de início. Agora chegam à conversa com contexto, e isso poupa tempo dos dois lados.</p>
-                <cite>Circuito Car, Stand automóvel em Joane</cite>
-              </div>
-              <div class="testimonial">
-                <p>A calculadora foi o que mais surpreendeu. O cliente preenche, percebe logo a ordem de grandeza do orçamento, e quando liga já sabe que é para avançar. Os pedidos ficaram mais qualificados.</p>
-                <cite>Motivo Rústico, Terraplanagens e muros no Minho</cite>
-              </div>
-              <div class="about-cta-note">
-                <strong>Preferes conversar primeiro?</strong>
-                Podes enviar o teu projeto por WhatsApp ou preencher o formulário abaixo. Respondo em menos de 24 horas.
-              </div>
-            </div>
-          </div>
-        </div>
+      <section id="trabalho" aria-labelledby="work-title">
+        <div class="wrap work-head"><div><span class="eyebrow reveal" data-index="02">Projetos em destaque</span><h2 class="section-title reveal" id="work-title">Prova, não promessa.</h2></div><p class="reveal">Dois produtos novos, desenhados para problemas completamente diferentes.</p></div>
       </section>
-
-      <section id="capacidades">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <span class="label">Capacidades</span>
-              <h2>O que levo para cada projeto.</h2>
-            </div>
-            <p>
-              Uma página moderna precisa de mais do que uma boa imagem. Precisa
-              de mensagem, estrutura, performance, ação e um caminho simples
-              para o cliente certo avançar.
-            </p>
-          </div>
-          <div class="capability-grid">
-            <article class="capability reveal">
-              <span class="capability-number">01</span>
-              <div>
-                <h3>Sites com presença forte</h3>
-                <p>
-                  Homepages e landing pages com hierarquia, secções úteis,
-                  chamadas para ação e design que parece feito à medida do
-                  negócio.
-                </p>
-              </div>
-            </article>
-            <article class="capability reveal">
-              <span class="capability-number">02</span>
-              <div>
-                <h3>SEO local e conteúdo</h3>
-                <p>
-                  Páginas e artigos pensados para pesquisas reais, localidades,
-                  serviços e dúvidas que já existem na cabeça do cliente.
-                </p>
-              </div>
-            </article>
-            <article class="capability reveal">
-              <span class="capability-number">03</span>
-              <div>
-                <h3>Ferramentas que geram leads</h3>
-                <p>
-                  Simuladores, calculadoras e formulários inteligentes que dão
-                  valor ao visitante e criam uma conversa comercial mais
-                  qualificada.
-                </p>
-              </div>
-            </article>
-            <article class="capability reveal">
-              <span class="capability-number">04</span>
-              <div>
-                <h3>Copy que explica rápido</h3>
-                <p>
-                  Textos sem ruído técnico, orientados para confiança,
-                  diferenciação e próximos passos claros em desktop e mobile.
-                </p>
-              </div>
-            </article>
-            <article class="capability reveal">
-              <span class="capability-number">05</span>
-              <div>
-                <h3>Contacto sem fricção</h3>
-                <p>
-                  WhatsApp, formulários e botões com contexto, para que o
-                  cliente não tenha de pensar demasiado antes de pedir ajuda.
-                </p>
-              </div>
-            </article>
-            <article class="capability reveal">
-              <span class="capability-number">06</span>
-              <div>
-                <h3>Execução rápida com critério</h3>
-                <p>
-                  Uso ferramentas modernas e IA para acelerar, mantendo revisão
-                  humana, estrutura limpa e foco no impacto real.
-                </p>
-              </div>
-            </article>
+      <article class="project-stage auto-stage" data-watermark="AUTO">
+        <div class="wrap project-grid">
+          <div class="project-copy reveal"><span class="project-number">PROJETO 01 / PLATAFORMA</span><h3>Auto<br />Retoma</h3><p>Uma plataforma de carros de baixo valor vendidos diretamente por stands. O desafio: transformar defeitos conhecidos em informação clara e confiança para comprar.</p><div class="project-facts"><div class="project-fact"><span>Construção</span><strong>Produto, UX, UI e desenvolvimento</strong></div><div class="project-fact"><span>Problema</span><strong>Transparência no automóvel usado</strong></div><div class="project-fact"><span>Para quem</span><strong>Compradores e stands portugueses</strong></div></div><a class="project-link" href="https://autoretoma.pt/" target="_blank" rel="noopener">Visitar autoretoma.pt <span class="arrow" aria-hidden="true">↗</span></a></div>
+          <div class="product-window tilt reveal" aria-label="Pré-visualização estilizada da AutoRetoma">
+            <div class="window-bar"><i></i><i></i><i></i><span class="window-address">autoretoma.pt</span></div>
+            <div class="auto-ui"><div class="auto-nav"><span class="auto-logo">Auto<b>Retoma</b></span><span class="auto-nav-links"><span>Início</span><span>Ver carros</span><span>Para stands</span></span></div><div class="auto-hero"><div><span class="auto-tag">RETOMAS E CARROS ATÉ 5500 €</span><h4>Carros baratos, sem surpresas escondidas.</h4><p>Retomas vendidas diretamente por stands, com os defeitos conhecidos apresentados de forma clara.</p><div class="auto-actions"><span class="mini-btn hot">Ver carros</span><span class="mini-btn">Sou um stand</span></div></div><div class="auto-panel"><strong>O que vais encontrar aqui</strong><ul><li>Problemas descritos com fotografia e gravidade.</li><li>Estado dividido por áreas do veículo.</li><li>Contacto direto com o stand responsável.</li></ul></div></div><div class="auto-car"><div><small>DISPONÍVEL</small><h5>Peugeot 207</h5><div class="car-specs"><span>2011</span><span>211 773 km</span><span>Gasóleo</span></div></div><span class="auto-price">5 350 €</span></div></div>
           </div>
         </div>
+      </article>
+      <article class="project-stage directory-stage alt" data-watermark="MAPA">
+        <div class="wrap project-grid">
+          <div class="project-copy reveal"><span class="project-number">PROJETO 02 / DIRETÓRIO</span><h3>Onde<br />Cortar</h3><p>Um diretório nacional que transforma centenas de registos numa pesquisa simples por cidade, zona ou nome, com perfis, contactos e mapa.</p><div class="project-facts"><div class="project-fact"><span>Construção</span><strong>Dados, pesquisa, mapas, UX e SEO</strong></div><div class="project-fact"><span>Escala</span><strong>400+ barbearias em 140+ cidades</strong></div><div class="project-fact"><span>Para quem</span><strong>Clientes e barbearias em Portugal</strong></div></div><a class="project-link" href="https://ondecortar.pt/" target="_blank" rel="noopener">Visitar ondecortar.pt <span class="arrow" aria-hidden="true">↗</span></a></div>
+          <div class="product-window tilt reveal" aria-label="Pré-visualização estilizada do OndeCortar">
+            <div class="window-bar"><i></i><i></i><i></i><span class="window-address">ondecortar.pt</span></div>
+            <div class="cut-ui"><div class="cut-search"><span class="cut-logo">ondecortar.</span><span class="cut-kicker">BARBEARIAS EM PORTUGAL</span><h4>Encontre uma barbearia <em>perto de si</em></h4><p class="cut-count">407 barbearias · 142 cidades · Gratuito</p><div class="search-box"><span>Pesquise por cidade, zona ou nome...</span><b>Procurar</b></div><div class="regions"><span>Norte</span><span>Centro</span><span>Lisboa</span><span>Alentejo</span><span>Algarve</span></div><div class="cut-result"><small>CIDADE: OEIRAS</small><strong>Fabius Barbershop Oeiras</strong><p>Perfil, contactos, horário e localização.</p></div></div><div class="map"><i class="pin"></i><i class="pin"></i><i class="pin"></i><i class="pin"></i><i class="pin"></i><span class="map-label">407 barbearias no mapa</span></div></div>
+          </div>
+        </div>
+      </article>
+      <section class="archive" aria-labelledby="archive-title">
+        <div class="wrap"><div class="archive-head"><span class="eyebrow reveal" data-index="03">Mais trabalho</span><h2 class="reveal" id="archive-title">Cada marca pede uma voz própria.</h2></div><div class="project-list">
+          <a class="project-row reveal" href="https://circuitocar.blog/" target="_blank" rel="noopener" style="--row: oklch(26% .08 142)"><span class="row-no">03</span><strong class="row-title">Circuito Car Blog</strong><span class="row-desc">Conteúdo automóvel, SEO local, simuladores e contactos mais informados.</span><span class="row-tags"><span>SEO</span><span>Simuladores</span></span></a>
+          <a class="project-row reveal" href="https://delicarte.pt/" target="_blank" rel="noopener" style="--row: oklch(47% .13 25)"><span class="row-no">04</span><strong class="row-title">Delicarte</strong><span class="row-desc">Uma presença calma e confiante para um espaço de bem-estar em Guimarães.</span><span class="row-tags"><span>Identidade</span><span>Local</span></span></a>
+          <a class="project-row reveal" href="https://motivorustico.pt/" target="_blank" rel="noopener" style="--row: oklch(37% .09 75)"><span class="row-no">05</span><strong class="row-title">Motivo Rústico</strong><span class="row-desc">Serviços locais apresentados com prova visual e uma calculadora que qualifica pedidos.</span><span class="row-tags"><span>Calculadora</span><span>Leads</span></span></a>
+          <a class="project-row reveal" href="https://pulsarfm.eu/" target="_blank" rel="noopener" style="--row: oklch(34% .14 315)"><span class="row-no">06</span><strong class="row-title">Pulsar FM</strong><span class="row-desc">Rádio online com visualizador, Trip Mode e uma interface retro que não passa despercebida.</span><span class="row-tags"><span>Áudio</span><span>Experimental</span></span></a>
+        </div></div>
       </section>
-      <section id="servicos">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <span class="label">Serviços</span>
-              <h2>Da auditoria ao lançamento, sem teatro técnico.</h2>
-            </div>
-            <p>
-              Escolho a solução pelo problema: às vezes é uma landing page nova,
-              às vezes é corrigir a homepage, criar páginas por serviço ou
-              acrescentar uma ferramenta simples.
-            </p>
-          </div>
-          <div class="services-wrap">
-            <aside class="service-menu" aria-label="Princípios de trabalho">
-              <div>
-                <strong>Diagnóstico primeiro</strong> Antes de criar, identifico
-                o que trava clareza, confiança e contacto.
-              </div>
-              <div>
-                <strong>Entrega funcional</strong> O resultado precisa de estar
-                pronto para usar, medir e melhorar.
-              </div>
-              <div>
-                <strong>Sem dependência cega</strong> O teu site torna-se uma
-                base própria, não só um apoio às redes sociais.
-              </div>
-            </aside>
-            <div class="service-grid">
-              <article class="service">
-                <i data-lucide="layout-template" aria-hidden="true"></i>
-                <h3>Landing pages e sites</h3>
-                <p>
-                  Páginas para serviços, campanhas ou negócios que precisam de
-                  explicar melhor a oferta e converter visitas em contactos.
-                </p>
-              </article>
-              <article class="service">
-                <i data-lucide="search-check" aria-hidden="true"></i>
-                <h3>SEO local</h3>
-                <p>
-                  Estrutura, conteúdos, headings e schema para melhorar
-                  relevância em pesquisas por serviço, localidade e intenção.
-                </p>
-              </article>
-              <article class="service">
-                <i data-lucide="calculator" aria-hidden="true"></i>
-                <h3>Ferramentas digitais</h3>
-                <p>
-                  Simuladores, calculadoras e formulários que tornam o site mais
-                  útil e aumentam a qualidade dos pedidos de contacto.
-                </p>
-              </article>
-              <article class="service">
-                <i data-lucide="wrench" aria-hidden="true"></i>
-                <h3>Melhoria de sites existentes</h3>
-                <p>
-                  Revisão visual, reorganização de conteúdo, melhoria mobile,
-                  botões, formulários e mensagens que hoje estão a falhar.
-                </p>
-              </article>
-              <article class="service">
-                <i data-lucide="messages-square" aria-hidden="true"></i>
-                <h3>WhatsApp e captação</h3>
-                <p>
-                  Links e fluxos com mensagens pré-preenchidas, para reduzir
-                  fricção e trazer contexto antes da primeira conversa.
-                </p>
-              </article>
-              <article class="service">
-                <i data-lucide="radar" aria-hidden="true"></i>
-                <h3>Auditoria prática</h3>
-                <p>
-                  Análise direta aos pontos que estão a afetar confiança,
-                  imagem, clareza, SEO, performance e conversão.
-                </p>
-              </article>
-            </div>
-          </div>
-        </div>
+      <section class="capabilities" id="capacidades" aria-labelledby="cap-title">
+        <div class="wrap cap-grid"><div class="cap-sticky"><span class="eyebrow reveal" data-index="04">Capacidades</span><h2 class="section-title reveal" id="cap-title">Uma cabeça. O sistema inteiro.</h2><p class="reveal">Vinte anos em IT permitem-me ligar estratégia, detalhe visual e engenharia sem perder informação pelo caminho.</p></div><div class="cap-list">
+          <article class="cap-item reveal"><div><h3>Estratégia e produto</h3><p>Defino a proposta, os públicos, a arquitetura e o caminho mais curto entre necessidade e ação.</p></div></article>
+          <article class="cap-item reveal"><div><h3>Direção visual</h3><p>Crio uma linguagem própria para cada projeto, com hierarquia, tipografia, cor e movimento que servem a mensagem.</p></div></article>
+          <article class="cap-item reveal"><div><h3>Desenvolvimento web</h3><p>Construo sites rápidos, responsivos e acessíveis, desde landing pages até plataformas com pesquisa, dados e contas.</p></div></article>
+          <article class="cap-item reveal"><div><h3>SEO e conteúdo</h3><p>Estruturo páginas para pesquisas reais, contexto local e respostas claras, sem escrever para robots.</p></div></article>
+          <article class="cap-item reveal"><div><h3>Ferramentas que trabalham</h3><p>Mapas, simuladores, calculadoras, formulários e automações que fazem mais do que decorar uma homepage.</p></div></article>
+        </div></div>
       </section>
-      <section>
-        <div class="container">
-          <div class="section-head full">
-            <span class="label">Processo</span>
-            <h2>
-              Uma sequência simples para sair do “temos de melhorar o site” para
-              uma entrega real.
-            </h2>
-          </div>
-          <div class="process-grid">
-            <article class="process-step">
-              <h3>Mapear</h3>
-              <p>
-                Vejo site, negócio, público, concorrência e intenção de
-                pesquisa. O foco é descobrir o bloqueio certo.
-              </p>
-            </article>
-            <article class="process-step">
-              <h3>Desenhar</h3>
-              <p>
-                Defino estrutura, mensagens, secções, ações e componentes. Tudo
-                com uma função clara.
-              </p>
-            </article>
-            <article class="process-step">
-              <h3>Construir</h3>
-              <p>
-                Crio a página, conteúdo, ajustes técnicos e integrações
-                necessárias para deixar a solução pronta.
-              </p>
-            </article>
-            <article class="process-step">
-              <h3>Lançar</h3>
-              <p>
-                Revejo mobile, contacto, SEO básico, velocidade percebida e
-                detalhes que podem travar confiança.
-              </p>
-            </article>
-          </div>
-        </div>
+      <section class="method" id="metodo" aria-labelledby="method-title">
+        <div class="wrap"><div class="method-head"><div><span class="eyebrow reveal" data-index="05">Como trabalho</span><h2 class="section-title reveal" id="method-title">Sem telefone estragado.</h2></div><p class="reveal">Falas diretamente com quem pensa, desenha e constrói.</p></div><div class="steps reveal"><article class="step"><b>01 / DESCOBRIR</b><h3>Perceber o problema certo.</h3><p>Negócio, público, concorrência e o que precisa realmente de mudar.</p></article><article class="step"><b>02 / CONSTRUIR</b><h3>Dar forma e pôr a funcionar.</h3><p>Mensagem, protótipo, identidade e código evoluem como um único sistema.</p></article><article class="step"><b>03 / LANÇAR</b><h3>Medir, aprender, afinar.</h3><p>Publicação, verificação técnica e melhorias com base no uso real.</p></article></div></div>
       </section>
-      <section id="precos" class="pricing">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <span class="label">Valores de entrada</span>
-              <h2>Escopo claro antes de orçamento fechado.</h2>
-            </div>
-            <p>
-              Estes valores servem como referência inicial. O preço final
-              depende do conteúdo, número de páginas, integrações e nível de
-              ferramenta necessário.
-            </p>
-          </div>
-          <div class="pricing-grid">
-            <article class="price-card">
-              <div>
-                <i data-lucide="file-text" aria-hidden="true"></i>
-                <h3>Auditoria prática</h3>
-                <div class="price">Desde 95€</div>
-                <p>
-                  Diagnóstico direto com prioridades de melhoria para clareza,
-                  confiança, SEO e contacto.
-                </p>
-              </div>
-            </article>
-            <article class="price-card featured">
-              <div>
-                <i data-lucide="rocket" aria-hidden="true"></i>
-                <h3>Landing page de serviço</h3>
-                <div class="price">Desde 350€</div>
-                <p>
-                  Página estratégica para uma oferta, com copy, estrutura,
-                  design responsivo e CTA.
-                </p>
-              </div>
-            </article>
-            <article class="price-card">
-              <div>
-                <i data-lucide="refresh-cw" aria-hidden="true"></i>
-                <h3>Melhoria de homepage</h3>
-                <div class="price">Desde 250€</div>
-                <p>
-                  Revisão visual, textual e estrutural para tornar a página
-                  principal mais convincente.
-                </p>
-              </div>
-            </article>
-            <article class="price-card">
-              <div>
-                <i data-lucide="cpu" aria-hidden="true"></i>
-                <h3>Ferramenta digital simples</h3>
-                <div class="price">Desde 450€</div>
-                <p>
-                  Simulador, calculadora ou formulário inteligente para gerar
-                  valor e captar pedidos.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section id="contacto">
-        <div class="container faq-contact">
-          <div>
-            <div class="section-head full">
-              <span class="label">FAQ</span>
-              <h2>Perguntas antes de arrancar.</h2>
-            </div>
-            <div class="faq-list" id="faq">
-              <details class="faq-item" open>
-                <summary>
-                  Fazes sites novos ou também melhoras sites existentes?
-                </summary>
-                <p>
-                  Faço ambos. Posso criar uma landing page nova, melhorar a
-                  homepage atual, reorganizar páginas de serviço ou acrescentar
-                  ferramentas úteis ao site que já existe.
-                </p>
-              </details>
-              <details class="faq-item">
-                <summary>Que tipo de ferramentas digitais podes criar?</summary>
-                <p>
-                  Simuladores, calculadoras, formulários inteligentes e fluxos
-                  de contacto por WhatsApp. A ideia é ajudar o visitante e
-                  trazer pedidos mais qualificados.
-                </p>
-              </details>
-              <details class="faq-item">
-                <summary>Preciso de ter tudo preparado?</summary>
-                <p>
-                  Não. Basta ter uma noção do negócio, serviços e do que
-                  gostavas de melhorar. A estrutura e a mensagem podem ser
-                  organizadas durante o processo.
-                </p>
-              </details>
-              <details class="faq-item">
-                <summary>Trabalhas com empresas fora da minha zona?</summary>
-                <p>
-                  Sim. Trabalho remotamente com negócios em Portugal. O processo
-                  funciona bem por WhatsApp, chamada e partilha de materiais.
-                </p>
-              </details>
-            </div>
-          </div>
-          <div>
-            <div class="contact-panel">
-              <span class="label">Diagnóstico inicial</span>
-              <h2>Mostra-me o teu site. Eu procuro os pontos de fuga.</h2>
-              <p>
-                Envia o negócio, o link e o que queres melhorar. O pedido abre
-                no WhatsApp com uma mensagem organizada para responderes em
-                poucos segundos.
-              </p>
-              <div class="inline-actions">
-                <a
-                  href="https://wa.me/31621290605?text=Olá%2C%20quero%20melhorar%20a%20presen%C3%A7a%20digital%20do%20meu%20neg%C3%B3cio."
-                  class="btn btn-primary"
-                  ><i data-lucide="message-square" aria-hidden="true"></i> Falar
-                  agora</a
-                >
-              </div>
-            </div>
-            <div class="form-panel" id="formulario-diagnostico">
-              <form id="diagnostico-form">
-                <div class="form-grid">
-                  <div>
-                    <label for="nome">Nome</label>
-                    <input
-                      id="nome"
-                      name="nome"
-                      type="text"
-                      placeholder="O teu nome"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label for="negocio">Negócio / Empresa</label>
-                    <input
-                      id="negocio"
-                      name="negocio"
-                      type="text"
-                      placeholder="Nome do negócio"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="form-grid">
-                  <div>
-                    <label for="website">Website ou Instagram</label>
-                    <input
-                      id="website"
-                      name="website"
-                      type="text"
-                      placeholder="https://..."
-                    />
-                  </div>
-                  <div>
-                    <label for="contacto-email">Email ou WhatsApp</label>
-                    <input
-                      id="contacto-email"
-                      name="contacto"
-                      type="text"
-                      placeholder="Como queres ser contactado"
-                      required
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label for="mensagem">O que gostavas de melhorar?</label>
-                  <textarea
-                    id="mensagem"
-                    name="mensagem"
-                    placeholder="Ex.: mais contactos, rever homepage, criar landing page, SEO local, ferramenta digital, WhatsApp, simulador..."
-                    required
-                  ></textarea>
-                </div>
-                <div id="form-feedback" class="form-feedback">
-                  O pedido vai abrir no WhatsApp com a mensagem já preenchida.
-                </div>
-                <button type="submit" class="btn btn-primary">
-                  <i data-lucide="send" aria-hidden="true"></i> Enviar pedido
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
+      <section class="contact" id="contacto" aria-labelledby="contact-title">
+        <div class="wrap"><div class="contact-layout"><h2 class="reveal" id="contact-title">VAMOS FAZER BARULHO?</h2><div class="contact-side reveal"><p>Mostra-me a ideia, o site ou o problema. Eu digo-te onde vejo oportunidade e qual seria o próximo passo.</p><div class="contact-actions"><a class="contact-action magnetic" href="https://wa.me/31621290605?text=Ol%C3%A1%20Fl%C3%A1vio%2C%20tenho%20um%20projeto%20para%20te%20mostrar." target="_blank" rel="noopener"><span>Começar no WhatsApp</span><span aria-hidden="true">↗</span></a><a class="contact-action magnetic" href="#trabalho"><span>Rever os projetos</span><span aria-hidden="true">↑</span></a></div><small>Normalmente respondo no próprio dia útil.</small></div></div><footer><div class="footer-inner"><span>© 2026 Estúdio Flávio Martins</span><span>Portugal · Trabalho remoto</span><a href="#top">Voltar ao início ↑</a></div></footer></div>
       </section>
     </main>
-    <footer>
-      <div class="container footer-inner">
-        <span
-          >Estúdio Flávio Martins. Sites, SEO local e ferramentas digitais para
-          negócios reais.</span
-        >
-        <a href="#top">Voltar ao topo</a>
-      </div>
-    </footer>
-    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
-      if (window.lucide) {
-        lucide.createIcons();
-      }
-      const diagnosticoForm = document.getElementById("diagnostico-form");
-      const formFeedback = document.getElementById("form-feedback");
-      diagnosticoForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-        const nome = document.getElementById("nome").value.trim();
-        const negocio = document.getElementById("negocio").value.trim();
-        const website =
-          document.getElementById("website").value.trim() || "Não indicado";
-        const contacto = document.getElementById("contacto-email").value.trim();
-        const mensagem = document.getElementById("mensagem").value.trim();
-        if (!nome || !negocio || !contacto || !mensagem) {
-          formFeedback.style.display = "block";
-          formFeedback.textContent =
-            "Preenche nome, negócio, contacto e o que gostavas de melhorar.";
-          return;
+      (function () {
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const header = document.querySelector(".site-header");
+        const progress = document.querySelector(".progress");
+        const orb = document.querySelector(".cursor-orb");
+        function updateScroll() { const max = document.documentElement.scrollHeight - window.innerHeight; progress.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + "%"; header.classList.toggle("scrolled", window.scrollY > 24); }
+        updateScroll(); window.addEventListener("scroll", updateScroll, { passive: true });
+        const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add("visible"); observer.unobserve(entry.target); } }); }, { threshold: .12, rootMargin: "0px 0px -40px" });
+        document.querySelectorAll(".reveal").forEach((el, index) => { el.style.transitionDelay = Math.min(index % 3, 2) * 70 + "ms"; observer.observe(el); });
+        if (window.matchMedia("(pointer: fine)").matches && !reduceMotion) {
+          window.addEventListener("pointermove", (event) => { orb.style.opacity = "1"; orb.style.left = event.clientX + "px"; orb.style.top = event.clientY + "px"; }, { passive: true });
+          document.querySelectorAll("a, button, .tilt").forEach((el) => { el.addEventListener("pointerenter", () => orb.classList.add("active")); el.addEventListener("pointerleave", () => orb.classList.remove("active")); });
+          document.querySelectorAll(".tilt").forEach((el) => { el.addEventListener("pointermove", (event) => { const r = el.getBoundingClientRect(); const rx = ((event.clientY - r.top) / r.height - .5) * -4; const ry = ((event.clientX - r.left) / r.width - .5) * 5; el.style.transform = `perspective(1200px) rotateX(${rx}deg) rotateY(${ry}deg)`; }); el.addEventListener("pointerleave", () => { el.style.transform = ""; }); });
+          document.querySelectorAll(".magnetic").forEach((el) => { el.addEventListener("pointermove", (event) => { const r = el.getBoundingClientRect(); el.style.transform = `translate(${(event.clientX - r.left - r.width / 2) * .08}px, ${(event.clientY - r.top - r.height / 2) * .12}px)`; }); el.addEventListener("pointerleave", () => { el.style.transform = ""; }); });
         }
-        const textoWhatsapp = [
-          "Olá Flávio, quero pedir um diagnóstico inicial.",
-          "",
-          "Nome: " + nome,
-          "Negócio / Empresa: " + negocio,
-          "Website ou Instagram: " + website,
-          "Email ou WhatsApp: " + contacto,
-          "",
-          "O que gostava de melhorar:",
-          mensagem,
-        ].join("\n");
-        formFeedback.style.display = "block";
-        formFeedback.textContent =
-          "A abrir o WhatsApp com os teus dados preenchidos.";
-        window.open(
-          "https://wa.me/31621290605?text=" + encodeURIComponent(textoWhatsapp),
-          "_blank",
-        );
-      });
-    </script>
-    <script>
-      // Inject visible capability number labels (watermark stays as ghost)
-      document.querySelectorAll('.capability').forEach(function(el) {
-        var numEl = el.querySelector('.capability-number');
-        var contentDiv = Array.from(el.children).find(function(c) { return c.tagName === 'DIV'; });
-        if (numEl && contentDiv) {
-          numEl.setAttribute('aria-hidden', 'true');
-          var label = document.createElement('span');
-          label.className = 'capability-number-label';
-          label.setAttribute('aria-hidden', 'true');
-          label.textContent = numEl.textContent.trim();
-          contentDiv.prepend(label);
-        }
-      });
-
-      // Scroll-triggered reveals via IntersectionObserver
-      var ioSelector = [
-        '.capability', '.service', '.process-step', '.price-card',
-        '.mini-project-card', '.faq-item', '.testimonial',
-        '.about-stat', '.about-cta-note',
-        '.section-head > div', '.section-head > p'
-      ].join(', ');
-
-      var ioObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('io-visible');
-            ioObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-
-      document.querySelectorAll(ioSelector).forEach(function(el) {
-        // Stagger siblings that share the same parent
-        var siblings = Array.from(el.parentElement.children).filter(function(c) {
-          return c.matches && c.matches(ioSelector);
-        });
-        var idx = siblings.indexOf(el);
-        if (idx > 0) {
-          el.style.transitionDelay = Math.min(idx * 80, 400) + 'ms';
-        }
-        el.classList.add('io-item');
-        ioObserver.observe(el);
-      });
+        const canvas = document.getElementById("field"); const ctx = canvas.getContext("2d"); let points = []; let mouse = { x: innerWidth * .72, y: innerHeight * .34 };
+        function resize() { const rect = canvas.getBoundingClientRect(); const dpr = Math.min(devicePixelRatio || 1, 2); canvas.width = rect.width * dpr; canvas.height = rect.height * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); points = Array.from({ length: Math.min(74, Math.floor(rect.width / 15)) }, () => ({ x: Math.random() * rect.width, y: Math.random() * rect.height, vx: (Math.random() - .5) * .18, vy: (Math.random() - .5) * .18 })); }
+        function draw() { const rect = canvas.getBoundingClientRect(); ctx.clearRect(0, 0, rect.width, rect.height); points.forEach((p, i) => { p.x += p.vx; p.y += p.vy; if (p.x < 0 || p.x > rect.width) p.vx *= -1; if (p.y < 0 || p.y > rect.height) p.vy *= -1; const md = Math.hypot(p.x - mouse.x, p.y - mouse.y); if (md < 170) { ctx.strokeStyle = `oklch(84% .2 135 / ${.22 * (1 - md / 170)})`; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke(); } for (let j = i + 1; j < points.length; j++) { const q = points[j]; const d = Math.hypot(p.x - q.x, p.y - q.y); if (d < 92) { ctx.strokeStyle = `oklch(82% .03 240 / ${.09 * (1 - d / 92)})`; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke(); } } ctx.fillStyle = "oklch(84% .2 135 / .42)"; ctx.fillRect(p.x, p.y, 1.5, 1.5); }); if (!reduceMotion) requestAnimationFrame(draw); }
+        window.addEventListener("resize", resize); window.addEventListener("pointermove", (e) => { mouse = { x: e.clientX, y: e.clientY }; }, { passive: true }); resize(); draw();
+      })();
     </script>
   </body>
 </html>
