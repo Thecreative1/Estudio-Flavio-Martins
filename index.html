@@ -206,6 +206,29 @@
       .step b { color: var(--lime); font: 700 .72rem/1 var(--display); }
       .step h3 { margin-top: 5rem; font: 600 clamp(1.6rem, 3vw, 2.7rem)/1 var(--display); }
       .step p { margin-top: 1rem; color: var(--muted); font-size: .86rem; }
+      .pricing { padding: clamp(7rem, 13vw, 12rem) 0; background: var(--paper); color: var(--night); }
+      .pricing-layout { display: grid; grid-template-columns: .62fr 1.38fr; gap: clamp(3rem, 9vw, 10rem); align-items: start; }
+      .pricing-copy { position: sticky; top: 130px; }
+      .pricing .eyebrow { color: oklch(42% .03 250); }
+      .pricing .eyebrow::before { color: var(--coral); }
+      .pricing-copy h2 { margin-top: 1.5rem; font: 700 clamp(3.3rem, 6.8vw, 6.8rem)/.88 var(--display); letter-spacing: -.055em; }
+      .pricing-copy > p { max-width: 38ch; margin-top: 1.8rem; color: oklch(42% .03 250); }
+      .price-sheet { border-top: 1px solid oklch(25% .03 250 / .28); }
+      .price-line { position: relative; display: grid; grid-template-columns: 1fr 1.1fr auto; gap: clamp(1rem, 3vw, 2.5rem); align-items: center; min-height: 150px; padding: 1.5rem 0; border-bottom: 1px solid oklch(25% .03 250 / .28); transition: padding .35s var(--ease), background .25s, color .25s; }
+      .price-line:hover { padding-inline: 1.2rem; background: var(--night); color: var(--paper); }
+      .price-line.featured { padding-inline: 1.2rem; background: var(--night); color: var(--paper); }
+      .price-name { display: grid; gap: .6rem; }
+      .price-name h3 { font: 600 clamp(1.35rem, 2.3vw, 2rem)/1.05 var(--display); }
+      .price-badge { width: fit-content; padding: .3rem .45rem; border: 1px solid var(--lime); color: var(--lime); font-size: .58rem; font-weight: 700; }
+      .price-description { max-width: 42ch; color: oklch(43% .03 250); font-size: .82rem; }
+      .price-line:hover .price-description, .price-line.featured .price-description { color: var(--paper-dim); }
+      .price-amount { min-width: 7.2rem; text-align: right; font: 700 clamp(1.55rem, 2.7vw, 2.5rem)/1 var(--display); letter-spacing: -.04em; }
+      .price-amount small { display: block; margin-bottom: .45rem; color: oklch(45% .03 250); font: 600 .58rem/1 var(--body); letter-spacing: .06em; }
+      .price-line:hover .price-amount, .price-line.featured .price-amount { color: var(--lime); }
+      .price-line:hover .price-amount small, .price-line.featured .price-amount small { color: var(--muted); }
+      .pricing-note { display: flex; justify-content: space-between; gap: 2rem; align-items: center; margin-top: 1.8rem; color: oklch(42% .03 250); font-size: .78rem; }
+      .pricing-note p { max-width: 52ch; }
+      .pricing-note a { flex: 0 0 auto; padding-bottom: .25rem; border-bottom: 1px solid currentColor; color: var(--night); font-weight: 700; }
       .contact { position: relative; min-height: 100svh; display: grid; align-items: center; padding: 8rem 0 4rem; overflow: hidden; background: var(--lime); color: var(--night); }
       .contact::before { content: "FM"; position: absolute; right: -.08em; bottom: -.18em; color: oklch(20% .05 135 / .09); font: 700 clamp(18rem, 46vw, 48rem)/.75 var(--display); letter-spacing: -.12em; pointer-events: none; }
       .contact-layout { position: relative; z-index: 2; display: grid; grid-template-columns: 1.2fr .8fr; gap: clamp(3rem, 9vw, 10rem); align-items: end; }
@@ -227,7 +250,7 @@
       @media (max-width: 980px) {
         .nav { grid-template-columns: 1fr auto; }
         .nav-links { display: none; }
-        .hero-grid, .project-grid, .intro-layout, .archive-head, .cap-grid, .contact-layout { grid-template-columns: 1fr; }
+        .hero-grid, .project-grid, .intro-layout, .archive-head, .cap-grid, .pricing-layout, .contact-layout { grid-template-columns: 1fr; }
         .hero-grid { align-items: end; gap: 2.5rem; }
         .hero h1 { max-width: 9ch; }
         .hero h1 span { transform: none; }
@@ -241,7 +264,7 @@
         .project-row { grid-template-columns: 3rem 1fr auto; }
         .row-desc { grid-column: 2; }
         .row-tags { grid-column: 3; grid-row: 1 / span 2; }
-        .cap-sticky { position: static; }
+        .cap-sticky, .pricing-copy { position: static; }
       }
       @media (max-width: 680px) {
         .wrap { width: min(calc(100% - 1.2rem), var(--max)); }
@@ -280,6 +303,10 @@
         .step { min-height: auto; }
         .step + .step { border-left: 0; border-top: 1px solid var(--line); }
         .step h3 { margin-top: 2.5rem; }
+        .price-line { grid-template-columns: 1fr auto; gap: .8rem 1rem; min-height: 150px; }
+        .price-description { grid-column: 1 / -1; grid-row: 2; }
+        .price-amount { grid-column: 2; grid-row: 1; min-width: 6rem; }
+        .pricing-note { display: grid; }
         .contact { min-height: 100svh; }
         .contact h2 { font-size: clamp(4rem, 20vw, 7rem); }
         .footer-inner { display: grid; }
@@ -311,7 +338,7 @@
     <header class="site-header">
       <div class="wrap nav">
         <a class="brand" href="#top" aria-label="Estúdio Flávio Martins, início"><i class="brand-mark" aria-hidden="true"></i><span>ESTÚDIO FLÁVIO MARTINS</span></a>
-        <nav class="nav-links" aria-label="Navegação principal"><a href="#trabalho">Trabalho</a><a href="#capacidades">Capacidades</a><a href="#metodo">Método</a></nav>
+        <nav class="nav-links" aria-label="Navegação principal"><a href="#trabalho">Trabalho</a><a href="#capacidades">Capacidades</a><a href="#metodo">Método</a><a href="#precos">Preços</a></nav>
         <a class="header-cta" href="#contacto">Disponível para projetos</a>
       </div>
     </header>
@@ -370,6 +397,43 @@
       </section>
       <section class="method" id="metodo" aria-labelledby="method-title">
         <div class="wrap"><div class="method-head"><div><span class="eyebrow reveal" data-index="05">Como trabalho</span><h2 class="section-title reveal" id="method-title">Sem telefone estragado.</h2></div><p class="reveal">Falas diretamente com quem pensa, desenha e constrói.</p></div><div class="steps reveal"><article class="step"><b>01 / DESCOBRIR</b><h3>Perceber o problema certo.</h3><p>Negócio, público, concorrência e o que precisa realmente de mudar.</p></article><article class="step"><b>02 / CONSTRUIR</b><h3>Dar forma e pôr a funcionar.</h3><p>Mensagem, protótipo, identidade e código evoluem como um único sistema.</p></article><article class="step"><b>03 / LANÇAR</b><h3>Medir, aprender, afinar.</h3><p>Publicação, verificação técnica e melhorias com base no uso real.</p></article></div></div>
+      </section>
+      <section class="pricing" id="precos" aria-labelledby="pricing-title">
+        <div class="wrap pricing-layout">
+          <div class="pricing-copy">
+            <span class="eyebrow reveal" data-index="06">Valores de entrada</span>
+            <h2 class="reveal" id="pricing-title">Saber por onde começar.</h2>
+            <p class="reveal">Referências claras para perceber a ordem de investimento antes de definirmos o escopo final.</p>
+          </div>
+          <div>
+            <div class="price-sheet">
+              <article class="price-line reveal">
+                <div class="price-name"><h3>Auditoria prática</h3></div>
+                <p class="price-description">Diagnóstico direto com prioridades de melhoria para clareza, confiança, SEO e contacto.</p>
+                <strong class="price-amount"><small>DESDE</small>95 €</strong>
+              </article>
+              <article class="price-line featured reveal">
+                <div class="price-name"><span class="price-badge">MAIS PEDIDO</span><h3>Landing page de serviço</h3></div>
+                <p class="price-description">Página estratégica para uma oferta, com copy, estrutura, design responsivo e chamada para ação.</p>
+                <strong class="price-amount"><small>DESDE</small>350 €</strong>
+              </article>
+              <article class="price-line reveal">
+                <div class="price-name"><h3>Melhoria de homepage</h3></div>
+                <p class="price-description">Revisão visual, textual e estrutural para tornar a página principal mais convincente.</p>
+                <strong class="price-amount"><small>DESDE</small>250 €</strong>
+              </article>
+              <article class="price-line reveal">
+                <div class="price-name"><h3>Ferramenta digital simples</h3></div>
+                <p class="price-description">Simulador, calculadora ou formulário inteligente para gerar valor e captar pedidos.</p>
+                <strong class="price-amount"><small>DESDE</small>450 €</strong>
+              </article>
+            </div>
+            <div class="pricing-note reveal">
+              <p>O preço final depende do conteúdo, número de páginas, integrações e nível de ferramenta necessário.</p>
+              <a href="#contacto">Pedir estimativa ↓</a>
+            </div>
+          </div>
+        </div>
       </section>
       <section class="contact" id="contacto" aria-labelledby="contact-title">
         <div class="wrap"><div class="contact-layout"><h2 class="reveal" id="contact-title">VAMOS FAZER BARULHO?</h2><div class="contact-side reveal"><p>Mostra-me a ideia, o site ou o problema. Eu digo-te onde vejo oportunidade e qual seria o próximo passo.</p><div class="contact-actions"><a class="contact-action magnetic" href="https://wa.me/31621290605?text=Ol%C3%A1%20Fl%C3%A1vio%2C%20tenho%20um%20projeto%20para%20te%20mostrar." target="_blank" rel="noopener"><span>Começar no WhatsApp</span><span aria-hidden="true">↗</span></a><a class="contact-action magnetic" href="#trabalho"><span>Rever os projetos</span><span aria-hidden="true">↑</span></a></div><small>Normalmente respondo no próprio dia útil.</small></div></div><footer><div class="footer-inner"><span>© 2026 Estúdio Flávio Martins</span><span>Portugal · Trabalho remoto</span><a href="#top">Voltar ao início ↑</a></div></footer></div>
